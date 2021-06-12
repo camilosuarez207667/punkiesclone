@@ -1,6 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Container from '../components/Container'
+import styled from 'styled-components';
+import { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+
+import theme from '../theme';
 
 export default function Home() {
   return (
@@ -11,8 +16,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
-        <h1>index</h1>
+        <ThemeProvider theme={theme}>
+          <h1>from indexddddfsdf</h1>
+          <Button>Click Me</Button>
+        </ThemeProvider>
       </Container>
-    </div>
+    </div >
   )
 }
+
+
+const Button = styled.button`
+  color: ${props => (
+    props.theme.primary
+    /* accessing props.theme */
+  )};
+  background-color: ${props => props.theme.background};
+`;
