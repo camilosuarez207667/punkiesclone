@@ -1,5 +1,14 @@
-import Navigation from "./Navigation"
+import Navigation from "../Navigation"
 import Head from "next/head"
+import styled from 'styled-components';
+import BasicLayout from "styles/Basic";
+
+
+// theme is also fully typed
+const Title = styled.h1`
+  color: red;
+`;
+
 
 const Container = (props: any) => (
     <div>
@@ -9,6 +18,10 @@ const Container = (props: any) => (
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navigation />
+        <BasicLayout>
+            <Title>Title</Title>
+        </BasicLayout>
+
         <div>
             {props.children}
         </div>
