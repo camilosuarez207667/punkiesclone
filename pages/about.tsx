@@ -1,15 +1,17 @@
-import Container from '../components/Container/Container'
 import Head from 'next/head'
+import styled from 'styled-components';
 
 export default function About() {
+
+  const Title = styled.h1`
+  color: red;
+`;
   return (
     <div>
-      <Container>
-      <Head>
-          <title>about Title</title>
+        <Head>
+          <title>about page</title>
         </Head>
-        <h1>about</h1>
-      </Container>
+        <Title>about Title</Title>
     </div>
   )
 }

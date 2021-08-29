@@ -1,26 +1,66 @@
 import styled from 'styled-components';
+interface MenuProps {
+  open: boolean;
+  width: string;
+}
 
 export const Wrapper = styled.div`
-  height: 50px;
   width: 100%;
-  outline: 1px solid red;
 `;
-
-export const SubWrapper = styled.div`
-  /* width: 1200px; */
-   width: ${({ theme }) => theme.breakpoint.md};
+export const LinksWrapper = styled.div`
+  width: ${({ theme }) => theme.breakpoint.md};
   margin: 0 auto;
-  outline: 5px solid orange;
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+  display: none;
+  }
 `;
-
+export const LinksContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+  display: none;
+  }
+`;
 export const Menu = styled.div`
-ul {
-    height: 50px;
-    line-height: 50px;
-}
+display: flex;
+align-items: center;
+outline: 1px solid red;
 li {
-    outline: 1px solid green;
     display: inline;
     padding-right: 24px;
+    font-family: 'Metal Mania', cursive;
+    font-size: 24px;
+    outline: 1px solid red;
+    span{
+      padding:0 4px;
+    }
 }
+`;
+export const ImageMain = styled.div`
+  display: flex;
+`;
+export const MobileWrapper = styled.div`
+  display: none;
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: blanchedalmond;
+    justify-content: space-between;
+  }
+`;
+export const MobileMenu = styled.div`
+  display: none;
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const MobileLogo = styled.div`
+  display: none;
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+    display: flex;
+    align-items: center;
+  }
 `;
