@@ -1,4 +1,3 @@
-import { FC, useEffect, useRef, useState } from 'react';
 import Link from 'next/link'
 import Image from "next/image";
 import Hamburger from './Hamburger/Hamburger';
@@ -10,20 +9,10 @@ import {
     ImageMain,
     LinksContainer,
     MobileNav,
-    MobileMenu,
-    MobileList,
-    MobileSocial,
     MobileLogo,
-
 } from './index.styled'
 
 const Navigation = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    // useEffect(() => {
-    //     console.log('called')
-    //     console.log(menuOpen);
-    // }, [menuOpen]);
 
     return (
         <>
@@ -78,7 +67,7 @@ const Navigation = () => {
                     </LinksContainer>
                 </LinksWrapper>
             </DesktopNav>
-            {/*  VERSION */}
+            {/*  Mobile and desktop */}
             <MobileNav>
                 <MobileLogo>
                     <Link href="/contact">
@@ -87,63 +76,6 @@ const Navigation = () => {
                 </MobileLogo>
                 <Hamburger />
             </MobileNav>
-            <MobileList open={menuOpen}>
-                <ul>
-                    <li>
-                        <Link href="/">
-                            <a>Inicio</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/about">
-                            <a>Noticias</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/contact">
-                            <a>Media</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/">
-                            <a>GP</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/about">
-                            <a>Tienda</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/contact">
-                            <a>Contacto</a>
-                        </Link>
-                    </li>
-                </ul>
-            </MobileList>
-            <MobileSocial open={menuOpen}>
-                <span>
-                    <Link href="/contact">
-                        <a><Image src="/svgs/facebook.svg" height={24} width={24} /></a>
-                    </Link>
-                </span>
-                <span>
-                    <Link href="/contact">
-                        <a><Image src="/svgs/youtube.svg" height={24} width={24} /></a>
-                    </Link>
-                </span>
-                <span><Link href="/contact">
-                    <a><Image src="/svgs/instagram.svg" height={24} width={24} /></a>
-                </Link></span>
-                <span><Link href="/contact">
-                    <a><Image src="/svgs/spotify.svg" height={24} width={24} /></a>
-                </Link></span>
-                <span>
-                    <Link href="/contact">
-                        <a><Image src="/svgs/twitter.svg" height={24} width={24} /></a>
-                    </Link>
-                </span>
-            </MobileSocial>
         </>
     )
 }

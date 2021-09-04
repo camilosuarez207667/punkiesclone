@@ -73,6 +73,7 @@ const colors: ColorType = {
   green: '#9aca3c',
   red: '#ff0000',
   dropdown: '#515151',
+  transparent: 'transparent',
 
 
   /* blue */
@@ -124,38 +125,7 @@ colors['secondary'] = colors.white;
 colors['tertiary'] = colors.red;
 
 const fonts = {
-  rubikLight: '"rubik-light", Helvetica, sans-serif',
-  rubikRegular: '"rubik-regular", Helvetica, sans-serif',
-  montserratThin: '"montserrat-thin", Helvetica, sans-serif',
-  montserratExtraLight: '"montserrat-extralight", Helvetica, sans-serif',
-  montserratLight: '"montserrat-light", Helvetica, sans-serif',
-  montserratRegular: '"montserrat-regular", Helvetica, sans-serif',
-  montserratMedium: '"montserrat-medium", Helvetica, sans-serif',
-  montserratSemiBold: '"montserrat-semibold", Helvetica, sans-serif',
-  montserratBold: '"montserrat-bold", Helvetica, sans-serif',
-  montserratExtraBold: '"montserrat-extrabold", Helvetica, sans-serif',
-  montserratBlack: '"montserrat-black", Helvetica, sans-serif',
-  nexaThin: '"nexa-thin", Helvetica, sans-serif',
-  nexaLight: '"nexa-light", Helvetica, sans-serif',
-  nexaBook: '"nexa-book", Helvetica, sans-serif',
-  nexaRegular: '"nexa-regular", Helvetica, sans-serif',
-  nexaBold: '"nexa-bold", Helvetica, sans-serif',
-  nexaExtraBold: '"nexa-extrabold", Helvetica, sans-serif',
-  nexaHeavy: '"nexa-heavy", Helvetica, sans-serif',
-  nexaBlack: '"nexa-black", Helvetica, sans-serif',
-  robotslabThin: '"robotslab-thin", Helvetica, sans-serif',
-  robotslabLight: '"robotslab-light", Helvetica, sans-serif',
-  robotslabRegular: '"robotslab-regular", Helvetica, sans-serif',
-  robotslabBold: '"robotslab-bold", Helvetica, sans-serif',
-  zonaproBlack: '"zonapro-black", Helvetica, sans-serif',
-  zonaproBold: '"zonapro-bold", Helvetica, sans-serif',
-  zonaproExtraBold: '"zonapro-extrabold", Helvetica, sans-serif',
-  zonaproHairline: '"zonapro-hairline", Helvetica, sans-serif',
-  zonaproLight: '"zonapro-light", Helvetica, sans-serif',
-  zonaproRegular: '"zonapro-regular", Helvetica, sans-serif',
-  zonaproSemiBold: '"zonapro-semibold", Helvetica, sans-serif',
-  zonaproThin: '"zonapro-thin", Helvetica, sans-serif',
-  zonaproUltra: '"zonapro-ultra", Helvetica, sans-serif'
+  primary: '"Metal Mania", cursive',
 };
 
 const fontSizes = {

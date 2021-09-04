@@ -9,18 +9,6 @@ import {
 
 const Hamburger = () => {
     const [menuOpen, setMenuOpen] = useState(true);
-
-    const ulRef = useRef<HTMLUListElement>(null);
-    const [dimensions, setDimensions] = useState('');
-
-    useEffect(() => {
-        let num: number;
-        if (ulRef.current) {
-            num = ulRef.current.offsetHeight;
-            setDimensions(num.toString());
-        }
-        console.log(dimensions)
-    }, [menuOpen]);
     return (
         <>
             <HamburgerMenu>
@@ -34,7 +22,7 @@ const Hamburger = () => {
                     <span></span>
                     <span></span>
                     <span></span>
-                    <Links ref={ulRef} heightCalc={dimensions}>
+                    <Links>
                         <li>
                             <Link href="/">
                                 <a>Inicio</a>

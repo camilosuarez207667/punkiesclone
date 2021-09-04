@@ -61,41 +61,11 @@ declare module 'styled-components' {
     graytitle: string;
     lightGray: string;
     dropdown: string;
+    transparent: string;
   }
 
   export interface FontType {
-    rubikLight: string;
-    rubikRegular: string;
-    montserratThin: string;
-    montserratExtraLight: string;
-    montserratLight: string;
-    montserratRegular: string;
-    montserratMedium: string;
-    montserratSemiBold: string;
-    montserratBold: string;
-    montserratExtraBold: string;
-    montserratBlack: string;
-    nexaThin: string;
-    nexaLight: string;
-    nexaBook: string;
-    nexaRegular: string;
-    nexaBold: string;
-    nexaExtraBold: string;
-    nexaHeavy: string;
-    nexaBlack: string;
-    robotslabThin: string;
-    robotslabLight: string;
-    robotslabRegular: string;
-    robotslabBold: string;
-    zonaproBlack: string;
-    zonaproBold: string;
-    zonaproExtraBold: string;
-    zonaproHairline: string;
-    zonaproLight: string;
-    zonaproRegular: string;
-    zonaproSemiBold: string;
-    zonaproThin: string;
-    zonaproUltra: string;
+    primary: string;
   }
 
   export interface FontSizeType {

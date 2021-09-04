@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-interface MenuProps {
-  heightCalc: string;
-}
 
 export const HamburgerMenu = styled.div`
     position: relative;
@@ -65,7 +62,7 @@ export const Menu = styled.div`
     }
 `;
 
-export const Links = styled.ul<MenuProps>`
+export const Links = styled.ul`
   color: ${({ theme }) => theme.colors.secondary};
   width: 200px;
   padding: 30px;
@@ -82,6 +79,7 @@ export const Links = styled.ul<MenuProps>`
   li {
       padding: 10px 0;
       font-size: 22px;
+      font-family: ${({ theme }) => theme.fonts.primary};
     }
   li:hover {
     color: ${({ theme }) => theme.colors.primary};

@@ -5,18 +5,12 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyle from 'styles/global'
 import { theme } from 'styles/theme'
 
-// theme is also fully typed
-const Title = styled.h1`
-  color: red;
-`;
-
-const Div = styled.h1`
-outline: 1px solid red;
-display: block;
+const ContainerBody = styled.body`
+  background-color: red;
 `;
 
 const Container = (props: any) => (
-    <div>
+    <ContainerBody>
         <ThemeProvider theme={theme}>
             <GlobalStyle />
             <Head>
@@ -26,11 +20,9 @@ const Container = (props: any) => (
                 <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
             </Head>
             <Navigation />
-            <Div>
-                {props.children}
-            </Div>
+            {props.children}
         </ThemeProvider>
-    </div>
+    </ContainerBody>
 )
 
 export default Container
