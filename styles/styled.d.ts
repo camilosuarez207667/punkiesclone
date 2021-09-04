@@ -24,6 +24,7 @@ declare module 'styled-components' {
     orange: string;
     green: string;
     blue: string;
+    red: string;
     hoki: string;
     rockBlue: string;
     gray: string;
@@ -39,6 +40,7 @@ declare module 'styled-components' {
     veryLightGrey: string;
     primary: string;
     secondary: string;
+    tertiary: string;
     danger: string;
     balticSea: string;
     shark: string;
@@ -58,6 +60,7 @@ declare module 'styled-components' {
     darktitle: string;
     graytitle: string;
     lightGray: string;
+    dropdown: string;
   }
 
   export interface FontType {

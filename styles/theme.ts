@@ -1,6 +1,17 @@
 /* stylelint-disable */
 import { ColorType, css, DefaultTheme, MediaQueryType } from 'styled-components';
 
+const breakpoint = {
+  xs: '23.438rem',
+  sm: '48rem',
+  md: '1200px'
+};
+const maxWidth = {
+  xs: '20.438rem',
+  sm: '46.5rem',
+  md: '70.5rem'
+};
+
 // These values will be used to generate mobile - first(i.e. min - width) media queries, which can then be used to apply responsive styles.
 const breakpoints = ['40em', '52em', '86em'];
 
@@ -37,51 +48,11 @@ export const media: MediaQueryType = Object.keys(queries).reduce((acc, label) =>
  * 
   const Box = styled.div`
     background: black;
-
     ${({ theme: { breakpoints, media } }) => media.down(breakpoints[1])`
       background: red;
   `}
-
-    ${({ theme: { breakpoints, media } }) => media.between(breakpoints[1], breakpoints[2])`
-      background: green;
-    `}
-
-    ${({ theme: { breakpoints, media } }) => media.up(breakpoints[2])`
-      background: blue;
-    `}
   `;
  */
-const up =
-  (breakpoint: string, vertical = false) =>
-  (...args: [TemplateStringsArray]) =>
-    css`
-      @media screen and (min-${vertical ? 'height' : 'width'}: ${breakpoint}) {
-        ${css(...args)};
-      }
-    `;
-const down =
-  (breakpoint: string, vertical = false) =>
-  (...args: [TemplateStringsArray]) =>
-    css`
-      @media screen and (max-${vertical ? 'height' : 'width'}: ${breakpoint}) {
-        ${css(...args)};
-      }
-    `;
-const between =
-  (breakpointMin, breakpointMax, vertical = false) =>
-  (...args: [TemplateStringsArray]) =>
-    css`
-      @media screen and (max-${vertical ? 'height' : 'width'}: ${breakpointMax}) and (min-${vertical
-          ? 'height'
-          : 'width'}: ${breakpointMin}) {
-        ${css(...args)};
-      }
-    `;
-
-media.up = up;
-media.down = down;
-media.between = between;
-
 // a set of smooth corner radius values
 const borderRadius = {
   none: '0',
@@ -97,9 +68,12 @@ const borderRadius = {
 
 const colors: ColorType = {
   white: '#ffffff',
-  black: '#000000',
+  black: '#111111',
   orange: '#ff9100',
   green: '#9aca3c',
+  red: '#ff0000',
+  dropdown: '#515151',
+
 
   /* blue */
   blue: '#0071bc',
@@ -119,7 +93,7 @@ const colors: ColorType = {
   geyser: '#d5dce6',
   godGray: '#0f0f0f', // text color
   mercury: '#e6e6e6',
-  brightGray: '#363e4b', // text color
+  brightGray: '#2796f6', // text color
   shuttleGray: '#5e6d84', // text color
   veryLightGrey: '#C9C9C9', // text color
   mediumGray: '#586678', //text color
@@ -145,12 +119,10 @@ const colors: ColorType = {
   danger: '#de1414' // form's error message
 } as ColorType;
 
-colors['primary'] = colors.orange;
-colors['secondary'] = colors.brightGray;
+colors['primary'] = colors.black;
+colors['secondary'] = colors.white;
+colors['tertiary'] = colors.red;
 
-/**
- * Font Families
- */
 const fonts = {
   rubikLight: '"rubik-light", Helvetica, sans-serif',
   rubikRegular: '"rubik-regular", Helvetica, sans-serif',
@@ -186,9 +158,6 @@ const fonts = {
   zonaproUltra: '"zonapro-ultra", Helvetica, sans-serif'
 };
 
-/**
- * Font Sizes
- */
 const fontSizes = {
   xs: '12px',
   sm: '14px',
@@ -205,18 +174,6 @@ const fontSizes = {
   '9xl': '96px'
 };
 
-/*
-Font Weights:
-- Thin            100
-- Extra Light     200
-- Light           300
-- Regular         400
-- Medium          500
-- Semi-Bold       600
-- Bold            700
-- Extra-Bold      800
-- Black           900
-*/
 const fontWeights = {
   thin: 100,
   extraLight: 200,
@@ -262,11 +219,6 @@ const shadows = [
   '0px 3px 15px -2px #00000050'
 ];
 
-// The space key allows you to customize the global spacing and sizing scale for your project.
-// By default these spacing value can be referenced by the padding, margin, and top, left, right, bottom styles.
-// The values are proportional, so 1 spacing unit is equal to 0.25rem, which translates to 4px by default in common browsers.
-// For example:
-//   If you need a spacing of 40px, divide it by 4. That'll give you 10. Then use it in your component.
 const space = {
   px: '1px',
   0: '0',
@@ -308,8 +260,6 @@ const space = {
   96: '24rem'
 };
 
-// The sizes key allows you to customize the global sizing of components you build.
-// By default these sizes value can be referenced by the width, height, and maxWidth, minWidth, maxHeight, minHeight styles.
 const sizes = {
   ...space,
   full: '100%',
@@ -327,7 +277,6 @@ const sizes = {
   '6xl': '72rem'
 };
 
-// A set of z-indeces out of the box to help control the stacking order of components.
 const zIndices = {
   hide: -1,
   auto: 'auto',
@@ -342,17 +291,6 @@ const zIndices = {
   skipLink: 1600,
   toast: 1700,
   tooltip: 1800
-};
-
-const breakpoint = {
-  xs: '23.438rem',
-  sm: '48rem',
-  md: '1200px'
-};
-const maxWidth = {
-  xs: '20.438rem',
-  sm: '46.5rem',
-  md: '70.5rem'
 };
 
 export const theme: DefaultTheme = {

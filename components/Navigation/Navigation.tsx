@@ -1,31 +1,33 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import Link from 'next/link'
 import Image from "next/image";
+import Hamburger from './Hamburger/Hamburger';
 
 import {
-    Wrapper,
+    DesktopNav,
     LinksWrapper,
     Menu,
     ImageMain,
     LinksContainer,
-    MobileWrapper,
+    MobileNav,
     MobileMenu,
-    MobileLogo,
     MobileList,
-    MobileSocial
+    MobileSocial,
+    MobileLogo,
+
 } from './index.styled'
 
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    useEffect(() => {
-        console.log('called')
-        console.log(menuOpen);
-    }, [menuOpen]);
+    // useEffect(() => {
+    //     console.log('called')
+    //     console.log(menuOpen);
+    // }, [menuOpen]);
 
     return (
         <>
-            <Wrapper>
+            <DesktopNav>
                 <LinksWrapper>
                     <LinksContainer>
                         <Menu>
@@ -71,47 +73,21 @@ const Navigation = () => {
                                         <a>Contacto</a>
                                     </Link>
                                 </li>
-                                <li>
-                                    <span>
-                                        <Link href="/contact">
-                                            <a className="svg"><Image src="/svgs/facebook.svg" height={24} width={24} /></a>
-                                        </Link>
-                                    </span>
-                                    <span>
-                                        <Link href="/contact">
-                                            <a><Image src="/svgs/youtube.svg" height={24} width={24} /></a>
-                                        </Link>
-                                    </span>
-                                    <span><Link href="/contact">
-                                        <a><Image src="/svgs/instagram.svg" height={24} width={24} /></a>
-                                    </Link></span>
-                                    <span><Link href="/contact">
-                                        <a><Image src="/svgs/spotify.svg" height={24} width={24} /></a>
-                                    </Link></span>
-                                    <span>
-                                        <Link href="/contact">
-                                            <a><Image src="/svgs/twitter.svg" height={24} width={24} /></a>
-                                        </Link>
-                                    </span>
-                                </li>
                             </ul>
                         </Menu>
                     </LinksContainer>
                 </LinksWrapper>
-            </Wrapper>
-            <MobileWrapper>
-                <MobileMenu>
+            </DesktopNav>
+            {/*  VERSION */}
+            <MobileNav>
+                <MobileLogo>
                     <Link href="/contact">
                         <a><Image src="/punkieslogo.png" height={40} width={80} /></a>
                     </Link>
-                </MobileMenu>
-                <MobileLogo>
-                    <div onClick={() => setMenuOpen(!menuOpen)}>
-                        <a><Image src="/svgs/hamburger-menu.svg" height={40} width={40} /></a>
-                    </div>
                 </MobileLogo>
-            </MobileWrapper>
-            <MobileList>
+                <Hamburger />
+            </MobileNav>
+            <MobileList open={menuOpen}>
                 <ul>
                     <li>
                         <Link href="/">
@@ -145,7 +121,7 @@ const Navigation = () => {
                     </li>
                 </ul>
             </MobileList>
-            <MobileSocial>
+            <MobileSocial open={menuOpen}>
                 <span>
                     <Link href="/contact">
                         <a><Image src="/svgs/facebook.svg" height={24} width={24} /></a>

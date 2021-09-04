@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 interface MenuProps {
   open: boolean;
-  width: string;
 }
 
-export const Wrapper = styled.div`
+export const DesktopNav = styled.div`
   width: 100%;
-  background-color: black;
+  background-color: ${({ theme }) => theme.colors.primary};
 `;
 export const LinksWrapper = styled.div`
   width: ${({ theme }) => theme.breakpoint.md};
@@ -26,19 +25,17 @@ export const Menu = styled.div`
 display: flex;
 align-items: center;
 li {
-    display: inline;
+    display: inline-flex;
     padding: 0 12px;
     font-family: 'Metal Mania', cursive;
     font-size: 24px;
     color: #fff;
     span{
+      display: flex;
       padding:0 4px;
     }
-    #svg-color:hover {
-      fill: orange;
-    }
     a:hover {
-      color: red;
+      color: ${({ theme }) => theme.colors.tertiary};
     }
 }
 
@@ -47,17 +44,18 @@ export const ImageMain = styled.div`
   display: flex;
 `;
 ///**  Mobile Menu 
-export const MobileWrapper = styled.div`
+
+export const MobileNav = styled.div`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     display: flex;
     width: 100%;
     height: 60px;
-    background-color: black;
+    background-color: ${({ theme }) => theme.colors.primary};
     justify-content: space-between;
   }
 `;
-export const MobileMenu = styled.div`
+export const MobileLogo = styled.div`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     display: flex;
@@ -66,7 +64,7 @@ export const MobileMenu = styled.div`
     -webkit-tap-highlight-color: transparent;
   }
 `;
-export const MobileLogo = styled.div`
+export const MobileMenu = styled.div`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     display: flex;
@@ -76,12 +74,11 @@ export const MobileLogo = styled.div`
     cursor: pointer;
   }
 `;
-
-export const MobileList = styled.div`
+export const MobileList = styled.div<MenuProps>`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    background-color: black;
-    display: flex;
+    background-color: ${({ theme }) => theme.colors.primary};
+    display: ${({ open }) => (open ? `'none'` : 'flex')};
     justify-content: center;
     li {
       color: white;
@@ -90,17 +87,16 @@ export const MobileList = styled.div`
       font-size: 24px;
       list-style-type: none;
     a:hover {
-      color: red;
+      color: ${({ theme }) => theme.colors.tertiary};
     }
     }
   }
 `;
-
-export const MobileSocial = styled.div`
+export const MobileSocial = styled.div<MenuProps>`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    background-color: black;
-    display: flex;
+    background-color: ${({ theme }) => theme.colors.primary};
+    display: ${({ open }) => (open ? `'none'` : 'flex')};;
     justify-content: center;
     cursor: pointer;
     span{
