@@ -6,7 +6,7 @@ import GlobalStyle from 'styles/global'
 import { theme } from 'styles/theme'
 
 const ContainerBody = styled.body`
-  background-color: red;
+  background-color: #111;
 `;
 
 const Container = (props: any) => (

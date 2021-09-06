@@ -8,51 +8,55 @@ import {
 } from './index.styled'
 
 const Hamburger = () => {
-    const [menuOpen, setMenuOpen] = useState(true);
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
         <>
             <HamburgerMenu>
-                <Menu>
+                <Menu
+                    onMouseLeave={() => setMenuOpen(false)}
+                    onBlur={() => setMenuOpen(false)}
+                >
                     <input
                         type="checkbox"
                         // defaultChecked={isMenuOpen}
-                        // checked={menuOpen}
-                        onClick={() => { setMenuOpen(!menuOpen); }}
+                        checked={menuOpen}
+                        onClick={() => setMenuOpen(!menuOpen)}
+
                     />
                     <span></span>
                     <span></span>
                     <span></span>
                     <Links>
-                        <li>
-                            <Link href="/">
+                        <Link href="/">
+                            <li>
                                 <a>Inicio</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/about">
+                            </li>
+                        </Link>
+                        <Link href="/about">
+                            <li>
                                 <a>Noticias</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/contact">
+                            </li>
+                        </Link>
+                        <Link href="/contact">
+                            <li>
                                 <a>Media</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/">
+                            </li>
+                        </Link>
+                        <Link href="/">
+                            <li>
                                 <a>GP</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/about">
+                            </li>
+                        </Link>
+                        <Link href="/about">
+                            <li>
                                 <a>Tienda</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/contact">
+                            </li>
+                        </Link>
+                        <Link href="/contact">
+                            <li>
                                 <a>Contacto</a>
-                            </Link>
-                        </li>
+                            </li>
+                        </Link>
                     </Links>
                 </Menu>
             </HamburgerMenu>

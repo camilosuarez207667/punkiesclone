@@ -3,10 +3,41 @@ import styled from 'styled-components';
 export const DesktopNav = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.transparent};
+  position: absolute;
 `;
 export const LinksWrapper = styled.div`
-  width: ${({ theme }) => theme.breakpoint.md};
   margin: 0 auto;
+  width: ${({ theme }) => theme.breakpoint.md};
+  .header__down {
+    position: fixed;
+    height: 50px;
+    top: 0%;
+    left: 0;
+    width: ${({ theme }) => theme.breakpoint.md};
+    background-color: ${({ theme }) => theme.colors.blue};;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    animation: navbar-slice-down 1s;
+    left: 50%;
+    transform: translate(-50%, 0); 
+  }
+  @keyframes navbar-slice-down {
+    0% {
+      background-color: blue;
+      top: -101px;
+    }
+    35% {
+      background-color: greenyellow;
+    }
+
+    100% {
+      background-color: red;
+    }
+  }
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
   display: none;
   }

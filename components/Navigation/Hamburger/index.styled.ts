@@ -63,6 +63,7 @@ export const Menu = styled.div`
 `;
 
 export const Links = styled.ul`
+    outline: 1px solid red;
   color: ${({ theme }) => theme.colors.secondary};
   width: 200px;
   padding: 30px;
