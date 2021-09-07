@@ -16,27 +16,26 @@ import {
 
 const Navigation: FC = () => {
 
-    const [header, setHeader] = useState("");
+    const [header, setHeader] = useState(false);
     const listenScrollEvent = () => {
         if (window.scrollY <= 101) {
-            setHeader("");
+            setHeader(false);
+            console.log('true')
         } else if (window.scrollY >= 101) {
-            setHeader("header__down");
+            setHeader(true);
+            console.log('false')
         }
     };
 
     useEffect(() => {
         window.addEventListener("scroll", listenScrollEvent);
-        return () => {
-            window.removeEventListener("scroll", listenScrollEvent);
-        }
     }, []);
 
     return (
         <>
-            <DesktopNav>
-                <LinksWrapper >
-                    <LinksContainer className={header}>
+            <DesktopNav openMenu={header}>
+                <LinksWrapper>
+                    <LinksContainer>
                         <Menu>
                             <ul>
                                 <li>
@@ -57,7 +56,7 @@ const Navigation: FC = () => {
                             </ul>
                         </Menu>
                         <ImageMain>
-                            {header === '' ?
+                            {!header ?
                                 < Image
                                     width={150}
                                     height={100}
@@ -93,11 +92,10 @@ const Navigation: FC = () => {
                 </LinksWrapper>
             </DesktopNav>
             {/*  Mobile and desktop */}
-            <MobileNav>
+            <MobileNav openMenu={header}>
                 <MobileLogo>
                     <Link href="/contact">
                         <a><Image src="/punkieslogo.png" height={40} width={80} /></a>
-                        {/* <a><Image src="/punkieslogo.png" height={header === '' ? 40 : 20} width={header === '' ? 80 : 40} /></a> */}
                     </Link>
                 </MobileLogo>
                 <Hamburger />

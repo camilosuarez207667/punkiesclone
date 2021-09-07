@@ -1,41 +1,39 @@
 import styled from 'styled-components';
+interface StyledHeaderProps {
+  openMenu: boolean;
+}
 
-export const DesktopNav = styled.div`
+export const DesktopNav = styled.div<StyledHeaderProps>`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.transparent};
-  position: absolute;
+  /* background-color: ${({ openMenu, theme }) => openMenu ? theme.colors.balticSea : theme.colors.transparent}; */
+  position:  ${({ openMenu }) => openMenu ? 'fixed': 'absolute'};
+  animation:  ${({ openMenu }) => openMenu ? 'navbar-slice-down 1s': 'none'};
+  transform:  ${({ openMenu }) => openMenu ? 'translate(-50%, 0)': 'none'};
+  left:  ${({ openMenu }) => openMenu ? '50%': 'none'};
+  height:  ${({ openMenu }) => openMenu ? '40px': '70px'};
+  align-items: ${({ openMenu }) => openMenu ? 'center': 'none'};
+  display: ${({ openMenu }) => openMenu ? 'flex': 'block'};
+  justify-content: ${({ openMenu }) => openMenu ? 'space-between': 'none'};
+  top: ${({ openMenu }) => openMenu ? '0': 'none'};
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 `;
 export const LinksWrapper = styled.div`
   margin: 0 auto;
   width: ${({ theme }) => theme.breakpoint.md};
-  .header__down {
-    position: fixed;
-    height: 50px;
-    top: 0%;
-    left: 0;
-    width: ${({ theme }) => theme.breakpoint.md};
-    background-color: ${({ theme }) => theme.colors.blue};;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 2;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    animation: navbar-slice-down 1s;
-    left: 50%;
-    transform: translate(-50%, 0); 
-  }
+
   @keyframes navbar-slice-down {
     0% {
-      background-color: blue;
+      background-color: balticSea;
       top: -101px;
     }
     35% {
-      background-color: greenyellow;
+      background-color: balticSea;
     }
 
     100% {
-      background-color: red;
+      background-color: balticSea;
     }
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
@@ -43,6 +41,7 @@ export const LinksWrapper = styled.div`
   }
 `;
 export const LinksContainer = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-around;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
@@ -73,13 +72,18 @@ export const ImageMain = styled.div`
 `;
 ///**  Mobile Menu 
 
-export const MobileNav = styled.div`
+export const MobileNav = styled.div<StyledHeaderProps>`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     display: flex;
+    position: ${({ openMenu }) => openMenu ? 'fixed': 'relative'};
+    animation:  ${({ openMenu }) => openMenu ? 'navbar-slice-down 1s': 'none'};
+    top: ${({ openMenu }) => openMenu ? '0': 'none'};
+    z-index: 1;
     width: 100%;
     height: 60px;
-    background-color: ${({ theme }) => theme.colors.transparent};
+    background-color: ${({ theme,openMenu }) => openMenu ? theme.colors.balticSea : theme.colors.transparent};
+    /* background-color: ${({ theme }) => theme.colors.transparent}; */
     justify-content: space-between;
   }
 `;
