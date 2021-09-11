@@ -1,10 +1,4 @@
 import Head from 'next/head'
-import styled from 'styled-components';
-
-
-import {
-  DesktopNav,
-} from './styles/showcase/index.styled';
 
 export default function Home() {
 

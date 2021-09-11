@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link'
 
 import {
@@ -9,6 +9,12 @@ import {
 
 const Hamburger = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+
+    useEffect(() => {
+        // Update the document title using the browser API
+        console.log(menuOpen)
+    }, [menuOpen]);
+
     return (
         <>
             <HamburgerMenu>
@@ -18,7 +24,7 @@ const Hamburger = () => {
                 >
                     <input
                         type="checkbox"
-                        // defaultChecked={isMenuOpen}
+                        defaultChecked={menuOpen}
                         checked={menuOpen}
                         onClick={() => setMenuOpen(!menuOpen)}
 

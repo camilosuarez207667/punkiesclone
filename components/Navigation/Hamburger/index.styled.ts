@@ -9,7 +9,7 @@ export const Menu = styled.div`
     position: absolute;
     top: 16px;
     right: 0px;
-    z-index: 1000;
+    z-index: ${({ theme }) => theme.zIndices.dropdown};;
     -webkit-user-select: none;
     user-select: none;
      input {
