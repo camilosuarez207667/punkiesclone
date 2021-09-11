@@ -1,7 +1,5 @@
 import 'styled-components';
-import { string } from 'yup/lib/locale';
 
-// and extend them!
 declare module 'styled-components' {
   export interface BorderRadiusType {
     none: string;
@@ -93,7 +91,6 @@ declare module 'styled-components' {
     extraBold: number;
     black: number;
   }
-
   export interface LetterSpacingType {
     tighter: string;
     tight: string;
@@ -102,7 +99,6 @@ declare module 'styled-components' {
     wider: string;
     widest: string;
   }
-
   export interface LetterHeightType {
     normal: string;
     none: string;
@@ -113,7 +109,6 @@ declare module 'styled-components' {
     taller: string;
     tallest: string;
   }
-
   export interface MediaQueryType {
     small: (args: TemplateStringsArray) => string;
     medium: (args: TemplateStringsArray) => string;
@@ -132,7 +127,6 @@ declare module 'styled-components' {
       vertical?: boolean
     ) => (args: TemplateStringsArray) => FlattenSimpleInterpolation;
   }
-
   export interface SpaceType {
     px: string;
     0: string;
@@ -172,7 +166,6 @@ declare module 'styled-components' {
     80: string;
     96: string;
   }
-
   export interface SizeType extends SpaceType {
     full: string;
     xs: string;
@@ -186,7 +179,6 @@ declare module 'styled-components' {
     '5xl': string;
     '6xl': string;
   }
-
   export interface ZindexType {
     hide: number;
     auto: string;
@@ -202,21 +194,12 @@ declare module 'styled-components' {
     toast: number;
     tooltip: number;
   }
-
   export interface breakpointType {
     xs: string;
     sm: string;
     md: string;
   }
-  export interface maxWidthType {
-    xs: string;
-    sm: string;
-    md: string;
-  }
-
   export interface DefaultTheme {
-    media: MediaQueryType;
-    breakpoints: string[];
     borderRadius: BorderRadiusType;
     colors: ColorType;
     fonts: FontType;
@@ -229,6 +212,5 @@ declare module 'styled-components' {
     space: SpaceType;
     zIndices: ZindexType;
     breakpoint: breakpointType;
-    maxWidth: maxWidthType;
   }
 }

@@ -1,59 +1,11 @@
 /* stylelint-disable */
-import { ColorType, css, DefaultTheme, MediaQueryType } from 'styled-components';
+import { ColorType, DefaultTheme  } from 'styled-components';
 
 const breakpoint = {
   xs: '23.438rem',
   sm: '48rem',
   md: '1200px'
 };
-const maxWidth = {
-  xs: '20.438rem',
-  sm: '46.5rem',
-  md: '70.5rem'
-};
-
-// These values will be used to generate mobile - first(i.e. min - width) media queries, which can then be used to apply responsive styles.
-const breakpoints = ['40em', '52em', '86em'];
-
-const queries = {
-  small: `@media screen and (min-width: ${breakpoints[0]})`,
-  medium: `@media screen and (min-width: ${breakpoints[1]})`,
-  large: `@media screen and (min-width: ${breakpoints[2]})`
-};
-
-// Generate media query utils used in components. props.theme.[small|medium|large]
-/*
-const Button = styled.button`
-  color: organge;
-  ${({ theme: { media: { small } } }) => small`
-     color: red;
-  `}
-`;
-*/
-export const media: MediaQueryType = Object.keys(queries).reduce((acc, label) => {
-  acc[label] = (...args: [TemplateStringsArray]) => css`
-    ${queries[label]} {
-      ${css(...args)};
-    }
-  `;
-  return acc;
-}, {} as MediaQueryType);
-
-/**
- * CSS Media Query Helper Utils
- * @param breakpoint 
- * @param vertical 
- * 
- * Usage:
- * 
-  const Box = styled.div`
-    background: black;
-    ${({ theme: { breakpoints, media } }) => media.down(breakpoints[1])`
-      background: red;
-  `}
-  `;
- */
-// a set of smooth corner radius values
 const borderRadius = {
   none: '0',
   sm: '0.125rem',
@@ -264,8 +216,6 @@ const zIndices = {
 };
 
 export const theme: DefaultTheme = {
-  media,
-  breakpoints,
   borderRadius,
   colors,
   fonts,
@@ -278,5 +228,4 @@ export const theme: DefaultTheme = {
   sizes,
   zIndices,
   breakpoint,
-  maxWidth
 };
