@@ -63,7 +63,6 @@ export const Menu = styled.div`
 `;
 
 export const Links = styled.ul`
-    outline: 1px solid red;
   color: ${({ theme }) => theme.colors.secondary};
   width: 200px;
   padding: 30px;
@@ -83,7 +82,7 @@ export const Links = styled.ul`
       font-family: ${({ theme }) => theme.fonts.primary};
     }
   li:hover {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.tertiary};
     cursor: pointer;
   }
 `;

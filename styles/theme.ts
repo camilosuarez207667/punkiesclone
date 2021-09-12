@@ -20,11 +20,13 @@ const borderRadius = {
 
 const colors: ColorType = {
   white: '#ffffff',
-  black: '#111111',
+  black: '#141414',
   orange: '#ff9100',
   green: '#9aca3c',
-  red: '#ff0000',
-  dropdown: '#515151',
+  red: '#AC1713',
+
+  //Mobile Dropdown Color
+  dropdown: '#161616',
   transparent: 'transparent',
 
 

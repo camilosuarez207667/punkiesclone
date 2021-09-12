@@ -58,6 +58,7 @@ declare module 'styled-components' {
     darktitle: string;
     graytitle: string;
     lightGray: string;
+    // -- Special --
     dropdown: string;
     transparent: string;
   }

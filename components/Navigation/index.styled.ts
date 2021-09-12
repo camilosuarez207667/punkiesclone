@@ -82,7 +82,7 @@ export const MobileNav = styled.div<StyledHeaderProps>`
     z-index: 1;
     width: 100%;
     height: 60px;
-    background-color: ${({ theme,openMenu }) => openMenu ? theme.colors.balticSea : theme.colors.transparent};
+    background-color: ${({ theme, openMenu }) => openMenu ? theme.colors.dropdown : theme.colors.transparent};
     /* background-color: ${({ theme }) => theme.colors.transparent}; */
     justify-content: space-between;
   }
