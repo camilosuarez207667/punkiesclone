@@ -20,7 +20,7 @@ const Hamburger = () => {
             <HamburgerMenu>
                 <Menu
                     onMouseLeave={() => setMenuOpen(false)}
-                    onBlur={() => setMenuOpen(false)}
+                // onBlur={() => setMenuOpen(false)}
                 >
                     <input
                         type="checkbox"
@@ -35,32 +35,32 @@ const Hamburger = () => {
                     <span></span>
                     <Links>
                         <Link href="/">
-                            <li>
+                            <li onClick={() => setMenuOpen(false)}>
                                 <a>Inicio</a>
                             </li>
                         </Link>
                         <Link href="/about">
-                            <li>
+                            <li onClick={() => setMenuOpen(false)}>
                                 <a>Noticias</a>
                             </li>
                         </Link>
                         <Link href="/contact">
-                            <li>
+                            <li onClick={() => setMenuOpen(false)}>
                                 <a>Media</a>
                             </li>
                         </Link>
                         <Link href="/">
-                            <li>
+                            <li onClick={() => setMenuOpen(false)}>
                                 <a>GP</a>
                             </li>
                         </Link>
                         <Link href="/about">
-                            <li>
+                            <li onClick={() => setMenuOpen(false)}>
                                 <a>Tienda</a>
                             </li>
                         </Link>
                         <Link href="/contact">
-                            <li>
+                            <li onClick={() => setMenuOpen(false)}>
                                 <a>Contacto</a>
                             </li>
                         </Link>
