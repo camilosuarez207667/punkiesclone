@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const HamburgerMenu = styled.div`
     position: relative;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: ${({ theme }) => theme.zIndices.dropdown};
 `;
 
 export const Menu = styled.div`

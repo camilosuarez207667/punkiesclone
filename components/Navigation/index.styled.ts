@@ -16,8 +16,7 @@ export const DesktopNav = styled.div<StyledHeaderProps>`
   display: ${({ openMenu }) => openMenu ? 'flex': 'block'};
   justify-content: ${({ openMenu }) => openMenu ? 'space-between': 'none'};
   top: ${({ openMenu }) => openMenu ? '0': 'none'};
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  z-index: ${({ theme }) => theme.zIndices.sticky};
 `;
 export const LinksWrapper = styled.div`
   margin: 0 auto;
@@ -57,6 +56,7 @@ li {
     font-family: ${({ theme }) => theme.fonts.primary};
     font-size: 24px;
     color: #fff;
+    cursor: pointer;
     span{
       display: flex;
       padding:0 4px;
@@ -79,11 +79,11 @@ export const MobileNav = styled.div<StyledHeaderProps>`
     position: ${({ openMenu }) => openMenu ? 'fixed': 'relative'};
     animation:  ${({ openMenu }) => openMenu ? 'navbar-slice-down 1s': 'none'};
     top: ${({ openMenu }) => openMenu ? '0': 'none'};
-    z-index: 1;
+    z-index: ${({ theme }) => theme.zIndices.sticky};
     width: 100%;
     height: 60px;
-    background-color: ${({ theme, openMenu }) => openMenu ? theme.colors.dropdown : theme.colors.transparent};
-    /* background-color: ${({ theme }) => theme.colors.transparent}; */
+    /* background-color: ${({ theme, openMenu }) => openMenu ? theme.colors.dropdown : theme.colors.transparent}; */
+    background-color: ${({ theme }) => theme.colors.black};
     justify-content: space-between;
   }
 `;

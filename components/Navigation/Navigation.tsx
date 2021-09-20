@@ -38,21 +38,21 @@ const Navigation: FC = () => {
                     <LinksContainer>
                         <Menu>
                             <ul>
-                                <li>
-                                    <Link href="/">
+                                <Link href="/">
+                                    <li>
                                         <a>Inicio</a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/about">
+                                    </li>
+                                </Link>
+                                <Link href="/about">
+                                    <li>
                                         <a>Noticias</a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/contact">
+                                    </li>
+                                </Link>
+                                <Link href="/contact">
+                                    <li>
                                         <a>Media</a>
-                                    </Link>
-                                </li>
+                                    </li>
+                                </Link>
                             </ul>
                         </Menu>
                         <ImageMain>
@@ -71,21 +71,21 @@ const Navigation: FC = () => {
                         </ImageMain>
                         <Menu>
                             <ul>
-                                <li>
-                                    <Link href="/">
+                                <Link href="/">
+                                    <li>
                                         <a>GP</a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/about">
+                                    </li>
+                                </Link>
+                                <Link href="/about">
+                                    <li>
                                         <a>Tienda</a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/contact">
+                                    </li>
+                                </Link>
+                                <Link href="/contact">
+                                    <li>
                                         <a>Contacto</a>
-                                    </Link>
-                                </li>
+                                    </li>
+                                </Link>
                             </ul>
                         </Menu>
                     </LinksContainer>

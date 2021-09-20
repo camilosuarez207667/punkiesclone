@@ -10,18 +10,12 @@ import {
 const Hamburger = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    useEffect(() => {
-        // Update the document title using the browser API
-        console.log(menuOpen)
-    }, [menuOpen]);
-
     return (
         <>
             <HamburgerMenu>
                 <Menu
                     onMouseLeave={() => setMenuOpen(false)}
-                // onBlur={() => setMenuOpen(false)}
-                >
+                 >
                     <input
                         type="checkbox"
                         defaultChecked={menuOpen}
