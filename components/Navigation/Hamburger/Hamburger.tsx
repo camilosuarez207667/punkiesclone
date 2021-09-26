@@ -18,7 +18,7 @@ const Hamburger = () => {
                  >
                     <input
                         type="checkbox"
-                        defaultChecked={menuOpen}
+                        // defaultChecked={menuOpen}
                         checked={menuOpen}
                         onClick={() => setMenuOpen(!menuOpen)}
                         //The onChange deletes the error message about the checked prop
