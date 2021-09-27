@@ -23,7 +23,7 @@ export const Slider: FC<ImageProps> = ({ posts }) => {
                     {posts.length ?
                         posts.map((post, index) => (
                             post.image.map(e => (
-                                <Image key={index} width={1600} height={900} src={`${API_URL}${e.url}`} alt="" />
+                                <Image key={index} width={1600} height={900} src={`${API_URL}${e.url}`} alt="he" />
                             ))
                         ))
                         : null}
