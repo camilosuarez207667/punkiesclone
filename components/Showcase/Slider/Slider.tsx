@@ -1,23 +1,34 @@
+import { FC, useEffect, useRef, useState } from 'react';
 import { Background } from './slider.styled'
 import Image from 'next/image'
 const Carousel = require('re-carousel');
 
-function Slider({ posts }: any) {
+
+interface ImageProps {
+    posts: {
+        image: {
+            url: string;
+        }[]
+    }[];
+}
+
+export const Slider: FC<ImageProps> = ({ posts }) => {
     const { API_URL } = process.env
-    let result = posts.map(a => a);
+    console.log(posts)
 
     return (
         <>
             <Background>
                 <Carousel auto loop>
-                    <Image width={result[0].imagen[0].width} height={result[0].imagen[0].height} src={API_URL + result[0].imagen[0].url} alt="" />
-                    <Image width={result[0].imagen[0].width} height={result[0].imagen[0].height} object-fit="contain" src={API_URL + result[0].imagen[0].url} alt="" />
-                    {/* <div style={{ backgroundColor: 'tomato', height: '100%' }}>Frame 1111</div>
-                    <div style={{ backgroundColor: 'orange', height: '100%' }}>Frame 2</div>
-                    <div style={{ backgroundColor: 'orchid', height: '100%' }}>Frame 3</div> */}
+                    {posts.length ?
+                        posts.map((post, index) => (
+                            post.image.map(e => (
+                                <Image key={index} width={1600} height={900} src={`${API_URL}${e.url}`} alt="" />
+                            ))
+                        ))
+                        : null}
+
                 </Carousel>
-
-
             </Background>
 
         </>
