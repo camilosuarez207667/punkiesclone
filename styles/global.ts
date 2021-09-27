@@ -14,7 +14,12 @@ const GlobalStyle = createGlobalStyle`
   *:after {
     box-sizing: inherit;
   }
-  body,
+  body{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    background-color: #000;
+  }
   h1,
   h2,
   h3,

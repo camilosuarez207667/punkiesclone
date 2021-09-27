@@ -1,6 +1,13 @@
 import 'styled-components';
 
 declare module 'styled-components' {
+  
+  export interface breakpointType {
+    xs: string;
+    sm: string;
+    md: string;
+    lg: string;
+  }
   export interface BorderRadiusType {
     none: string;
     sm: string;
@@ -194,11 +201,6 @@ declare module 'styled-components' {
     skipLink: number;
     toast: number;
     tooltip: number;
-  }
-  export interface breakpointType {
-    xs: string;
-    sm: string;
-    md: string;
   }
   export interface DefaultTheme {
     borderRadius: BorderRadiusType;

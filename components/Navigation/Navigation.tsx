@@ -20,10 +20,8 @@ const Navigation: FC = () => {
     const listenScrollEvent = () => {
         if (window.scrollY <= 101) {
             setHeader(false);
-            console.log('true')
         } else if (window.scrollY >= 101) {
             setHeader(true);
-            console.log('false')
         }
     };
 

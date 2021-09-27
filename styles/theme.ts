@@ -4,7 +4,8 @@ import { ColorType, DefaultTheme  } from 'styled-components';
 const breakpoint = {
   xs: '23.438rem',
   sm: '48rem',
-  md: '1200px'
+  md: '1200px',
+  lg: '1600px',
 };
 const borderRadius = {
   none: '0',

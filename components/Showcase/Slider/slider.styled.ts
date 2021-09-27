@@ -5,7 +5,9 @@ interface StyledHeaderProps {
   }
   
   export const Background = styled.div`
-    width: 100%;
-    height: 100vh; 
-    opacity: .5;
+    height:100vh;
+    max-width: ${({ theme }) => theme.breakpoint.lg};
+    margin: 0 auto;
+    object-fit: contain;
+    /* opacity: .5; */
   `;
