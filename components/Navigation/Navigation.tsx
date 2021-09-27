@@ -10,6 +10,7 @@ import {
     Menu,
     ImageMain,
     LinksContainer,
+    MobileBar,
     MobileNav,
     MobileLogo,
 } from './index.styled'
@@ -31,6 +32,7 @@ const Navigation: FC = () => {
 
     return (
         <>
+            {/*  Desktop */}
             <DesktopNav openMenu={header}>
                 <LinksWrapper>
                     <LinksContainer>
@@ -89,15 +91,18 @@ const Navigation: FC = () => {
                     </LinksContainer>
                 </LinksWrapper>
             </DesktopNav>
-            {/*  Mobile and desktop */}
-            <MobileNav openMenu={header}>
-                <MobileLogo>
-                    <Link href="/contact">
-                        <a><Image src="/punkieslogo.png" height={40} width={80} /></a>
-                    </Link>
-                </MobileLogo>
-                <Hamburger />
-            </MobileNav>
+            {/*  Desktop */}
+            {/*  Mobile  */}
+            <MobileBar openMenu={header} />
+                <MobileNav openMenu={header}>
+                    <MobileLogo>
+                        <Link href="/contact">
+                            <a><Image src="/punkieslogo.png" height={40} width={80} /></a>
+                        </Link>
+                    </MobileLogo>
+                    <Hamburger />
+                </MobileNav>
+            {/*  Mobile  */}
         </>
     )
 }

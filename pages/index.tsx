@@ -10,7 +10,7 @@ type Post = {
   image: string
 }
 
-export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Index({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div>
       <Head>
@@ -19,7 +19,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Slider posts={posts} />
-      {/* <Noticias /> */}
+      <Noticias />
     </div>
   )
 }
