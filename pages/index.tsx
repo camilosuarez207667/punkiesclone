@@ -26,7 +26,7 @@ export default function Index({ posts }: InferGetStaticPropsType<typeof getStati
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await fetch(`http://localhost:1337/sliders`)
+  const res = await fetch(`https://safe-lake-50849.herokuapp.com/sliders`)
   const posts: Post[] = await res.json()
 
   if (!posts) {
