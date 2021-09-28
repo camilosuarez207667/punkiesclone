@@ -26,7 +26,10 @@ export const Slider: FC<ImageProps> = ({ posts }) => {
                                 <Image key={index} width={1600} height={900} src={`${API_URL}${e.url}`} alt="he" />
                             ))
                         ))
-                        : null}
+                        :
+                        <Image width={1600} height={900} src="resources/images/slider/punkies-slider-1.jpg" alt="he" />
+
+                    }
 
                 </Carousel>
             </Background>

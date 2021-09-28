@@ -7,5 +7,5 @@ interface StyledHeaderProps {
   export const Background = styled.div`
     width: 100%;
     height: 100vh; 
-    opacity: .5;
+    background-color: white;
   `;
