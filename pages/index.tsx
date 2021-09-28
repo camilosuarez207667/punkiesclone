@@ -6,8 +6,8 @@ import Slider from 'components/Showcase/Slider/Slider'
 import Noticias from 'components/Noticias/Noticias'
 
 type Post = {
-  id: string
-  image: string
+  id?: string
+  image?: string
 }
 
 export default function Index({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
