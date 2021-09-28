@@ -27,8 +27,10 @@ export const Slider: FC<ImageProps> = ({ posts }) => {
                             ))
                         ))
                         :
-                        <Image width={1600} height={900} src="resources/images/slider/punkies-slider-1.jpg" alt="he" />
-
+                        <>
+                            <Image width={1600} height={900} src="resources/images/slider/punkies-slider-1.jpg" alt="he" />
+                            <Image width={1600} height={900} src="resources/images/slider/punkies-slider-2.jpg" alt="he" />
+                        </>
                     }
 
                 </Carousel>
