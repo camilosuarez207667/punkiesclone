@@ -93,15 +93,15 @@ const Navigation: FC = () => {
             </DesktopNav>
             {/*  Desktop */}
             {/*  Mobile  */}
-            <MobileBar openMenu={header} />
-                <MobileNav openMenu={header}>
-                    <MobileLogo>
-                        <Link href="/contact">
-                            <a><Image src="/punkieslogo.png" height={40} width={80} /></a>
-                        </Link>
-                    </MobileLogo>
-                    <Hamburger />
-                </MobileNav>
+            {/* <MobileBar openMenu={header} /> */}
+            <MobileNav openMenu={header}>
+                <MobileLogo>
+                    <Link href="/contact">
+                        <a><Image src="/punkieslogo.png" height={40} width={80} /></a>
+                    </Link>
+                </MobileLogo>
+                <Hamburger />
+            </MobileNav>
             {/*  Mobile  */}
         </>
     )

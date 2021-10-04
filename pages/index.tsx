@@ -5,12 +5,12 @@ import { ParsedUrlQuery } from 'querystring'
 import Slider from 'components/Showcase/Slider/Slider'
 import Noticias from 'components/Noticias/Noticias'
 
-type Post = {
+type Showcase = {
   id?: string
   image?: string
 }
 
-export default function Index({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Index({ images }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div>
       <Head>
@@ -19,17 +19,18 @@ export default function Index({ posts }: InferGetStaticPropsType<typeof getStati
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Slider posts={posts} />
+      <Slider images={images} />
       <Noticias />
     </div>
   )
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await fetch(`https://safe-lake-50849.herokuapp.com/sliders`)
-  const posts: Post[] = await res.json()
+  const res = await fetch(`https://punkies-strapi.herokuapp.com/showcases`)
+  const images: Showcase = await res.json()
 
-  if (!posts) {
+  if (!images) {
+    console.log('posts false')
     return {
       redirect: {
         destination: '/',
@@ -39,7 +40,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 
   return {
-    props: { posts },
+    props: { images },
   }
 }
 

@@ -71,11 +71,11 @@ export const ImageMain = styled.div`
   display: flex;
 `;
 ///**  Mobile Menu 
-
+//In case mobile dropdown needs a color height.
 export const MobileBar = styled.div<StyledHeaderProps>`
   display: none;
     @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-      display: flex;
+      display: block;
       position: fixed;
       animation:  ${({ openMenu }) => openMenu ? 'navbar-slice-down 1s': 'none'};
       top: ${({ openMenu }) => openMenu ? '0': 'none'};
@@ -84,7 +84,7 @@ export const MobileBar = styled.div<StyledHeaderProps>`
       height: 60px;
       background-color: ${({ theme, openMenu }) => openMenu ? theme.colors.black : theme.colors.transparent};
       opacity: ${({ openMenu }) => openMenu ? '0.5' : '1'}; 
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
 `;
 
@@ -92,14 +92,15 @@ export const MobileNav = styled.div<StyledHeaderProps>`
 display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     display: flex;
-    position: fixed;
+    position: ${({ openMenu }) => openMenu ? 'fixed': 'absolute'};
     animation: ${({ openMenu }) => openMenu ? 'navbar-slice-down 1s': 'none'};
     top: ${({ openMenu }) => openMenu ? '0': 'none'};
     z-index: ${({ theme }) => theme.zIndices.sticky};
+    /* background-color: ${({ theme, openMenu }) => openMenu ? theme.colors.black : theme.colors.transparent}; */
     width: 100%;
     height: 60px;
     justify-content: space-between;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
   }
 `;
 export const MobileLogo = styled.div`
