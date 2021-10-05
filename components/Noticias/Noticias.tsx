@@ -12,7 +12,7 @@ const Noticias: FC = () => {
     return (
         <>
             <Background>
-                <p>En Contrucci&oacute;n</p>
+                <p>En Construcci&oacute;n</p>
             </Background>
 
         </>
