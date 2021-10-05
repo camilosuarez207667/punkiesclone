@@ -43,12 +43,12 @@ const Navigation: FC = () => {
                                         <a>Inicio</a>
                                     </li>
                                 </Link>
-                                <Link href="/about">
+                                <Link href="/">
                                     <li>
                                         <a>Noticias</a>
                                     </li>
                                 </Link>
-                                <Link href="/contact">
+                                <Link href="/">
                                     <li>
                                         <a>Media</a>
                                     </li>
@@ -76,12 +76,12 @@ const Navigation: FC = () => {
                                         <a>GP</a>
                                     </li>
                                 </Link>
-                                <Link href="/about">
+                                <Link href="/">
                                     <li>
                                         <a>Tienda</a>
                                     </li>
                                 </Link>
-                                <Link href="/contact">
+                                <Link href="/">
                                     <li>
                                         <a>Contacto</a>
                                     </li>

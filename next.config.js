@@ -9,7 +9,7 @@ module.exports = {
     },
     images: {
         deviceSizes: [640, 768, 1024, 1280, 1600],
-        imageSizes: [16, 32, 48, 64, 96],
+        imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
         domains: [process.env.IMAGES_DOMAIN],
         path: '_next/image',
         loader: 'default'

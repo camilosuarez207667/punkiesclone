@@ -1,7 +1,6 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC } from 'react';
 import { Background } from './slider.styled'
 import Image from 'next/image'
-import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
 const Carousel = require('re-carousel');
 
 
@@ -20,8 +19,6 @@ interface OfflinePosts {
 }
 
 export const Slider: FC<ImageProps> = ({ images }) => {
-    const { API_URL } = process.env
-
     console.log(images.map(e => e))
     return (
         <>
@@ -29,10 +26,9 @@ export const Slider: FC<ImageProps> = ({ images }) => {
                 <Carousel auto loop>
                     {
                         images.map(img => (
-                            <Image key={img.id} width={1600} height={900} src={`${img.image.url}`} alt="he" />
+                            <Image key={img.id} layout="fill" objectFit="cover" objectPosition="top center" src={`${img.image.url}`} alt="punkies y cerebro showcase" />
                         ))
                     }
-
                 </Carousel>
             </Background>
 
