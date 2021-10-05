@@ -33,12 +33,12 @@ const Hamburger = () => {
                                 <a>Inicio</a>
                             </li>
                         </Link>
-                        <Link href="/about">
+                        <Link href="/">
                             <li onClick={() => setMenuOpen(false)}>
                                 <a>Noticias</a>
                             </li>
                         </Link>
-                        <Link href="/contact">
+                        <Link href="/">
                             <li onClick={() => setMenuOpen(false)}>
                                 <a>Media</a>
                             </li>
@@ -48,12 +48,12 @@ const Hamburger = () => {
                                 <a>GP</a>
                             </li>
                         </Link>
-                        <Link href="/about">
+                        <Link href="/">
                             <li onClick={() => setMenuOpen(false)}>
                                 <a>Tienda</a>
                             </li>
                         </Link>
-                        <Link href="/contact">
+                        <Link href="/">
                             <li onClick={() => setMenuOpen(false)}>
                                 <a>Contacto</a>
                             </li>
