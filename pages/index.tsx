@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import { InferGetStaticPropsType } from 'next'
 import { GetStaticProps } from 'next'
-import { ParsedUrlQuery } from 'querystring'
 import Slider from 'components/Showcase/Slider/Slider'
-import Noticias from 'components/Noticias/Noticias'
+import Construction from 'components/Contruction/Construction'
+import Title from 'components/Title/Title'
 
 type Showcase = {
   id?: string
@@ -20,7 +20,7 @@ export default function Index({ images }: InferGetStaticPropsType<typeof getStat
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Slider images={images} />
-      <Noticias />
+      <Title title={'Noticias'} message={`¡Aquí Puedes estár al tanto de nuestras últimas noticias! ¡Bienvenidos al de mundo Punkies y Cerebro!`}/>
     </div>
   )
 }

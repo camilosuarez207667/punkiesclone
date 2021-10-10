@@ -1,7 +1,6 @@
-import 'styled-components';
+import "styled-components";
 
-declare module 'styled-components' {
-  
+declare module "styled-components" {
   export interface breakpointType {
     xs: string;
     sm: string;
@@ -15,8 +14,8 @@ declare module 'styled-components' {
     md: string;
     lg: string;
     xl: string;
-    '2xl': string;
-    '3xl': string;
+    "2xl": string;
+    "3xl": string;
     full: string;
   }
   export interface ColorType {
@@ -72,6 +71,7 @@ declare module 'styled-components' {
 
   export interface FontType {
     primary: string;
+    secondary: string;
   }
 
   export interface FontSizeType {
@@ -80,12 +80,12 @@ declare module 'styled-components' {
     md: string;
     lg: string;
     xl: string;
-    '2xl': string;
-    '3xl': string;
-    '4xl': string;
-    '5xl': string;
-    '6xl': string;
-    '9xl': string;
+    "2xl": string;
+    "3xl": string;
+    "4xl": string;
+    "5xl": string;
+    "6xl": string;
+    "9xl": string;
   }
 
   export interface FontWeightType {
@@ -181,11 +181,11 @@ declare module 'styled-components' {
     md: string;
     lg: string;
     xl: string;
-    '2xl': string;
-    '3xl': string;
-    '4xl': string;
-    '5xl': string;
-    '6xl': string;
+    "2xl": string;
+    "3xl": string;
+    "4xl": string;
+    "5xl": string;
+    "6xl": string;
   }
   export interface ZindexType {
     hide: number;
