@@ -20,7 +20,7 @@ export default function Index({ images }: InferGetStaticPropsType<typeof getStat
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Slider images={images} />
-      <Title title={'Noticias'} message={`¡Aquí Puedes estár al tanto de nuestras últimas noticias! ¡Bienvenidos al de mundo Punkies y Cerebro!`}/>
+      <Title title={'Noticias'} message={`¡Aquí Puedes estár al tanto de todas nuestras noticias! ¡Bienvenidos al de mundo Punkies y Cerebro!`}/>
     </div>
   )
 }
