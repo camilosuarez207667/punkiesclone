@@ -1,21 +1,14 @@
-import { useEffect, useState, FC } from 'react'
+import { useEffect, useState, FC } from "react";
 
-import {
-    Background,
+import { Background } from "./construction.styled";
 
-} from './construction.styled'
-
-const Construction: FC = () => {
-
-
-
-    return (
-        <>
-            <Background>
-                <p>En Construcci&oacute;n</p>
-            </Background>
-
-        </>
-    )
-}
-export default Construction
+const Noticias: FC = () => {
+  return (
+    <>
+      <Background>
+        <p>En Construcci&oacute;n</p>
+      </Background>
+    </>
+  );
+};
+export default Noticias;

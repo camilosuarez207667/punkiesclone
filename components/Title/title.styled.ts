@@ -18,9 +18,11 @@ export const TitleWrapper = styled.div`
   h2 {
     text-align: center;
     font-size: 1.2rem;
-    color: white;
+    color: ${({ theme }) => theme.colors.secondary};
     padding-top: 16px;
     font-family: ${({ theme }) => theme.fonts.secondary};
+    max-width: 600px;
+    margin: 0 auto;
     @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
       font-size: 1rem;
     }

@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { ImagesStylesDesktop, ImagesStylesMobile } from "./slider.styled";
 import Image from "next/image";
+import image from "next/image";
 const Carousel = require("re-carousel");
 
 interface ImageProps {
@@ -12,18 +13,11 @@ interface ImageProps {
   }[];
 }
 
-interface OfflinePosts {
-  offlineImage: {
-    url: string;
-  }[];
-}
+const Slider: FC<ImageProps> = ({ images }) => {
+  let imgesArr = [...images];
+  let mobileImages = imgesArr.splice(2, 5);
+  let desktopImages = imgesArr.splice(0, 2);
 
-export const Slider: FC<ImageProps> = ({ images }) => {
- 
-  let imgesArr = [...images]
-  let mobileImages = imgesArr.splice(2,5)
-  let desktopImages = imgesArr.splice(0,2)
-  
   return (
     <>
       <ImagesStylesDesktop>
@@ -41,7 +35,7 @@ export const Slider: FC<ImageProps> = ({ images }) => {
         </Carousel>
       </ImagesStylesDesktop>
       <ImagesStylesMobile>
-      <Carousel auto loop>
+        <Carousel auto loop>
           {mobileImages.map((img) => (
             <Image
               key={img.id}
@@ -53,7 +47,7 @@ export const Slider: FC<ImageProps> = ({ images }) => {
             />
           ))}
         </Carousel>
-        </ImagesStylesMobile>
+      </ImagesStylesMobile>
     </>
   );
 };

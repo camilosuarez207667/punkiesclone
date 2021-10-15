@@ -1,21 +1,80 @@
-import { useEffect, useState, FC } from 'react'
-
+import { useEffect, useState, FC } from "react";
+import Image from "next/image";
 import {
-    Background,
+  Wrapper,
+  Description,
+  Title,
+  NewsWrapper,
+  ImageHeading,
+  Date,
+} from "./noticias.styled";
+import image from "next/image";
 
-} from './noticias.styled'
-
-const Noticias: FC = () => {
-
-
-
-    return (
-        <>
-            <Background>
-                <p>En Construcci&oacute;n</p>
-            </Background>
-
-        </>
-    )
+interface NewsProps {
+  news: {
+    image: {
+      url: string;
+    };
+    id: number;
+    title: string;
+    description: string;
+    date: Date;
+    readMore?: string;
+  }[];
 }
-export default Noticias
+
+const Noticias: FC<NewsProps> = ({ news }) => {
+  console.log(news);
+  let Arr = [...news];
+  let firstNews = Arr.splice(0, 1).shift();
+  let firstImage = firstNews?.image.url;
+  let firstTitle = firstNews?.title;
+  let firstDescription = firstNews?.description;
+  let firstDate = firstNews?.date;
+
+  let secondNews = Arr.slice(-1).pop();
+
+  console.log(secondNews);
+
+  let secondImage = secondNews?.image.url;
+  let secondTitle = secondNews?.title;
+  let secondDescription = secondNews?.description;
+  let secondDate = secondNews?.date;
+
+  return (
+    <>
+      <Wrapper>
+        <NewsWrapper>
+          <ImageHeading>
+            <Image
+              layout="intrinsic"
+              width={800}
+              height={605}
+              src={`${secondImage}`}
+              alt="punkies y cerebro showcase"
+            />
+          </ImageHeading>
+          <Title>{secondTitle}</Title>
+          <Description>{secondDescription}</Description>
+          <Date>{secondDate}</Date>
+        </NewsWrapper>
+        <NewsWrapper>
+          <ImageHeading>
+            <Image
+              layout="intrinsic"
+              width={800}
+              height={605}
+              src={`${firstImage}`}
+              alt="punkies y cerebro showcase"
+            />
+          </ImageHeading>
+          <Title>{firstTitle}</Title>
+          <Description>{firstDescription}</Description>
+          <Date>{firstDate}</Date>
+        </NewsWrapper>
+      </Wrapper>
+    </>
+  );
+};
+
+export default Noticias;
