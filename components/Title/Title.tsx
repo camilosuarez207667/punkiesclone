@@ -1,19 +1,19 @@
-import { LinksWrapper } from "components/Navigation/index.styled";
-import { useEffect, useState, FC } from "react";
+import { FC } from "react";
 
 import { TitleWrapper } from "./title.styled";
 
 interface TitleProps {
   title: string;
   message: string;
+  backgroundColor?: string;
 }
 
-const Title: FC<TitleProps> = ({ title, message }) => {
+const Title: FC<TitleProps> = ({ title, message, backgroundColor }) => {
   return (
     <>
-      <TitleWrapper>
-          <h3>{title}</h3>
-          <h2>{message}</h2>
+      <TitleWrapper backgroundColor={backgroundColor}>
+        <h3>{title}</h3>
+        <h2>{message}</h2>
       </TitleWrapper>
     </>
   );

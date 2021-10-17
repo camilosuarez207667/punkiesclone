@@ -1,4 +1,4 @@
-import { useEffect, useState, FC } from "react";
+import { FC } from "react";
 import Image from "next/image";
 import {
   Wrapper,
@@ -8,7 +8,6 @@ import {
   ImageHeading,
   Date,
 } from "./noticias.styled";
-import image from "next/image";
 
 interface NewsProps {
   news: {
@@ -34,8 +33,6 @@ const Noticias: FC<NewsProps> = ({ news }) => {
 
   let secondNews = Arr.slice(-1).pop();
 
-  console.log(secondNews);
-
   let secondImage = secondNews?.image.url;
   let secondTitle = secondNews?.title;
   let secondDescription = secondNews?.description;
@@ -56,7 +53,7 @@ const Noticias: FC<NewsProps> = ({ news }) => {
           </ImageHeading>
           <Title>{secondTitle}</Title>
           <Description>{secondDescription}</Description>
-          <Date>{secondDate}</Date>
+          {/* <Date>{secondDate}</Date> */}
         </NewsWrapper>
         <NewsWrapper>
           <ImageHeading>
@@ -70,7 +67,7 @@ const Noticias: FC<NewsProps> = ({ news }) => {
           </ImageHeading>
           <Title>{firstTitle}</Title>
           <Description>{firstDescription}</Description>
-          <Date>{firstDate}</Date>
+          {/* <Date>{firstDate}</Date> */}
         </NewsWrapper>
       </Wrapper>
     </>

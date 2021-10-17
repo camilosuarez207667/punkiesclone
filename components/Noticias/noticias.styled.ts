@@ -4,20 +4,18 @@ export const Wrapper = styled.div`
   max-width: ${({ theme }) => theme.breakpoint.lg};
   margin: 0 auto;
   display: flex;
-  @media (max-width: ${({ theme }) => theme.breakpoint.lg}) {
+  padding-bottom: 32px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     flex-direction: column;
   }
 `;
 
 export const NewsWrapper = styled.div`
-  width: 50%;
-  padding: 8px 48px;
-  align-items: center;
-  @media (max-width: ${({ theme }) => theme.breakpoint.lg}) {
-    margin: 0 auto;
+  margin: 0 auto;
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+    margin: 0 auto 24px;
     width: auto;
-    flex-direction: column;
-    align-items: center;
+    padding: 8px 24px;
   }
 `;
 
@@ -45,7 +43,6 @@ export const Date = styled.div`
   font-size: ${({ theme }) => theme.fontSizes["2xl"]};
   color: ${({ theme }) => theme.colors.tertiary};
   font-family: ${({ theme }) => theme.fonts.primary};
-  margin: 0 auto;
   padding: 8px 0;
   width: 100%;
 `;

@@ -1,12 +1,7 @@
 /* stylelint-disable */
 import { ColorType, DefaultTheme } from "styled-components";
 
-const breakpoint = {
-  xs: "768px",
-  sm: "1024px",
-  md: "1280px",
-  lg: "1600px",
-};
+
 const borderRadius = {
   none: "0",
   sm: "0.125rem",
@@ -83,6 +78,12 @@ const fonts = {
   secondary: '"Lato", sans-serif',
 };
 
+const breakpoint = {
+  xs: "768px",
+  sm: "1024px",
+  md: "1280px",
+  lg: "1600px",
+};
 const fontSizes = {
   xs: "12px",
   sm: "14px",

@@ -4,6 +4,8 @@ import { GetStaticProps } from "next";
 import Slider from "components/Showcase/Slider/Slider";
 import Title from "components/Title/Title";
 import Noticias from "components/Noticias/Noticias";
+import Discografia from "components/Discografia/Discrografia";
+import Contact from "components/Contact/Contact";
 
 type Showcase = {
   id?: string;
@@ -23,9 +25,21 @@ type NewsData = {
   }[];
 };
 
+interface DiscoProps {
+  discos: {
+    image: {
+      url: string;
+    };
+    id: number;
+    title: string;
+    description?: string;
+    year?: number;
+  }[];
+}
 export default function Index({
   images,
   news,
+  discos,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div>
@@ -45,8 +59,16 @@ export default function Index({
       <Title
         title={"Noticias"}
         message={`¡Aquí puedes estár al tanto de todas nuestras noticias! ¡Bienvenidos al de mundo Punkies y Cerebro!`}
+        backgroundColor={"black"}
       />
       <Noticias news={news} />
+      <Title
+        title={"Discografía"}
+        message={`Aquí encontrarás nuestra discografía!  ¡Disfruta el mundo de Punkies y Cerebro!`}
+        backgroundColor={"white"}
+      />
+      <Discografia discos={discos} />
+      <Contact />
     </div>
   );
 }
@@ -57,6 +79,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const resNews = await fetch(`https://punkies-strapi.herokuapp.com/noticias`);
   const news: NewsData = await resNews.json();
+
+  const resDisco = await fetch(
+    `https://punkies-strapi.herokuapp.com/discografias`
+  );
+  const discos: DiscoProps = await resDisco.json();
 
   if (!images) {
     console.log("posts false");
@@ -72,6 +99,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       images: images,
       news: news,
+      discos: discos,
     },
     revalidate: 1,
   };
