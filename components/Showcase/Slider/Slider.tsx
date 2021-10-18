@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { ImagesStylesDesktop, ImagesStylesMobile } from "./slider.styled";
 import Image from "next/image";
-import image from "next/image";
 const Carousel = require("re-carousel");
 
 interface ImageProps {

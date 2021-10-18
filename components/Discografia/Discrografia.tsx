@@ -35,7 +35,7 @@ const Discografia: FC<DiscoProps> = ({ discos }) => {
 
   return (
     <>
-      <BodyWrapper>
+      <BodyWrapper id="discografia">
         <Wrapper>
           {sortedByYear.length
             ? sortedByYear.map((e, i) => (
