@@ -15,7 +15,7 @@ const Container = (props: any) => (
             <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"></link>
         </Head>
-        <Navigation />
+        {/* <Navigation /> */}
         {props.children}
     </ThemeProvider>
 )
