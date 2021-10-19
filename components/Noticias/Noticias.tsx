@@ -32,7 +32,6 @@ const Noticias: FC<NewsProps> = ({ news }) => {
   let firstDate = firstNews?.date;
 
   let secondNews = Arr.slice(-1).pop();
-
   let secondImage = secondNews?.image.url;
   let secondTitle = secondNews?.title;
   let secondDescription = secondNews?.description;
