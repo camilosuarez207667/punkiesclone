@@ -69,8 +69,8 @@ export default function Index({
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Consctruction />
-      {/* <Slider images={images} />
+      {/* <Consctruction /> */}
+      <Slider images={images} />
       <Title
         title={"Noticias"}
         message={`¡Aquí puedes estár al tanto de todas nuestras noticias! ¡Bienvenidos al de mundo Punkies y Cerebro!`}
@@ -89,7 +89,7 @@ export default function Index({
         backgroundColor={""}
       />
       <Conciertos conciertos={conciertos} />
-      <Contact /> */}
+      <Contact />
     </div>
   );
 }
