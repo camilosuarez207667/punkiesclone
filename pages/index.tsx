@@ -79,13 +79,13 @@ export default function Index({
       <Noticias news={news} />
       <Title
         title={"Discografía"}
-        message={`¡Aquí encontrarás nuestra discografía!  ¡Disfruta el mundo de Punkies y Cerebro!`}
+        message={`Aquí encontraras nuestra discografía`}
         backgroundColor={"white"}
       />
       <Discografia discos={discos} />
       <Title
         title={"Conciertos"}
-        message={`¡Aquí encontrarás todos los toques!`}
+        message={`Aquí encontraras todos los toques`}
         backgroundColor={""}
       />
       <Conciertos conciertos={conciertos} />
