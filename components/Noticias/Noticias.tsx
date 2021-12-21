@@ -39,7 +39,7 @@ const Noticias: FC<NewsProps> = ({ news }) => {
 
   return (
     <>
-      <Wrapper id="noticias">
+      <Wrapper>
         <NewsWrapper>
           <ImageHeading>
             <Image

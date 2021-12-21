@@ -22,7 +22,7 @@ const Hamburger = () => {
           <span></span>
           <span></span>
           <Links>
-            <Link href="#inicio">
+            <Link href="#home">
               <li onClick={() => setMenuOpen(false)}>
                 <a>Inicio</a>
               </li>
@@ -32,7 +32,7 @@ const Hamburger = () => {
                 <a>Noticias</a>
               </li>
             </Link>
-            <Link href="#discografia">
+            <Link href="#discos">
               <li onClick={() => setMenuOpen(false)}>
                 <a>Discografía</a>
               </li>
@@ -42,7 +42,7 @@ const Hamburger = () => {
                 <a>GP</a>
               </li>
             </Link>
-            <Link href="#conciertos">
+            <Link href="#toques">
               <li onClick={() => setMenuOpen(false)}>
                 <a>Conciertos</a>
               </li>

@@ -5,7 +5,7 @@ import Slider from "components/Showcase/Slider/Slider";
 import Title from "components/Title/Title";
 import Noticias from "components/Noticias/Noticias";
 import Discografia from "components/Discografia/Discrografia";
-import Contact from "components/Contact/Contact";
+
 import Conciertos from "components/Conciertos/Conciertos";
 
 import Consctruction from "components/Construction/Construction";
@@ -72,24 +72,27 @@ export default function Index({
       {/* <Consctruction /> */}
       <Slider images={images} />
       <Title
+        id="noticias"
         title={"Noticias"}
-        message={`¡Aquí puedes estár al tanto de todas nuestras noticias! ¡Bienvenidos al de mundo Punkies y Cerebro!`}
+        message={`¡Aquí puedes estar al tanto de todas nuestras noticias! ¡Bienvenidos al de mundo Punkies y Cerebro!`}
         backgroundColor={"black"}
       />
       <Noticias news={news} />
       <Title
-        title={"Discografía"}
-        message={`Aquí encontraras nuestra discografía`}
+        id="discos"
+        title={"Discos"}
+        message={``}
         backgroundColor={"white"}
       />
       <Discografia discos={discos} />
       <Title
-        title={"Conciertos"}
-        message={`Aquí encontraras todos los toques`}
+        id="conciertos"
+        title={"Toques"}
+        message={``}
         backgroundColor={""}
       />
       <Conciertos conciertos={conciertos} />
-      <Contact />
+      
     </div>
   );
 }

@@ -36,7 +36,7 @@ const Navigation: FC = () => {
           <LinksContainer>
             <Menu>
               <ul>
-                <Link href="/">
+                <Link href="#home">
                   <li>
                     <a>Inicio</a>
                   </li>
@@ -46,7 +46,7 @@ const Navigation: FC = () => {
                     <a>Noticias</a>
                   </li>
                 </Link>
-                <Link href="#discografia">
+                <Link href="#discos">
                   <li>
                     <a>Discografía</a>
                   </li>

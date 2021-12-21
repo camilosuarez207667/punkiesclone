@@ -3,6 +3,8 @@ import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "styles/global";
 import { theme } from "styles/theme";
+import Contact from "components/Contact/Contact";
+
 
 const Container = (props: any) => (
   <ThemeProvider theme={theme}>
@@ -25,6 +27,7 @@ const Container = (props: any) => (
     </Head>
     <Navigation />
     {props.children}
+    <Contact />
   </ThemeProvider>
 );
 
