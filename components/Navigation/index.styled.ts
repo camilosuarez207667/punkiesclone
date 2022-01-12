@@ -3,19 +3,28 @@ import styled from "styled-components";
 export const DesktopNav = styled.div`
   width: 100%;
   position: fixed;
+  height: 141px;
+  opacity: 0.9;
   top: 0;
   background-color: ${({ theme }) => theme.colors.primary};
   z-index: ${({ theme }) => theme.zIndices.sticky};
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+    display: none;
+  }
 `;
 export const LinksWrapper = styled.div`
-  margin: 0 auto;
   width: ${({ theme }) => theme.breakpoint.md};
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  margin: 0 auto;
+  z-index: ${({ theme }) => theme.zIndices.banner};
 `;
 export const LinksContainer = styled.div`
-  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-around;
+  z-index: ${({ theme }) => theme.zIndices.banner};
+  width: ${({ theme }) => theme.breakpoint.md};
+  position: fixed;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     display: none;
   }
