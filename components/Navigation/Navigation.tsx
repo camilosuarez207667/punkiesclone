@@ -5,38 +5,27 @@ import Hamburger from "./Hamburger/Hamburger";
 
 import {
   DesktopNav,
+  ImagePaddingMobile,
+  ImagePadding,
   LinksWrapper,
   Menu,
   ImageMain,
   LinksContainer,
-  MobileBar,
+
   MobileNav,
   MobileLogo,
 } from "./index.styled";
 
 const Navigation: FC = () => {
-  const [header, setHeader] = useState(false);
-  const listenScrollEvent = () => {
-    if (window.scrollY <= 101) {
-      setHeader(false);
-    } else if (window.scrollY >= 101) {
-      setHeader(true);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
-  }, []);
-
   return (
     <>
       {/*  Desktop */}
-      <DesktopNav openMenu={header}>
+      <DesktopNav>
         <LinksWrapper>
           <LinksContainer>
             <Menu>
               <ul>
-                <Link href="#home">
+                <Link href="/index">
                   <li>
                     <a>Inicio</a>
                   </li>
@@ -46,45 +35,48 @@ const Navigation: FC = () => {
                     <a>Noticias</a>
                   </li>
                 </Link>
-                <Link href="#discos">
+                <Link href="/discografia">
                   <li>
                     <a>Discografía</a>
+                  </li>
+                </Link>
+                <Link href="media">
+                  <li>
+                    <a>Media</a>
                   </li>
                 </Link>
               </ul>
             </Menu>
             <ImageMain>
-              {!header ? (
+              <ImagePadding>
                 <Image
-                  width={150}
-                  height={100}
-                  src={"/punkieslogo.png"}
+                  width={220}
+                  height={148}
+                  src={"/punkies-y-cerebro-logo.png"}
                   alt="Picture of the author"
                 />
-              ) : (
-                <Image
-                  width={260}
-                  height={31}
-                  src={"/punkies-logo-small.png"}
-                  alt="Picture of the author"
-                />
-              )}
+              </ImagePadding>
             </ImageMain>
             <Menu>
               <ul>
                 <Link href="#inicio">
                   <li>
-                    <a>GP</a>
+                    <a>Tienda</a>
                   </li>
                 </Link>
-                <Link href="#conciertos">
+                <Link href="/">
                   <li>
-                    <a>Conciertos</a>
+                    <a>Eventos</a>
                   </li>
                 </Link>
                 <Link href="#contacto">
                   <li>
-                    <a>Contacto</a>
+                    <a>Blog</a>
+                  </li>
+                </Link>
+                <Link href="#contacto">
+                  <li>
+                    <a>contacto</a>
                   </li>
                 </Link>
               </ul>
@@ -94,11 +86,17 @@ const Navigation: FC = () => {
       </DesktopNav>
       {/*  Desktop */}
       {/*  Mobile  */}
-      <MobileNav openMenu={header}>
+      <MobileNav>
         <MobileLogo>
           <Link href="/contact">
             <a>
-              <Image src="/punkieslogo.png" height={40} width={80} />
+              <ImagePaddingMobile>
+                <Image
+                  src="/punkies-y-cerebro-logo.png"
+                  height={80}
+                  width={110}
+                />
+              </ImagePaddingMobile>
             </a>
           </Link>
         </MobileLogo>

@@ -1,7 +1,6 @@
 /* stylelint-disable */
 import { ColorType, DefaultTheme } from "styled-components";
 
-
 const borderRadius = {
   none: "0",
   sm: "0.125rem",
@@ -90,6 +89,8 @@ const fontSizes = {
   md: "16px",
   lg: "18px",
   xl: "20px",
+  title: "36px",
+  titleMobile: "30px",
   "2md": "32px",
   "2xl": "24px",
   "3xl": "28px",

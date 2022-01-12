@@ -5,7 +5,6 @@ import GlobalStyle from "styles/global";
 import { theme } from "styles/theme";
 import Contact from "components/Contact/Contact";
 
-
 const Container = (props: any) => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
@@ -14,6 +13,11 @@ const Container = (props: any) => (
       <meta
         name="description"
         content="Punkies y Cerebro P&aacute;gina Oficial"
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
       />
       <link rel="icon" href="/favicon.ico" />
       <link

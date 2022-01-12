@@ -1,7 +1,7 @@
 import styled from "styled-components";
+
 export const BodyWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};
-  max-width: 100%;
 `;
 
 export const Wrapper = styled.div`

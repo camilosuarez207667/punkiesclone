@@ -80,6 +80,8 @@ declare module "styled-components" {
     md: string;
     lg: string;
     xl: string;
+    title: string;
+    titleMobile: string;
     "2xl": string;
     "3xl": string;
     "4xl": string;
