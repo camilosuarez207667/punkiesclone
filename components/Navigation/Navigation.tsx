@@ -24,7 +24,7 @@ const Navigation: FC = () => {
         <LinksContainer>
           <Menu>
             <ul>
-              <Link href="/index">
+              <Link href="/">
                 <li>
                   <a>Inicio</a>
                 </li>
@@ -58,7 +58,7 @@ const Navigation: FC = () => {
           </ImageMain>
           <Menu>
             <ul>
-              <Link href="#inicio">
+              <Link href="/index">
                 <li>
                   <a>Tienda</a>
                 </li>

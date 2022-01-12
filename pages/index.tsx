@@ -87,12 +87,11 @@ export default function Index({
       <Discografia discos={discos} />
       <Title
         id="conciertos"
-        title={"Toques"}
+        title={"Eventos"}
         message={``}
         backgroundColor={""}
       />
       <Conciertos conciertos={conciertos} />
-      
     </div>
   );
 }

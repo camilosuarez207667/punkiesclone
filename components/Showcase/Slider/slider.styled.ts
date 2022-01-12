@@ -10,11 +10,10 @@ export const ImagesStylesDesktop = styled.div`
   }
   margin: 0 auto;
   max-width: ${({ theme }) => theme.breakpoint.lg};
+  padding-top: 141px;
   height: 100vh;
-  max-height: 100%;
-
   @media (max-width: ${({ theme }) => theme.breakpoint.lg}) {
-    height: 100vh;
+    padding-top: 92px;
   }
 `;
 
@@ -22,9 +21,8 @@ export const ImagesStylesMobile = styled.div`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
     display: block;
-
+    padding-top: 92px;
     margin: 0 auto;
-    height: 380px;
-
+    height: 440px;
   }
 `;
