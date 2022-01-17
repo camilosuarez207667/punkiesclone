@@ -6,9 +6,10 @@ interface TitleProps {
 
 export const TitleWrapper = styled.div<TitleProps>`
   background-color: ${({ theme, backgroundColor }) =>
-    backgroundColor === "white" ? theme.colors.white : "#000"};
+    backgroundColor === "white" ? theme.colors.white : theme.colors.black};
   margin: 0 auto;
-  padding: 32px 24px;
+
+  padding: 32px 0;
   h3 {
     text-align: center;
     font-size: 3rem;

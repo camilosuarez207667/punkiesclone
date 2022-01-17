@@ -8,7 +8,7 @@ export const HamburgerMenu = styled.div`
 
 export const Menu = styled.div`
   position: absolute;
-  top: 38px;
+  top: 23px;
   right: 0px;
   z-index: ${({ theme }) => theme.zIndices.dropdown};
   -webkit-user-select: none;
@@ -48,7 +48,7 @@ export const Menu = styled.div`
   }
   input:checked ~ span {
     opacity: 1;
-    transform: rotate(45deg) translate(6px, -5px);
+    transform: rotate(45deg) translate(4px, -6px);
     background: ${({ theme }) => theme.colors.secondary};
   }
   input:checked ~ span:nth-last-child(3) {

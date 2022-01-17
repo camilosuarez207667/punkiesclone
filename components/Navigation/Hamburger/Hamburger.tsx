@@ -27,7 +27,7 @@ const Hamburger = () => {
                 <a>Inicio</a>
               </li>
             </Link>
-            <Link href="#noticias">
+            <Link href="/noticias">
               <li onClick={() => setMenuOpen(false)}>
                 <a>Noticias</a>
               </li>

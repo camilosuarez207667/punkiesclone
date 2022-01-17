@@ -29,7 +29,7 @@ const Navigation: FC = () => {
                   <a>Inicio</a>
                 </li>
               </Link>
-              <Link href="#noticias">
+              <Link href="/noticias">
                 <li>
                   <a>Noticias</a>
                 </li>
@@ -49,9 +49,9 @@ const Navigation: FC = () => {
           <ImageMain>
             <ImagePadding>
               <Image
-                width={190}
-                height={120}
-                src={"/punkies-y-cerebro-logo.png"}
+                width={260}
+                height={94}
+                src={"/punkies-logo.png"}
                 alt="Picture of the author"
               />
             </ImagePadding>
@@ -90,11 +90,7 @@ const Navigation: FC = () => {
           <Link href="/contact">
             <a>
               <ImagePaddingMobile>
-                <Image
-                  src="/punkies-y-cerebro-logo.png"
-                  height={80}
-                  width={110}
-                />
+                <Image src="/punkies-logo.png" height={60} width={150} />
               </ImagePaddingMobile>
             </a>
           </Link>

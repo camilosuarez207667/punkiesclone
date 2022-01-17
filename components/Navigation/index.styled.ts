@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const DesktopNav = styled.div`
   width: 100%;
   position: fixed;
-  height: 141px;
+  height: 121px;
   opacity: 0.9;
   top: 0;
   background-color: ${({ theme }) => theme.colors.primary};
@@ -53,10 +53,10 @@ export const ImageMain = styled.div`
 `;
 
 export const ImagePadding = styled.div`
-  padding: 8px 0;
+  padding: 14px 0 0;
 `;
 export const ImagePaddingMobile = styled.div`
-  padding: 0 0 4px 0;
+  padding: 4px 0 4px 4px;
 `;
 ///**  Mobile Menu
 //In case mobile dropdown needs a color height.

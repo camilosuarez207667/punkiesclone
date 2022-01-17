@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const DivWrapper = styled.div`
-  padding-bottom: 80px;
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
     display: none;
   }
 `;
 
 export const BodyWrapper = styled.div`
-  background-color: black;
+  background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
 `;
 
@@ -48,6 +47,7 @@ export const Title = styled.div`
 export const MobileWrapper = styled.div`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+    background-color: ${({ theme }) => theme.colors.primary};
     display: block;
     max-width: ${({ theme }) => theme.breakpoint.xs};
     margin: 0 auto;

@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-size: 16px;
+    height: 100%;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
@@ -18,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-weight: normal;
-    background-color: #000;
+    background-color: #111;
   }
   h1,
   h2,

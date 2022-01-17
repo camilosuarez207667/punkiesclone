@@ -1,8 +1,12 @@
 import { FC } from "react";
-import { ImagesStylesDesktop, ImagesStylesMobile } from "./slider.styled";
+import {
+  ImagesStylesDesktop,
+  ImagesStylesMobile,
+  FullWrapper,
+} from "./slider.styled";
 import Image from "next/image";
 const Carousel = require("re-carousel");
-import IndicatorDots from './indicator-dots'
+import IndicatorDots from "./indicator-dots";
 
 interface ImageProps {
   images: {
@@ -19,7 +23,7 @@ const Slider: FC<ImageProps> = ({ images }) => {
   let desktopImages = imgesArr.splice(0, 2);
 
   return (
-    <>
+    <FullWrapper>
       <ImagesStylesDesktop id="home">
         <Carousel auto loop widgets={[IndicatorDots]}>
           {desktopImages.map((img) => (
@@ -48,7 +52,7 @@ const Slider: FC<ImageProps> = ({ images }) => {
           ))}
         </Carousel>
       </ImagesStylesMobile>
-    </>
+    </FullWrapper>
   );
 };
 

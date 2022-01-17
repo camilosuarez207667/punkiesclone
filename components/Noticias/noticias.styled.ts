@@ -1,31 +1,39 @@
 import styled from "styled-components";
 
+export const TitleWrapper = styled.div``;
+
+export const FullWrapper = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary};
+  width: 100%;
+`;
+
 export const Wrapper = styled.div`
-  max-width: ${({ theme }) => theme.breakpoint.lg};
+  background-color: ${({ theme }) => theme.colors.primary};
+  max-width: ${({ theme }) => theme.breakpoint.md};
   margin: 0 auto;
-  display: flex;
-  padding-bottom: 32px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 16px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
   }
 `;
 
 export const NewsWrapper = styled.div`
-  margin: 0 auto;
+  margin: 0 auto 24px;
+  max-width: 500px;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    margin: 0 auto 24px;
     width: auto;
     padding: 8px 24px;
   }
 `;
 
-export const ImageHeading = styled.div`
-  max-width: 600px;
-`;
-
 export const Title = styled.div`
   font-size: ${({ theme }) => theme.fontSizes["3xl"]};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.tertiary};
   font-family: ${({ theme }) => theme.fonts.primary};
   margin: 0 auto;
   padding: 8px 0;
@@ -36,13 +44,4 @@ export const Description = styled.div`
   color: ${({ theme }) => theme.colors.secondary};
   font-family: ${({ theme }) => theme.fonts.secondary};
   padding: 8px 0;
-  max-width: 600px;
-`;
-
-export const Date = styled.div`
-  font-size: ${({ theme }) => theme.fontSizes["2xl"]};
-  color: ${({ theme }) => theme.colors.tertiary};
-  font-family: ${({ theme }) => theme.fonts.primary};
-  padding: 8px 0;
-  width: 100%;
 `;

@@ -1,19 +1,20 @@
 import styled from "styled-components";
 
-interface StyledHeaderProps {
-  openMenu: boolean;
-}
+export const FullWrapper = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary};
+  width: 100%;
+`;
 
 export const ImagesStylesDesktop = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
     display: none;
   }
   margin: 0 auto;
-  max-width: ${({ theme }) => theme.breakpoint.lg};
-  padding-top: 141px;
-  height: 100vh;
-  @media (max-width: ${({ theme }) => theme.breakpoint.lg}) {
-    padding-top: 92px;
+  padding-top: 120px;
+  max-width: ${({ theme }) => theme.breakpoint.md};
+  height: 800px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+    padding-top: 48px;
   }
 `;
 
@@ -21,8 +22,8 @@ export const ImagesStylesMobile = styled.div`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
     display: block;
-    padding-top: 92px;
+    padding-top: 48px;
     margin: 0 auto;
-    height: 440px;
+    height: 460px;
   }
 `;
