@@ -2,17 +2,21 @@ import styled from "styled-components";
 
 interface VideoProps {
   openVideo?: boolean;
+  backgroundColor?: boolean;
+  seeMore?: boolean;
 }
 
-export const BodyWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.secondary};
+export const BodyWrapper = styled.div<VideoProps>`
+  background-color: ${({ backgroundColor, theme }) =>
+    backgroundColor === true ? theme.colors.secondary : theme.colors.primary};
 `;
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<VideoProps>`
   max-width: ${({ theme }) => theme.breakpoint.md};
   margin: 0 auto;
   padding: 0 0 48px 0;
   display: grid;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ backgroundColor, theme }) =>
+    backgroundColor === true ? theme.colors.secondary : theme.colors.primary};
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
@@ -27,10 +31,12 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const NewsWrapper = styled.div`
+export const NewsWrapper = styled.div<VideoProps>`
   margin: 0 auto;
   max-width: 360px;
-  outline: 1px solid black;
+  outline: 1px solid
+    ${({ backgroundColor, theme }) =>
+      backgroundColor === true ? theme.colors.primary : theme.colors.secondary};
   padding: 24px 24px 8px;
   display: flex;
   flex-direction: column;
@@ -53,9 +59,10 @@ export const YoutubeIconDiv = styled.div`
   transform: translateX(-50%);
 `;
 
-export const Title = styled.div`
+export const Title = styled.div<VideoProps>`
   font-size: ${({ theme }) => theme.fontSizes["2xl"]};
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ backgroundColor, theme }) =>
+    backgroundColor === true ? theme.colors.primary : theme.colors.secondary};
   font-family: ${({ theme }) => theme.fonts.primary};
   padding: 8px 0;
 `;
@@ -67,21 +74,23 @@ export const DescriptionWrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const Description = styled.div`
+export const Description = styled.div<VideoProps>`
   font-size: ${({ theme }) => theme.fontSizes.lg};
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ backgroundColor, theme }) =>
+    backgroundColor === true ? theme.colors.primary : theme.colors.secondary};
   font-family: ${({ theme }) => theme.fonts.secondary};
   padding: 8px 0;
 `;
 
-export const More = styled.div`
+export const More = styled.div<VideoProps>`
   font-size: ${({ theme }) => theme.fontSizes.lg};
   color: ${({ theme }) => theme.colors.tertiary};
   font-family: ${({ theme }) => theme.fonts.primary};
   padding: 8px 0;
-  display: flex;
   justify-content: flex-end;
   cursor: pointer;
+  /* display: flex; */
+  display: ${({ seeMore }) => (seeMore === true ? "flex" : "none")};
   @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
     font-size: 22px;
   }

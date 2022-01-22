@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const BodyWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
-  height: calc(100vh - 125px);
   flex-direction: column;
   overflow-x: hidden;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
@@ -21,10 +20,20 @@ export const RedLineDesktop = styled.div`
     display: none;
   }
 `;
+export const ArrowContent = styled.div`
+  margin: 18px 0 0 40px;
+  width: 28px;
+  height: 28px;
+  z-index: ${({ theme }) => theme.zIndices.docked};
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+    display: none;
+  }
+`;
 export const TitleTextDesktop = styled.div`
   display: flex;
   width: ${({ theme }) => theme.breakpoint.md};
   margin: -57px auto 0;
+  padding: 0 48px;
   z-index: ${({ theme }) => theme.zIndices.docked};
 `;
 export const Title = styled.div`
@@ -34,7 +43,14 @@ export const Title = styled.div`
   margin-top: 10px;
   font-family: ${({ theme }) => theme.fonts.primary};
   color: ${({ theme }) => theme.colors.white};
-  padding: 0 48px;
+  padding: 1px 48px 0 10px;
+`;
+
+export const GoBack = styled.div`
+  font-size: ${({ theme }) => theme.fontSizes.xl};
+  margin: 18px 0 0 8px;
+  font-family: ${({ theme }) => theme.fonts.secondary};
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export const BandWrapper = styled.div`

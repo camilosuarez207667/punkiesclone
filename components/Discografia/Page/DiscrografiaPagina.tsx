@@ -1,5 +1,5 @@
 import { useState, FC } from "react";
-
+import Link from "next/link";
 import {
   Title,
   BodyWrapper,
@@ -40,7 +40,9 @@ const DiscografiaPagina: FC = () => {
               Arroyave un incansable colaborador de esta agrupación...
             </BandDescription>
             <BandReadMoreButton>
-              <BandReadMore>Ver Más</BandReadMore>
+              <Link href="/gp">
+                <BandReadMore>Ver Más</BandReadMore>
+              </Link>
             </BandReadMoreButton>
           </ImageDiv>
           <ImageDiv>
@@ -53,8 +55,11 @@ const DiscografiaPagina: FC = () => {
               cuanto a los integrantes restantes y, qué las cosas que se decían
               y, que el otrogrupo que se hace llamar Genoma Punk…
             </BandDescription>
+
             <BandReadMoreButton>
-              <BandReadMore>Ver Más</BandReadMore>
+              <Link href="/gp">
+                <BandReadMore>Ver Más</BandReadMore>
+              </Link>
             </BandReadMoreButton>
           </ImageDiv>
           <ImageDiv>
@@ -68,7 +73,9 @@ const DiscografiaPagina: FC = () => {
               consideraban un peligro por su lengua viperina…
             </BandDescription>
             <BandReadMoreButton>
-              <BandReadMore>Ver Más</BandReadMore>
+              <Link href="/gp">
+                <BandReadMore>Ver Más</BandReadMore>
+              </Link>
             </BandReadMoreButton>
           </ImageDiv>
         </ImageDiscoWrapper>

@@ -82,7 +82,7 @@ export default function Index({
       {/* <NavPadding /> */}
       <Slider images={images} />
       <Title title={"Media"} message={``} backgroundColor={"white"} />
-      <Multimedia media={multimedia} />
+      <Multimedia media={multimedia} backgroundColor={true} seeMore={true} />
       {/* <Title
         title={"Noticias"}
         message={`¡Aquí puedes estar al tanto de todas nuestras noticias! ¡Bienvenidos al de mundo Punkies y Cerebro!`}

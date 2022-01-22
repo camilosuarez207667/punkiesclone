@@ -44,7 +44,7 @@ export const ImageDiscoWrapper = styled.div`
   padding-top: 8px;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 60px;
     padding-top: 48px;
     width: 100%;
   }

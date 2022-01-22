@@ -17,7 +17,6 @@ import {
   VideoYoutubeWrapper,
   VideoYoutube,
 } from "./multimedia.styled";
-
 interface MultimediaProps {
   media: {
     image: {
@@ -30,17 +29,22 @@ interface MultimediaProps {
     readMore: string;
     youtube: string;
   }[];
+  backgroundColor: boolean;
+  seeMore: boolean;
 }
 
-const Multimedia: FC<MultimediaProps> = ({ media }) => {
+const Multimedia: FC<MultimediaProps> = ({
+  media,
+  backgroundColor,
+  seeMore,
+}) => {
   const [video, setvideo] = useState(false);
   const [videoUrl, setvideoUrl] = useState("");
-  console.log(videoUrl);
   return (
-    <BodyWrapper>
-      <Wrapper>
+    <BodyWrapper backgroundColor={backgroundColor}>
+      <Wrapper backgroundColor={backgroundColor}>
         {media.map((e, i) => (
-          <NewsWrapper key={i}>
+          <NewsWrapper key={i} backgroundColor={backgroundColor}>
             <ImageDiv
               onClick={() => {
                 setvideo(true);
@@ -59,11 +63,13 @@ const Multimedia: FC<MultimediaProps> = ({ media }) => {
                 <YoutubeIcon />
               </YoutubeIconDiv>
             </ImageDiv>
-            <Title>{e.title}</Title>
+            <Title backgroundColor={backgroundColor}>{e.title}</Title>
 
             <DescriptionWrapper>
-              <Description>{e.description}</Description>
-              <More>ver más</More>
+              <Description backgroundColor={backgroundColor}>
+                {e.description}
+              </Description>
+              <More seeMore={seeMore}>ver más</More>
             </DescriptionWrapper>
           </NewsWrapper>
         ))}
