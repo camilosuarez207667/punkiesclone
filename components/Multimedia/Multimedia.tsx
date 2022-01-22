@@ -67,8 +67,8 @@ const Multimedia: FC<MultimediaProps> = ({ media }) => {
             </DescriptionWrapper>
           </NewsWrapper>
         ))}
-        <VideoOverlay openVideo={video} onClick={() => setvideo(!video)}>
-          <ExitButton>
+        <VideoOverlay openVideo={video}>
+          <ExitButton onClick={() => setvideo(!video)}>
             <span></span>
             <span></span>
           </ExitButton>

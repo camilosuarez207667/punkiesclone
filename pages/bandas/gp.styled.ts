@@ -30,18 +30,19 @@ export const TitleTextDesktop = styled.div`
 export const Title = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.title};
   flex-basis: 100%;
-  text-align: center;
+  text-align: left;
   margin-top: 10px;
   font-family: ${({ theme }) => theme.fonts.primary};
   color: ${({ theme }) => theme.colors.white};
   padding: 0 48px;
 `;
 
-export const ImageDiscoWrapper = styled.div`
-  display: flex;
+export const BandWrapper = styled.div`
   width: ${({ theme }) => theme.breakpoint.md};
   margin: 0 auto;
-  padding-top: 8px;
+  padding-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     flex-direction: column;
     margin-top: 80px;
@@ -50,34 +51,41 @@ export const ImageDiscoWrapper = styled.div`
   }
 `;
 
-export const ImageDiv = styled.div`
-  font-size: 3rem;
-  flex-basis: 100%;
-  text-align: center;
-  font-family: ${({ theme }) => theme.fonts.primary};
-  color: ${({ theme }) => theme.colors.white};
-  img {
-    width: 424px;
-    padding: 24px 48px 16px;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    img {
-      padding: 24px 24px 16px;
-    }
-  }
-`;
-
-export const BandDescription = styled.h2`
-  padding-top: 8px;
+export const BandDescription = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.lg};
   font-family: ${({ theme }) => theme.fonts.secondary};
   color: ${({ theme }) => theme.colors.white};
   text-align: left;
   padding: 0 48px;
+
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     max-width: 376px;
     margin: 0 auto;
     padding: 0 24px;
+  }
+`;
+
+export const ReadMore = styled.span`
+  font-size: ${({ theme }) => theme.fontSizes.lg};
+  font-family: ${({ theme }) => theme.fonts.secondary};
+  color: ${({ theme }) => theme.colors.tertiary};
+  text-decoration: underline;
+  cursor: pointer;
+`;
+
+export const ImageDiv = styled.div`
+  font-size: 3rem;
+  text-align: center;
+  font-family: ${({ theme }) => theme.fonts.primary};
+  color: ${({ theme }) => theme.colors.white};
+  img {
+    width: 624px;
+    padding: 0 48px 16px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+    img {
+      padding: 24px 24px 16px;
+    }
   }
 `;
 
@@ -113,25 +121,4 @@ export const TitleMobile = styled.div`
     width: 424px;
     z-index: ${({ theme }) => theme.zIndices.docked};
   }
-`;
-
-export const BandReadMoreButton = styled.p`
-  margin: 16px auto 0;
-  display: flex;
-  padding: 8px 24px;
-  max-width: 376px;
-  justify-content: center;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  /* outline: 1px solid ${({ theme }) => theme.colors.tertiary}; */
-`;
-
-export const BandReadMore = styled.p`
-  margin: 0 24px;
-  font-size: ${({ theme }) => theme.fontSizes.xl};
-  font-family: ${({ theme }) => theme.fonts.primary};
-  color: ${({ theme }) => theme.colors.tertiary};
-  padding: 0 48px;
-  max-width: 330px;
-  outline: 1px solid ${({ theme }) => theme.colors.tertiary};
 `;

@@ -52,7 +52,7 @@ const Navigation: FC = () => {
                 width={260}
                 height={94}
                 src={"/punkies-logo.png"}
-                alt="Picture of the author"
+                alt="Logo Punkies y Cerebro"
               />
             </ImagePadding>
           </ImageMain>
