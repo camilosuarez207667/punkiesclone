@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Successfully deployed to the following URLs:
+
+punkiesnext.vercel.app
+punkiesycerebro.com
+www.punkiesycerebro.com
+punkiesnext-alejandroyunes.vercel.app
+punkiesnext-git-main-alejandroyunes.vercel.app
 
 ## Getting Started
 

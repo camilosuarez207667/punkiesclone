@@ -12,6 +12,7 @@ export const BodyWrapper = styled.div`
   }
 `;
 export const RedLineDesktop = styled.div`
+  outline: 1px solid white;
   background-color: ${({ theme }) => theme.colors.tertiary};
   margin-top: 160px;
   height: 48px;
@@ -118,20 +119,19 @@ export const TitleMobile = styled.div`
 export const BandReadMoreButton = styled.p`
   margin: 16px auto 0;
   display: flex;
-  padding: 8px 24px;
+  padding: 24px 24px 0 0;
   max-width: 376px;
   justify-content: center;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  /* outline: 1px solid ${({ theme }) => theme.colors.tertiary}; */
 `;
 
 export const BandReadMore = styled.p`
   margin: 0 24px;
-  font-size: ${({ theme }) => theme.fontSizes.xl};
-  font-family: ${({ theme }) => theme.fonts.primary};
-  color: ${({ theme }) => theme.colors.tertiary};
-  padding: 0 48px;
+  font-size: ${({ theme }) => theme.fontSizes.lg};
+  font-family: ${({ theme }) => theme.fonts.secondary};
+  color: ${({ theme }) => theme.colors.white};
+  padding: 4px 48px;
   max-width: 330px;
-  outline: 1px solid ${({ theme }) => theme.colors.tertiary};
+  outline: 1px solid ${({ theme }) => theme.colors.white};
 `;

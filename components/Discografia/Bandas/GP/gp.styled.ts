@@ -1,69 +1,91 @@
 import styled from "styled-components";
 
-export const BodyWrapper = styled.div`
+export const FullWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   overflow-x: hidden;
-  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    height: 100%;
-    padding-bottom: 40px;
-  }
+`;
+export const Wrapper = styled.div`
+  max-width: ${({ theme }) => theme.breakpoint.md};
+  margin: 0 auto;
 `;
 export const RedLineDesktop = styled.div`
+  outline: 1px solid white;
   background-color: ${({ theme }) => theme.colors.tertiary};
   margin-top: 160px;
   height: 48px;
   opacity: 0.3;
   z-index: ${({ theme }) => theme.zIndices.base};
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    display: none;
+    margin-top: 100px;
   }
 `;
-export const ArrowContent = styled.div`
-  margin: 18px 0 0 40px;
-  width: 28px;
-  height: 28px;
-  z-index: ${({ theme }) => theme.zIndices.docked};
-  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    display: none;
-  }
-`;
-export const TitleTextDesktop = styled.div`
+
+export const TitleWrapper = styled.div`
   display: flex;
-  width: ${({ theme }) => theme.breakpoint.md};
+  justify-content: space-between;
   margin: -57px auto 0;
   padding: 0 48px;
   z-index: ${({ theme }) => theme.zIndices.docked};
+  cursor: pointer;
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+    padding: 0 24px;
+  }
+`;
+
+export const GoBackWrapper = styled.div`
+  display: flex;
+  z-index: ${({ theme }) => theme.zIndices.docked};
+  cursor: pointer;
 `;
 export const Title = styled.div`
-  font-size: ${({ theme }) => theme.fontSizes.title};
-  flex-basis: 100%;
-  text-align: left;
   margin-top: 10px;
-  font-family: ${({ theme }) => theme.fonts.primary};
-  color: ${({ theme }) => theme.colors.white};
-  padding: 1px 48px 0 10px;
+  padding: 1px 48px 0 0;
+  z-index: ${({ theme }) => theme.zIndices.docked};
+  h1 {
+    font-family: ${({ theme }) => theme.fonts.primary};
+    color: ${({ theme }) => theme.colors.white};
+    font-size: ${({ theme }) => theme.fontSizes.title};
+    text-align: left;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+    padding: 2px 48px 0 0;
+    h1 {
+      font-size: ${({ theme }) => theme.fontSizes.titleMobile};
+    }
+  }
+`;
+export const ArrowContent = styled.div`
+  margin: 20px 0 0 40px;
+  transform: rotate(275deg);
+  width: 24px;
+  height: 24px;
+  z-index: ${({ theme }) => theme.zIndices.docked};
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+    margin: 22px 0 0 40px;
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 export const GoBack = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.xl};
-  margin: 18px 0 0 8px;
+  margin: 19px 0 0 8px;
   font-family: ${({ theme }) => theme.fonts.secondary};
   color: ${({ theme }) => theme.colors.white};
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const BandWrapper = styled.div`
-  width: ${({ theme }) => theme.breakpoint.md};
   margin: 0 auto;
-  padding-top: 48px;
+  padding-top: 40px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    flex-direction: column;
-    margin-top: 80px;
-    padding-top: 48px;
-    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 
@@ -73,11 +95,9 @@ export const BandDescription = styled.p`
   color: ${({ theme }) => theme.colors.white};
   text-align: left;
   padding: 0 48px;
-
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    max-width: 376px;
-    margin: 0 auto;
     padding: 0 24px;
+    /* text-align: justify; */
   }
 `;
 
@@ -106,7 +126,7 @@ export const ImageDiv = styled.div`
 `;
 
 export const RedLineMobile = styled.div`
-  display: none;
+  /* display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     display: block;
     width: 100%;
@@ -120,7 +140,7 @@ export const RedLineMobile = styled.div`
       margin: 24px auto 0;
       z-index: ${({ theme }) => theme.zIndices.docked};
     }
-  }
+  } */
 `;
 
 export const TitleMobile = styled.div`

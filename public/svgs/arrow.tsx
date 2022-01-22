@@ -5,7 +5,6 @@ const Arrow = () => (
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
     y="0px"
-    transform="rotate(275)"
     fill="#fff"
     viewBox="0 0 487 487"
   >

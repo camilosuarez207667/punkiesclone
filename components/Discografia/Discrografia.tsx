@@ -1,4 +1,4 @@
-import { useState, FC } from "react";
+import { FC } from "react";
 const Carousel = require("re-carousel");
 import {
   Wrapper,
@@ -25,8 +25,6 @@ interface DiscoProps {
 }
 
 const Discografia: FC<DiscoProps> = ({ discos }) => {
-  const [year, setYear] = useState([]);
-
   const arrData = [...discos];
 
   let sortedByYear = arrData.sort((a, b) => {
