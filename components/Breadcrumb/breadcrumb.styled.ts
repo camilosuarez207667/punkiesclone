@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 interface BreadProps {
-  header: boolean;
-  multiple: boolean;
+  headerDesktop: boolean;
+  multipleHeader: boolean;
 }
 
 export const FullWrapper = styled.div<BreadProps>`
   background-color: ${({ theme }) => theme.colors.primary};
-  padding-top: ${({ header }) => (header ? "140px" : "0px")};
+  padding-top: ${({ headerDesktop }) => (headerDesktop ? "140px" : "0px")};
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    padding-top: ${({ multiple }) => (multiple ? "48px" : "80px")};
+    padding-top: ${({ multipleHeader }) => (multipleHeader ? "48px" : "80px")};
   }
 `;
 export const RedLineDesktop = styled.div`

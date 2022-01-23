@@ -16,19 +16,21 @@ interface BreadProps {
   title: string;
   goBack?: boolean;
   url: string;
-  header: boolean;
-  multiple: boolean;
+  headerDesktop: boolean;
+  topPadding: boolean;
+  backMessage: string;
 }
 
 const Breadcrumb: FC<BreadProps> = ({
   title,
-  url,
   goBack,
-  header,
-  multiple,
+  url,
+  headerDesktop,
+  topPadding,
+  backMessage,
 }) => {
   return (
-    <FullWrapper header={header} multiple={multiple}>
+    <FullWrapper headerDesktop={headerDesktop} multipleHeader={topPadding}>
       <RedLineDesktop />
 
       <TitleWrapper>
@@ -41,7 +43,7 @@ const Breadcrumb: FC<BreadProps> = ({
               <ArrowContent>
                 <Arrow />
               </ArrowContent>
-              <GoBack>volver</GoBack>
+              <GoBack>{backMessage}</GoBack>
             </GoBackWrapper>
           </Link>
         )}

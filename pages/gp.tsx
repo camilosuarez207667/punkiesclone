@@ -20,6 +20,7 @@ type MediaData = {
 export default function GpBand({
   multimedia,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log("multimedia");
   console.log(multimedia);
   return (
     <>
@@ -27,8 +28,9 @@ export default function GpBand({
         title={"GP"}
         goBack={true}
         url={"/discografia"}
-        header={true}
-        multiple={false}
+        topPadding={false}
+        headerDesktop={true}
+        backMessage={"volver"}
       />
       <Hero />
       <TitleComp title={"Media"} message={``} backgroundColor={"black"} />

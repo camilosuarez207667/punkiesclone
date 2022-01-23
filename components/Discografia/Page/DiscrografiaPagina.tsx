@@ -19,6 +19,7 @@ import {
 import { mockData_discoProps } from "./MOCK_DATA";
 
 const DiscografiaPagina: FC = () => {
+  console.log(mockData_discoProps);
   return (
     <>
       <BodyWrapper>
@@ -36,18 +37,20 @@ const DiscografiaPagina: FC = () => {
                 <Breadcrumb
                   title={e.title}
                   url={e.url}
-                  header={true}
-                  multiple={e.multiple}
+                  headerDesktop={true}
+                  topPadding={e.topPadding}
+                  goBack={e.goBack}
+                  backMessage={"inicio"}
                 />
               </BreadcrumbWrapper>
               <Image>
-                <img src={e.image} alt="" />
+                <img src={e.image} alt={e.alt} />
               </Image>
 
               <BandDescriptionWrapper>
                 <BandDescription>{e.description}</BandDescription>
                 <BandReadMoreButton>
-                  <Link href={e.url}>
+                  <Link href={e.moreLink}>
                     <BandReadMore>ver más</BandReadMore>
                   </Link>
                 </BandReadMoreButton>
