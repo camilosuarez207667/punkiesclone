@@ -1,7 +1,9 @@
 import { InferGetStaticPropsType } from "next";
 import { GetStaticProps } from "next";
-import GpBandComponent from "components/Discografia/Bandas/GP/gp";
+import Hero from "components/Discografia/Banda/Hero/Hero";
 import Multimedia from "components/Multimedia/Multimedia";
+import TitleComp from "components/Title/Title";
+import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 
 type MediaData = {
   media: {
@@ -21,7 +23,15 @@ export default function GpBand({
   console.log(multimedia);
   return (
     <>
-      <GpBandComponent />
+      <Breadcrumb
+        title={"GP"}
+        goBack={true}
+        url={"/discografia"}
+        header={true}
+        multiple={false}
+      />
+      <Hero />
+      <TitleComp title={"Media"} message={``} backgroundColor={"black"} />
       <Multimedia media={multimedia} backgroundColor={false} seeMore={false} />
     </>
   );

@@ -10,10 +10,7 @@ export default function Discografia() {
           name="description"
           content="Punkies y Cerebro P&aacute;gina Oficial"
         />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-        />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DiscografiaPagina />

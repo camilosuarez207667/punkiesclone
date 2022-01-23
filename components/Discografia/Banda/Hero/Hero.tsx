@@ -1,45 +1,21 @@
 import { FC } from "react";
-import TitleComp from "components/Title/Title";
-import Arrow from "public/svgs/arrow";
 import Link from "next/link";
 
 import {
-  Title,
   FullWrapper,
-  TitleWrapper,
-  RedLineDesktop,
   BandWrapper,
   ImageDiv,
   BandDescription,
-  RedLineMobile,
-  GoBackWrapper,
+  ReadMoreDisco,
   ReadMore,
-  ArrowContent,
-  GoBack,
   Wrapper,
-} from "./gp.styled";
+} from "./hero.styled";
 
-const Gp: FC = () => {
+const Hero: FC = () => {
   return (
     <>
       <FullWrapper>
-        <RedLineDesktop />
-
         <Wrapper>
-          <TitleWrapper>
-            <Title>
-              <h1>GP</h1>
-            </Title>
-            <Link href="/discografia">
-              <GoBackWrapper>
-                <ArrowContent>
-                  <Arrow />
-                </ArrowContent>
-                <GoBack>volver</GoBack>
-              </GoBackWrapper>
-            </Link>
-          </TitleWrapper>
-
           <BandWrapper>
             <BandDescription>
               GP nace en Medellín en 1984 gracias a Jaime Lopez y Oscar Roldán,
@@ -58,18 +34,22 @@ const Gp: FC = () => {
               como bajista de G.P., ayudando a la banda a continuar con las
               labores de promoción de su último disco, aportando no solo en las
               líneas de bajo de esta banda Punk sino también en sus letras.{" "}
-              <ReadMore> Leer más</ReadMore>
+              <ReadMore> leer más</ReadMore>
             </BandDescription>
 
             <ImageDiv>
-              <img src="/gp-band.jpg" alt="" />
+              <div>
+                <img src="/gp-band.jpg" alt="" />
+              </div>
+              <ReadMoreDisco>
+                <h3>ver discografia completa</h3>
+              </ReadMoreDisco>
             </ImageDiv>
           </BandWrapper>
         </Wrapper>
       </FullWrapper>
-      <TitleComp title={"Media"} message={``} backgroundColor={"black"} />
     </>
   );
 };
 
-export default Gp;
+export default Hero;
