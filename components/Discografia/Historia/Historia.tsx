@@ -13,18 +13,25 @@ import {
 } from "./historia.styled";
 
 interface HistoryProps {
+  title: string;
+  secondTitle?: string;
   intro: string;
   sectionOne?: string;
 }
 
-const Historia: FC<HistoryProps> = ({ intro }) => {
+const Historia: FC<HistoryProps> = ({
+  intro,
+  title,
+  sectionOne,
+  secondTitle,
+}) => {
   const [readMore, setReadMore] = useState(false);
 
   return (
     <>
       <BodyWrapper>
         <ContentWrapper>
-          <Title>Introducción:</Title>
+          <Title>{title}:</Title>
           <Content>
             <p>{ReactHtmlParser(intro)}</p>
           </Content>
