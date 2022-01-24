@@ -1,5 +1,5 @@
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import { mockData_bandProps } from "./data-full";
+import { mockData_bandProps } from "../../../components/Discografia/Data/data-full";
 import Historia from "components/Discografia/Historia/Historia";
 
 export default function GpBand() {
