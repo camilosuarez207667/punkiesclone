@@ -4,7 +4,7 @@ import Hero from "components/Discografia/Banda/Hero/Hero";
 import Multimedia from "components/Multimedia/Multimedia";
 import TitleComp from "components/Title/Title";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import { mockData_bandProps } from "./data";
+import { mockData_bandProps } from "../../components/Discografia/Data/data";
 
 type MediaData = {
   media: {
