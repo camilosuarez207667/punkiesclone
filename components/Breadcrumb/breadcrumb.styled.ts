@@ -27,9 +27,10 @@ export const TitleWrapper = styled.div`
   margin: -57px auto 0;
   padding: 0 48px;
   z-index: ${({ theme }) => theme.zIndices.docked};
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    padding: 0 24px;
+    padding: 0 24px 0;
     width: 100%;
   }
 `;
@@ -51,22 +52,17 @@ export const Title = styled.div`
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     h1 {
-      padding: 4px 48px 0 0;
+      padding: 4px 0 0 0;
       font-size: ${({ theme }) => theme.fontSizes.titleMobile};
     }
   }
 `;
 export const ArrowContent = styled.div`
-  margin: 22px 0 0 40px;
+  margin: 22px 0 0 0;
   transform: rotate(275deg);
   width: 20px;
   height: 20px;
   z-index: ${({ theme }) => theme.zIndices.docked};
-  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    margin: 22px 0 0 40px;
-    width: 20px;
-    height: 20px;
-  }
 `;
 
 export const GoBack = styled.div`

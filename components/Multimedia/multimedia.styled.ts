@@ -9,12 +9,13 @@ interface VideoProps {
 export const BodyWrapper = styled.div<VideoProps>`
   background-color: ${({ backgroundColor, theme }) =>
     backgroundColor === true ? theme.colors.secondary : theme.colors.primary};
+  padding-bottom: 48px;
 `;
 export const Wrapper = styled.div<VideoProps>`
   max-width: ${({ theme }) => theme.breakpoint.md};
   margin: 0 auto;
-  padding: 0 0 48px 0;
   display: grid;
+  padding: 0 48px;
   background-color: ${({ backgroundColor, theme }) =>
     backgroundColor === true ? theme.colors.secondary : theme.colors.primary};
   grid-template-columns: repeat(3, 1fr);
@@ -24,6 +25,7 @@ export const Wrapper = styled.div<VideoProps>`
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
+    padding: 0 48px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
     grid-template-columns: repeat(1, 1fr);
@@ -46,6 +48,7 @@ export const ImageDiv = styled.div`
   position: relative;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+
   &:hover {
     background-color: #fff;
     opacity: 0.8;
@@ -59,6 +62,12 @@ export const YoutubeIconDiv = styled.div`
   transform: translateX(-50%);
 `;
 
+export const ImageWrapper = styled.div`
+  img {
+    width: 312px;
+    max-height: 177px;
+  }
+`;
 export const Title = styled.div<VideoProps>`
   font-size: ${({ theme }) => theme.fontSizes["2xl"]};
   color: ${({ backgroundColor, theme }) =>
@@ -143,6 +152,7 @@ export const ExitButton = styled.div<VideoProps>`
   position: fixed;
   top: 5%;
   right: 5%;
+  padding: 48px;
   @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
     right: 0%;
   }

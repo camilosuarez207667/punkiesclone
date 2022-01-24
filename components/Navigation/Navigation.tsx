@@ -48,12 +48,7 @@ const Navigation: FC = () => {
           </Menu>
           <ImageMain>
             <ImagePadding>
-              <Image
-                width={260}
-                height={94}
-                src={"/punkies-logo.png"}
-                alt="Logo Punkies y Cerebro"
-              />
+              <img src="/punkies-logo.png" alt="Logo Punkies y Cerebro" />
             </ImagePadding>
           </ImageMain>
           <Menu>
@@ -90,7 +85,7 @@ const Navigation: FC = () => {
           <Link href="/contact">
             <a>
               <ImagePaddingMobile>
-                <Image src="/punkies-logo.png" height={60} width={150} />
+                <img src="/punkies-logo.png" />
               </ImagePaddingMobile>
             </a>
           </Link>

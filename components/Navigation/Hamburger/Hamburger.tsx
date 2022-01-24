@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 import { HamburgerMenu, Menu, Links } from "./index.styled";
@@ -37,14 +37,24 @@ const Hamburger = () => {
                 <a>Discografía</a>
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/media">
               <li onClick={() => setMenuOpen(false)}>
-                <a>GP</a>
+                <a>Media</a>
               </li>
             </Link>
-            <Link href="#toques">
+            <Link href="/tienda">
               <li onClick={() => setMenuOpen(false)}>
-                <a>Conciertos</a>
+                <a>Tienda</a>
+              </li>
+            </Link>
+            <Link href="/eventos">
+              <li onClick={() => setMenuOpen(false)}>
+                <a>Eventos</a>
+              </li>
+            </Link>
+            <Link href="/blog">
+              <li onClick={() => setMenuOpen(false)}>
+                <a>Blog</a>
               </li>
             </Link>
             <Link href="#contacto">

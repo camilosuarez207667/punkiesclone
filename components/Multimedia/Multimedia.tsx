@@ -1,5 +1,4 @@
 import { FC, useState } from "react";
-import Image from "next/image";
 import YoutubeIcon from "public/svgs/youtube-icon";
 
 import {
@@ -16,6 +15,7 @@ import {
   ExitButton,
   VideoYoutubeWrapper,
   VideoYoutube,
+  ImageWrapper,
 } from "./multimedia.styled";
 interface MultimediaProps {
   media: {
@@ -51,17 +51,12 @@ const Multimedia: FC<MultimediaProps> = ({
                 setvideoUrl(e.youtube);
               }}
             >
-              <Image
-                layout="intrinsic"
-                width={360}
-                height={205}
-                src={`${e.image.url}`}
-                alt="punkies y cerebro showcase"
-              />
-
               <YoutubeIconDiv>
                 <YoutubeIcon />
               </YoutubeIconDiv>
+              <ImageWrapper>
+                <img src={`${e.image.url}`} alt="punkies y cerebro showcase" />
+              </ImageWrapper>
             </ImageDiv>
             <Title backgroundColor={backgroundColor}>{e.title}</Title>
 

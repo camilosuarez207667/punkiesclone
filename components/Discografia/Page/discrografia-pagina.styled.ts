@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const BodyWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
-  height: calc(100vh - 125px);
   flex-direction: column;
   width: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {

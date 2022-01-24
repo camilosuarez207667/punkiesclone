@@ -19,7 +19,6 @@ import {
 import { mockData_discoProps } from "./MOCK_DATA";
 
 const DiscografiaPagina: FC = () => {
-  console.log(mockData_discoProps);
   return (
     <>
       <BodyWrapper>

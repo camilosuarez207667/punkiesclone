@@ -54,9 +54,13 @@ export const ImageMain = styled.div`
 
 export const ImagePadding = styled.div`
   padding: 14px 0 0;
+  width: 260px;
+  height: 94px;
 `;
 export const ImagePaddingMobile = styled.div`
   padding: 4px 0 4px 4px;
+  width: 160px;
+  height: 60px;
 `;
 ///**  Mobile Menu
 //In case mobile dropdown needs a color height.

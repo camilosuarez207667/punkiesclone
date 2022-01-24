@@ -4,7 +4,7 @@ import Hero from "components/Discografia/Banda/Hero/Hero";
 import Multimedia from "components/Multimedia/Multimedia";
 import TitleComp from "components/Title/Title";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-
+import { mockData_bandProps } from "./data";
 type MediaData = {
   media: {
     image: {
@@ -17,23 +17,28 @@ type MediaData = {
   }[];
 };
 
-export default function GpBand({
+export default function JimmyJazz({
   multimedia,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log("multimedia");
-  console.log(multimedia);
+  const data = { ...mockData_bandProps };
   return (
     <>
       <Breadcrumb
-        title={"GP"}
+        title={"Jimmy Jazz"}
         goBack={true}
         url={"/discografia"}
         topPadding={false}
         headerDesktop={true}
         backMessage={"volver"}
       />
-      <Hero />
-      <TitleComp title={"Media"} message={``} backgroundColor={"black"} />
+      <Hero
+        description={data.bands[2].description}
+        imgUrl={data.bands[2].imgUrl}
+        imgAlt={data.bands[2].imgAlt}
+        viewMore={data.bands[2].viewMore}
+        fullDisco={data.bands[2].fullDisco}
+      />
+      <TitleComp title={"Videos"} message={``} backgroundColor={"black"} />
       <Multimedia media={multimedia} backgroundColor={false} seeMore={false} />
     </>
   );
