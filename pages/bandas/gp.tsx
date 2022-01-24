@@ -33,7 +33,7 @@ export default function GpBand({
       />
       <Hero
         description={data.bands[0].description}
-        imgUrl={data.bands[0].imgUrl}
+        imgUrl="/gp-inicios-bw.jpg"
         imgAlt={data.bands[0].imgAlt}
         viewMore={data.bands[0].viewMore}
         fullDisco={data.bands[0].fullDisco}

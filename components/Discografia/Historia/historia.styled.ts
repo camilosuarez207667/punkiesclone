@@ -70,3 +70,35 @@ export const ArrowContent = styled.div<HistoryProps>`
     z-index: ${({ theme }) => theme.zIndices.docked};
   }
 `;
+
+export const ReadMoreNextPage = styled.div`
+  width: ${({ theme }) => theme.breakpoint.md};
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 32px;
+  cursor: pointer;
+  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+    width: auto;
+  }
+`;
+export const ReadingNext = styled.div`
+  p {
+    padding: 0 48px;
+    text-align: center;
+    font-size: ${({ theme }) => theme.fontSizes.lg};
+    font-family: ${({ theme }) => theme.fonts.secondary};
+    color: ${({ theme }) => theme.colors.white};
+  }
+`;
+export const ArrowContentNext = styled.div`
+  align-items: center;
+  margin: 0 auto;
+  svg {
+    margin: 8px 0 0 0;
+    transform: rotate(90deg);
+    width: 20px;
+    height: 20px;
+    z-index: ${({ theme }) => theme.zIndices.docked};
+  }
+`;

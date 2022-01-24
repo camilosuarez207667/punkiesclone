@@ -4,22 +4,21 @@ import Historia from "components/Discografia/Historia/Historia";
 
 export default function GpBand() {
   const data = { ...mockData_bandProps };
-  console.log(data);
   return (
     <>
       <Breadcrumb
-        title={"la historia - GP"}
+        title={"Punkies y Cerebro"}
         goBack={true}
-        url={"/bandas/gp"}
+        url={"/bandas/pyc"}
         topPadding={false}
         headerDesktop={true}
         backMessage={"volver"}
       />
       <Historia
-        title={data.bands[0].title}
-        sectionOne={data.bands[0].sectionOne}
-        sectionTwoTitle={data.bands[0].sectionTwoTitle}
-        sectionTwo={data.bands[0].sectionTwo}
+        title={data.bands[1].title}
+        sectionOne={data.bands[1].sectionOne}
+        sectionTwoTitle={data.bands[1].sectionTwoTitle}
+        sectionTwo={data.bands[1].sectionTwo}
       />
       {/* <Hero
         description={data.bands[0].description}

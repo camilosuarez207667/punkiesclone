@@ -10,20 +10,23 @@ import {
   ReadMore,
   ArrowContent,
   Reading,
+  ReadingNext,
+  ArrowContentNext,
+  ReadMoreNextPage,
 } from "./historia.styled";
 
 interface HistoryProps {
   title: string;
-  secondTitle?: string;
-  intro: string;
-  sectionOne?: string;
+  sectionOne: string;
+  sectionTwoTitle: string;
+  sectionTwo: string;
 }
 
 const Historia: FC<HistoryProps> = ({
-  intro,
   title,
   sectionOne,
-  secondTitle,
+  sectionTwoTitle,
+  sectionTwo,
 }) => {
   const [readMore, setReadMore] = useState(false);
 
@@ -31,22 +34,34 @@ const Historia: FC<HistoryProps> = ({
     <>
       <BodyWrapper>
         <ContentWrapper>
-          <Title>{title}:</Title>
+          <Title>{title}</Title>
           <Content>
-            <p>{ReactHtmlParser(intro)}</p>
+            <p>{ReactHtmlParser(sectionOne)}</p>
           </Content>
-          <ReadMore onClick={() => setReadMore(!readMore)}>
-            <Reading>
-              {readMore ? <p>ocultar</p> : <p>seguir leyendo</p>}
-            </Reading>
-            <ArrowContent readMore={readMore}>
-              <Arrow />
-            </ArrowContent>
-          </ReadMore>
+          {!!sectionTwoTitle && (
+            <ReadMore onClick={() => setReadMore(!readMore)}>
+              <Reading>
+                {readMore ? <p>ocultar</p> : <p>seguir leyendo</p>}
+              </Reading>
+              <ArrowContent readMore={readMore}>
+                <Arrow />
+              </ArrowContent>
+            </ReadMore>
+          )}
+
           {!!readMore && (
-            <Content>
-              <p>{ReactHtmlParser(intro)}</p>
-            </Content>
+            <>
+              <Title>{sectionTwoTitle}</Title>
+              <Content>{<p>{ReactHtmlParser(sectionTwo)}</p>}</Content>
+              <ReadMoreNextPage>
+                <ReadingNext>
+                  <p>continuar leyendo</p>
+                </ReadingNext>
+                <ArrowContentNext>
+                  <Arrow />
+                </ArrowContentNext>
+              </ReadMoreNextPage>
+            </>
           )}
         </ContentWrapper>
       </BodyWrapper>

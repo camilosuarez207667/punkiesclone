@@ -46,7 +46,7 @@ export default function JimmyJazz({
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const resMultimedia = await fetch(
-    `https://punkies-strapi.herokuapp.com/multimedias`
+    `https://punkies-strapi.herokuapp.com/Jimmyjazzmedias`
   );
   const multimedia: MediaData = await resMultimedia.json();
 

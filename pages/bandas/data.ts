@@ -19,7 +19,7 @@ export const mockData_bandProps: BandProps = {
     },
     {
       description:
-        "Esta historia corre alrededor de la comunidad en la que Juan Camilo Restrepo en diciembre de 2005 solicita la creación de una nueva banda para decir lo que a bien nos diera la gana; la propuesta recibida por Jaime López “Jimmy Jazz” (vocalistas, bajista y Autor del 98.% de las canciones de G.P.) no se hace esperar y se proponen arrancar en enero de 2006, Juan Camilo decide llamar a los integrantes que antes militaban en DISKORDIA en la misma formación con la diferencia que Diego Soto deja el bajo a un lado para que Jaime López se encargue de el junto a la voz y entonces quedan Neyger Zapata y Diego Soto en las guitarras, Juan Camilo en la batería y Jaime en el bajo y la voz y ensayando bajo la sombra de GP.",
+        "Esta historia corre alrededor de la comunidad en la que Juan Camilo Restrepo en diciembre de 2005 solicita la creación de una nueva banda para decir lo que a bien nos diera la gana; la propuesta recibida por Jaime López “Jimmy Jazz” (vocalista, bajista y autor del 98% de las canciones de G.P.) no se hace esperar y se proponen arrancar en enero de 2006, Juan Camilo decide llamar a los integrantes que antes militaban en Diskordia en la misma formación con la diferencia que Diego Soto deja el bajo a un lado para que Jaime López se encargue de el junto a la voz y entonces quedan Neyger Zapata y Diego Soto en las guitarras, Juan Camilo en la batería y Jaime en el bajo y la voz y ensayando bajo la sombra de GP.",
       imgAlt: "Punkies y Cerebro banda en vivo",
       imgUrl: "/pyc.jpg",
       viewMore: "/bandas/historia/punkies-y-cerebro",
