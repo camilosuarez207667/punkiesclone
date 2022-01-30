@@ -1,7 +1,7 @@
-import { useEffect, useState, FC } from "react";
+import { FC } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import Hamburger from "./Hamburger/Hamburger";
+import { useRouter } from "next/router";
 
 import {
   DesktopNav,
@@ -16,6 +16,8 @@ import {
 } from "./index.styled";
 
 const Navigation: FC = () => {
+  const router = useRouter();
+
   return (
     <>
       {/*  Desktop */}
@@ -26,22 +28,38 @@ const Navigation: FC = () => {
             <ul>
               <Link href="/">
                 <li>
-                  <a>Inicio</a>
+                  <a className={router.pathname == "/" ? "active" : ""}>
+                    Inicio
+                  </a>
                 </li>
               </Link>
-              <Link href="/noticias">
+              <Link href="/noticias/index">
                 <li>
-                  <a>Noticias</a>
+                  <a
+                    className={
+                      router.pathname == "/noticias/index" ? "active" : ""
+                    }
+                  >
+                    Noticias
+                  </a>
                 </li>
               </Link>
               <Link href="/discografia">
                 <li>
-                  <a>Discografía</a>
+                  <a
+                    className={
+                      router.pathname == "/discografia" ? "active" : ""
+                    }
+                  >
+                    Discografía
+                  </a>
                 </li>
               </Link>
               <Link href="media">
                 <li>
-                  <a>Media</a>
+                  <a className={router.pathname == "/media" ? "active" : ""}>
+                    Media
+                  </a>
                 </li>
               </Link>
             </ul>
@@ -53,9 +71,11 @@ const Navigation: FC = () => {
           </ImageMain>
           <Menu>
             <ul>
-              <Link href="/index">
+              <Link href="/tienda">
                 <li>
-                  <a>Tienda</a>
+                  <a className={router.pathname == "/tienda" ? "active" : ""}>
+                    Tienda
+                  </a>
                 </li>
               </Link>
               <Link href="/">
@@ -63,14 +83,18 @@ const Navigation: FC = () => {
                   <a>Eventos</a>
                 </li>
               </Link>
-              <Link href="#contacto">
+              <Link href="/eventos">
                 <li>
-                  <a>Blog</a>
+                  <a className={router.pathname == "/eventos" ? "active" : ""}>
+                    Blog
+                  </a>
                 </li>
               </Link>
               <Link href="#contacto">
                 <li>
-                  <a>contacto</a>
+                  <a className={router.pathname == "/contacto" ? "active" : ""}>
+                    contacto
+                  </a>
                 </li>
               </Link>
             </ul>

@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { InferGetStaticPropsType } from "next";
 import { GetStaticProps } from "next";
-import Title from "components/Title/Title";
 import NoticiasComponent from "components/Noticias/Noticias";
 import NavPadding from "components/Navigation/NavPadding/NavPadding";
 

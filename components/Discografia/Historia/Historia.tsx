@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
 import ReactHtmlParser from "react-html-parser";
-import Link from "next/link";
 import Arrow from "public/svgs/arrow";
 import {
   Title,

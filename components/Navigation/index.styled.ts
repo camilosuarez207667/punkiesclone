@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface NavProps {
+  highlighted: boolean;
+}
+
 export const DesktopNav = styled.div`
   width: 100%;
   position: fixed;
@@ -32,6 +36,7 @@ export const LinksContainer = styled.div`
 export const Menu = styled.div`
   display: flex;
   align-items: center;
+
   li {
     display: inline-flex;
     padding: 0 12px;
@@ -44,6 +49,9 @@ export const Menu = styled.div`
       padding: 0 4px;
     }
     a:hover {
+      color: ${({ theme }) => theme.colors.tertiary};
+    }
+    .active {
       color: ${({ theme }) => theme.colors.tertiary};
     }
   }

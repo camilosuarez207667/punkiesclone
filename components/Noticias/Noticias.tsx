@@ -28,8 +28,8 @@ const Noticias: FC<NewsProps> = ({ news }) => {
     <>
       <TitleWrapper>
         <TitleComp
-          title={"Noticias"}
-          message={`Aquí puedes estar al tanto de todas nuestras noticias.`}
+          title={"Eventos"}
+          message={`Aquí puedes estar al tanto de los próximos eventos`}
           backgroundColor={"black"}
         />
       </TitleWrapper>
