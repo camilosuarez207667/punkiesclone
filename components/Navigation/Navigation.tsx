@@ -33,13 +33,9 @@ const Navigation: FC = () => {
                   </a>
                 </li>
               </Link>
-              <Link href="/noticias/index">
+              <Link href="/noticias">
                 <li>
-                  <a
-                    className={
-                      router.pathname == "/noticias/index" ? "active" : ""
-                    }
-                  >
+                  <a className={router.pathname == "/noticias" ? "active" : ""}>
                     Noticias
                   </a>
                 </li>
@@ -83,9 +79,9 @@ const Navigation: FC = () => {
                   <a>Eventos</a>
                 </li>
               </Link>
-              <Link href="/eventos">
+              <Link href="/blog">
                 <li>
-                  <a className={router.pathname == "/eventos" ? "active" : ""}>
+                  <a className={router.pathname == "/blog" ? "active" : ""}>
                     Blog
                   </a>
                 </li>
