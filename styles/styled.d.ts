@@ -205,16 +205,10 @@ declare module "styled-components" {
     tooltip: number;
   }
   export interface DefaultTheme {
-    borderRadius: BorderRadiusType;
     colors: ColorType;
     fonts: FontType;
     fontSizes: FontSizeType;
     fontWeights: FontWeightType;
-    lettingSpacings: LetterSpacingType;
-    lineHeights: LetterHeightType;
-    shadows: string[];
-    sizes: SizeType;
-    space: SpaceType;
     zIndices: ZindexType;
     breakpoint: breakpointType;
   }
