@@ -28,7 +28,7 @@ export default function PycBand({
       <Breadcrumb
         title={"Punkies y Cerebro"}
         goBack={true}
-        url={"/discografia"}
+        url={"/historia"}
         topPadding={false}
         headerDesktop={true}
         backMessage={"volver"}

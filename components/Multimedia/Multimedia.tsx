@@ -40,6 +40,7 @@ const Multimedia: FC<MultimediaProps> = ({
 }) => {
   const [video, setvideo] = useState(false);
   const [videoUrl, setvideoUrl] = useState("");
+
   return (
     <BodyWrapper backgroundColor={backgroundColor}>
       <Wrapper backgroundColor={backgroundColor}>
@@ -64,7 +65,7 @@ const Multimedia: FC<MultimediaProps> = ({
               <Description backgroundColor={backgroundColor}>
                 {e.description}
               </Description>
-              <More seeMore={seeMore}>ver más</More>
+              {/* <More seeMore={seeMore}>ver más</More> */}
             </DescriptionWrapper>
           </NewsWrapper>
         ))}

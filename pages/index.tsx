@@ -5,10 +5,7 @@ import Slider from "components/Showcase/Slider/Slider";
 import Title from "components/Title/Title";
 import Noticias from "components/Noticias/Noticias";
 import Discografia from "components/Discografia/Discrografia";
-import NavPadding from "components/Navigation/NavPadding/NavPadding";
 import Conciertos from "components/Conciertos/Conciertos";
-
-import Consctruction from "components/Construction/Construction";
 import Multimedia from "components/Multimedia/Multimedia";
 
 type Showcase = {
@@ -78,16 +75,10 @@ export default function Index({
           content="Punkies y Cerebro P&aacute;gina Oficial"
         />
       </Head>
-      {/* <Consctruction /> */}
-      {/* <NavPadding /> */}
       <Slider images={images} />
       <Title title={"Media"} message={``} backgroundColor={"white"} />
       <Multimedia media={multimedia} backgroundColor={true} seeMore={true} />
-      {/* <Title
-        title={"Noticias"}
-        message={`¡Aquí puedes estar al tanto de todas nuestras noticias! ¡Bienvenidos al de mundo Punkies y Cerebro!`}
-        backgroundColor={"black"}
-      /> */}
+
       <Noticias news={news} />
       <Title
         id="discos"

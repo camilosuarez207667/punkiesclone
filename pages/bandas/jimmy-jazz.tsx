@@ -26,7 +26,7 @@ export default function JimmyJazz({
       <Breadcrumb
         title={"Jimmy Jazz"}
         goBack={true}
-        url={"/discografia"}
+        url={"/historia"}
         topPadding={false}
         headerDesktop={true}
         backMessage={"volver"}

@@ -10,6 +10,6 @@ export const MobileNav = styled.div`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     display: block;
-    height: 75px;
+    height: 0;
   }
 `;

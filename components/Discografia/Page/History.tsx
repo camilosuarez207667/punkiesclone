@@ -18,7 +18,7 @@ import {
 
 import { mockData_discoProps } from "./MOCK_DATA";
 
-const DiscografiaPagina: FC = () => {
+const History: FC = () => {
   return (
     <>
       <BodyWrapper>
@@ -62,4 +62,4 @@ const DiscografiaPagina: FC = () => {
   );
 };
 
-export default DiscografiaPagina;
+export default History;

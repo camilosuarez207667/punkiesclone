@@ -40,14 +40,10 @@ const Navigation: FC = () => {
                   </a>
                 </li>
               </Link>
-              <Link href="/discografia">
+              <Link href="/historia">
                 <li>
-                  <a
-                    className={
-                      router.pathname == "/discografia" ? "active" : ""
-                    }
-                  >
-                    Discografía
+                  <a className={router.pathname == "/historia" ? "active" : ""}>
+                    historia
                   </a>
                 </li>
               </Link>

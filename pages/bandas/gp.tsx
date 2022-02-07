@@ -26,7 +26,7 @@ export default function GpBand({
       <Breadcrumb
         title={"GP"}
         goBack={true}
-        url={"/discografia"}
+        url={"/historia"}
         topPadding={false}
         headerDesktop={true}
         backMessage={"volver"}

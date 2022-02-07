@@ -11,6 +11,11 @@ export const TitleWrapper = styled.div`
   }
 `;
 
+export const FullWrapper = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary};
+  width: 100%;
+`;
+
 export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   max-width: ${({ theme }) => theme.breakpoint.sm};

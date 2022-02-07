@@ -1,19 +1,17 @@
 import Head from "next/head";
-import DiscografiaPagina from "components/Discografia/Page/DiscrografiaPagina";
+import History from "components/Discografia/Page/History";
 
 export default function Discografia() {
   return (
     <div>
       <Head>
-        <title>Punkies y Cerebro P&aacute;gina Oficial</title>
+        <title>Hitoria GP, Punkies y Cerebro</title>
         <meta
           name="description"
           content="Punkies y Cerebro P&aacute;gina Oficial"
         />
-
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <DiscografiaPagina />
+      <History />
     </div>
   );
 }
