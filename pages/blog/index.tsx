@@ -6,14 +6,13 @@ import NavPadding from "components/Navigation/NavPadding/NavPadding";
 import Blog from "components/Blog/Blog";
 
 type BlogData = {
-  news: {
+  blogs: {
     image: {
       url: string;
-    }[];
+    };
     video: {
       url: string;
-    }[];
-    id: number;
+    };
     title: string;
     description: string;
     date: Date;
@@ -27,8 +26,8 @@ export default function Index({
   return (
     <div>
       <Head>
-        <title>Noticias - Punkies y Cerebro</title>
-        <meta name="description" content="Noticias - Punkies y Cerebro" />
+        <title>Blog - Punkies y Cerebro</title>
+        <meta name="description" content="Blog - Punkies y Cerebro" />
       </Head>
       <NavPadding />
       <Blog blogs={blogs} />

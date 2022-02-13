@@ -25,7 +25,7 @@ export const TitleWrapper = styled.div`
   justify-content: space-between;
   width: ${({ theme }) => theme.breakpoint.md};
   margin: -57px auto 0;
-  padding: 0 48px;
+  padding: 0 72px;
   z-index: ${({ theme }) => theme.zIndices.docked};
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
