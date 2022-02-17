@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 import Arrow from "public/svgs/arrow";
+
 import {
   Wrapper,
   Description,
@@ -16,8 +17,11 @@ import {
   Profile,
   ReadMore,
   BothComponent,
-  MobileButton,
+  DropdownWrapper,
   ArrowContent,
+  Dropdown,
+  DropdownMenu,
+  DropdownList,
 } from "./blog.styled";
 interface BlogProps {
   blogs: {
@@ -35,12 +39,9 @@ interface BlogProps {
 const Blog: FC<BlogProps> = ({ blogs }) => {
   console.log(blogs);
   const [blog, setBlog] = useState();
+  const [open, setOpen] = useState(false);
+  console.log(open);
 
-  // const sortByYear = blogs.sort(function (a, b) {
-  //   return b - a;
-  // });
-  console.log("sortByYear");
-  // console.log(sortByYear);
   return (
     <>
       <Breadcrumb
@@ -58,22 +59,21 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
         </p>
       </TitleWrapper>
       <FullWrapper>
-        <MobileButton>
-          <button>
-            <div>Archivo blogs</div>
-            <div>
-              <ArrowContent>
-                <Arrow />
-              </ArrowContent>
-            </div>
-          </button>
+        {/* MOBILE MENU */}
+        <DropdownWrapper onClick={() => setOpen(!open)}>
+          <Dropdown className={open ? "dropdown" : " "}>
+            Archivo Blog
+            <DropdownMenu className="dropdown_menu--animated dropdown_animation">
+              <DropdownList>2019</DropdownList>
+              <DropdownList>2020</DropdownList>
+              <DropdownList>2021</DropdownList>
+            </DropdownMenu>
+            <ArrowContent>
+              <Arrow />
+            </ArrowContent>
+          </Dropdown>
+        </DropdownWrapper>
 
-          {/* <div>
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div> */}
-        </MobileButton>
         <BothComponent>
           <Wrapper>
             {blogs.map((e, i) => (

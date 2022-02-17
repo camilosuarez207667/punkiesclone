@@ -28,27 +28,83 @@ export const BothComponent = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-export const MobileButton = styled.div`
+export const DropdownWrapper = styled.div`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+    outline: 1px solid red;
     display: block;
     background-color: ${({ theme }) => theme.colors.primary};
     margin: 0 24px;
-    button {
-      margin-bottom: 24px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      height: 32px;
-      background-color: transparent;
-      outline: 1px solid white;
-      color: white;
-      font-family: ${({ theme }) => theme.fonts.primary};
-      font-size: ${({ theme }) => theme.fontSizes.xl};
+
+    .dropdown .dropdown_menu--animated {
+      display: block;
+    }
+
+    .dropdown_menu--animated {
+      display: none;
+    }
+
+    .dropdown_menu--animated li {
+      display: block;
+      opacity: 1;
+    }
+
+    .dropdown_animation {
+      animation: growDown 300ms ease-in-out forwards;
+      transform-origin: top center;
+    }
+
+    @keyframes growDown {
+      0% {
+        transform: scaleY(0);
+      }
+      80% {
+        transform: scaleY(1.1);
+      }
+      100% {
+        transform: scaleY(1);
+      }
     }
   }
 `;
+
+export const Dropdown = styled.li`
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  perspective: 1000px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: 1px solid white;
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-size: ${({ theme }) => theme.fontSizes.xl};
+`;
+
+export const DropdownMenu = styled.ul`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  perspective: 1000px;
+  z-index: -1;
+  li:hover {
+    background-color: ${({ theme }) => theme.colors.jaguar};
+  }
+`;
+
+export const DropdownList = styled.li`
+  display: none;
+  color: #fff;
+  background-color: ${({ theme }) => theme.colors.balticSea};
+  padding: 10px 20px;
+  font-size: 16px;
+  opacity: 0;
+  text-align: center;
+`;
+
 export const ArrowContent = styled.div`
   margin-top: 4px;
   transform: rotate(180deg);
@@ -56,18 +112,16 @@ export const ArrowContent = styled.div`
   height: 20px;
   z-index: ${({ theme }) => theme.zIndices.docked};
 `;
+/////// MOBILE DROPDOWN ///////////
 export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   max-width: ${({ theme }) => theme.breakpoint.sm};
   margin: 0 auto;
   padding: 0 24px;
 `;
-
 export const BlogWrapper = styled.div`
   width: 100%;
-  padding-right: 24px;
 `;
-
 export const ArchiveWrapper = styled.div`
   display: block;
   width: 100%;
@@ -75,7 +129,6 @@ export const ArchiveWrapper = styled.div`
     display: none;
   }
 `;
-
 export const Title = styled.div`
   height: 50px;
   border-bottom: 1px solid white;
@@ -99,14 +152,12 @@ export const Date = styled.div`
     padding: 4px 0 16px;
   }
 `;
-
 export const ReadWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
   border-bottom: 1px solid white;
 `;
-
 export const Profile = styled.div`
   display: flex;
   justify-content: space-between;
@@ -122,7 +173,6 @@ export const Profile = styled.div`
     height: 40px;
   }
 `;
-
 export const ReadMore = styled.div`
   p {
     font-size: ${({ theme }) => theme.fontSizes.lg};
@@ -135,7 +185,6 @@ export const ReadMore = styled.div`
     }
   }
 `;
-
 export const Archive = styled.div`
   height: 50px;
   font-size: ${({ theme }) => theme.fontSizes.xl};
