@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   html {
+    background-color: ${({ theme }) => theme.colors.primary};
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-size: 16px;
