@@ -3,75 +3,61 @@ import styled from "styled-components";
 export const TitleWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   max-width: ${({ theme }) => theme.breakpoint.sm};
-  margin: 0 auto;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 24px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+
+export const TitleParagraph = styled.div`
+  padding-right: 24px;
   p {
     color: ${({ theme }) => theme.colors.white};
-    padding: 32px 0 24px 0;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
-    padding: 0 24px;
+    padding-bottom: 24px;
   }
 `;
 
-export const FullWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary};
-  width: 100%;
-`;
-
-export const BothComponent = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary};
-  max-width: ${({ theme }) => theme.breakpoint.sm};
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 160px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-    grid-template-columns: 1fr;
-  }
-`;
 export const DropdownWrapper = styled.div`
-  display: none;
-  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-    outline: 1px solid red;
+  width: 100%;
+  align-items: flex-end;
+  .dropdown .dropdown_menu--animated {
     display: block;
-    background-color: ${({ theme }) => theme.colors.primary};
-    margin: 0 24px;
+  }
+  .dropdown_menu--animated {
+    display: none;
+  }
 
-    .dropdown .dropdown_menu--animated {
-      display: block;
+  .dropdown_menu--animated li {
+    display: block;
+    opacity: 1;
+  }
+
+  .dropdown_animation {
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+  }
+
+  @keyframes growDown {
+    0% {
+      transform: scaleY(0);
     }
-
-    .dropdown_menu--animated {
-      display: none;
+    80% {
+      transform: scaleY(1.1);
     }
-
-    .dropdown_menu--animated li {
-      display: block;
-      opacity: 1;
-    }
-
-    .dropdown_animation {
-      animation: growDown 300ms ease-in-out forwards;
-      transform-origin: top center;
-    }
-
-    @keyframes growDown {
-      0% {
-        transform: scaleY(0);
-      }
-      80% {
-        transform: scaleY(1.1);
-      }
-      100% {
-        transform: scaleY(1);
-      }
+    100% {
+      transform: scaleY(1);
     }
   }
 `;
-
 export const Dropdown = styled.li`
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 8px;
   perspective: 1000px;
   margin-bottom: 24px;
@@ -82,7 +68,10 @@ export const Dropdown = styled.li`
   font-family: ${({ theme }) => theme.fonts.primary};
   font-size: ${({ theme }) => theme.fontSizes.xl};
 `;
-
+export const FullWrapper = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary};
+  width: 100%;
+`;
 export const DropdownMenu = styled.ul`
   position: absolute;
   top: 100%;
@@ -95,16 +84,26 @@ export const DropdownMenu = styled.ul`
   }
 `;
 
+export const BlogComponent = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary};
+  max-width: ${({ theme }) => theme.breakpoint.sm};
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+    grid-template-columns: 1fr;
+  }
+`;
+
 export const DropdownList = styled.li`
   display: none;
   color: #fff;
-  background-color: ${({ theme }) => theme.colors.balticSea};
+  background-color: ${({ theme }) => theme.colors.shark};
   padding: 10px 20px;
   font-size: 16px;
   opacity: 0;
   text-align: center;
 `;
-
 export const ArrowContent = styled.div`
   margin-top: 4px;
   transform: rotate(180deg);
@@ -122,13 +121,7 @@ export const Wrapper = styled.div`
 export const BlogWrapper = styled.div`
   width: 100%;
 `;
-export const ArchiveWrapper = styled.div`
-  display: block;
-  width: 100%;
-  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-    display: none;
-  }
-`;
+
 export const Title = styled.div`
   height: 50px;
   border-bottom: 1px solid white;
@@ -185,17 +178,26 @@ export const ReadMore = styled.div`
     }
   }
 `;
-export const Archive = styled.div`
-  height: 50px;
-  font-size: ${({ theme }) => theme.fontSizes.xl};
-  color: ${({ theme }) => theme.colors.white};
-  font-family: ${({ theme }) => theme.fonts.primary};
-  margin: 0 auto;
-  padding: 12px 8px 8px 16px;
+export const PaginationWrapper = styled.div`
+  max-width: ${({ theme }) => theme.breakpoint.sm};
+  margin: 24px auto 0;
+
+  display: flex;
+  justify-content: center;
+  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+  }
 `;
-export const Year = styled.div`
-  font-size: ${({ theme }) => theme.fontSizes.lg};
-  color: ${({ theme }) => theme.colors.secondary};
-  font-family: ${({ theme }) => theme.fonts.secondary};
-  padding: 0 8px 8px 16px;
+export const ArrowLeft = styled.div`
+  margin-right: 20px;
+  transform: rotate(270deg);
+  width: 28px;
+  height: 28px;
+  z-index: ${({ theme }) => theme.zIndices.docked};
+`;
+export const ArrowRight = styled.div`
+  margin-left: 20px;
+  transform: rotate(90deg);
+  width: 28px;
+  height: 28px;
+  z-index: ${({ theme }) => theme.zIndices.docked};
 `;

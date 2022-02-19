@@ -8,20 +8,21 @@ import {
   Title,
   BlogWrapper,
   TitleWrapper,
-  Archive,
-  Year,
   Date,
-  ArchiveWrapper,
   ReadWrapper,
   FullWrapper,
   Profile,
   ReadMore,
-  BothComponent,
+  BlogComponent,
   DropdownWrapper,
   ArrowContent,
   Dropdown,
   DropdownMenu,
   DropdownList,
+  PaginationWrapper,
+  ArrowLeft,
+  ArrowRight,
+  TitleParagraph,
 } from "./blog.styled";
 interface BlogProps {
   blogs: {
@@ -37,8 +38,6 @@ interface BlogProps {
 }
 
 const Blog: FC<BlogProps> = ({ blogs }) => {
-  console.log(blogs);
-  const [blog, setBlog] = useState();
   const [open, setOpen] = useState(false);
   console.log(open);
 
@@ -52,14 +51,15 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
         goBack={true}
         backMessage={"volver"}
       />
+
       <TitleWrapper>
-        <p>
-          Un ejercicio de escritura para decir lo que pienso... en palabras
-          vulgares.
-        </p>
-      </TitleWrapper>
-      <FullWrapper>
-        {/* MOBILE MENU */}
+        <TitleParagraph>
+          <p>
+            Un ejercicio de escritura para decir lo que pienso... en palabras
+            vulgares.
+          </p>
+        </TitleParagraph>
+
         <DropdownWrapper onClick={() => setOpen(!open)}>
           <Dropdown className={open ? "dropdown" : " "}>
             Archivo Blog
@@ -73,8 +73,10 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
             </ArrowContent>
           </Dropdown>
         </DropdownWrapper>
+      </TitleWrapper>
 
-        <BothComponent>
+      <FullWrapper>
+        <BlogComponent>
           <Wrapper>
             {blogs.map((e, i) => (
               <BlogWrapper key={i}>
@@ -102,16 +104,17 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
               </BlogWrapper>
             ))}
           </Wrapper>
-
-          <ArchiveWrapper>
-            <Archive>Archivo blogs</Archive>
-            <Year>2022</Year>
-            <Year>2021</Year>
-            <Year>2020</Year>
-            <Year>2019</Year>
-          </ArchiveWrapper>
-        </BothComponent>
+        </BlogComponent>
       </FullWrapper>
+      {/* pagination */}
+      <PaginationWrapper>
+        <ArrowLeft>
+          <Arrow />
+        </ArrowLeft>
+        <ArrowRight>
+          <Arrow />
+        </ArrowRight>
+      </PaginationWrapper>
     </>
   );
 };
