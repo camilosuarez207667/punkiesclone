@@ -121,7 +121,6 @@ export const Wrapper = styled.div`
 export const BlogWrapper = styled.div`
   width: 100%;
 `;
-
 export const Title = styled.div`
   height: 50px;
   border-bottom: 1px solid white;
@@ -136,7 +135,7 @@ export const Description = styled.p`
   color: ${({ theme }) => theme.colors.secondary};
   font-family: ${({ theme }) => theme.fonts.secondary};
 `;
-export const Date = styled.div`
+export const Fecha = styled.div`
   p {
     font-size: ${({ theme }) => theme.fontSizes.lg};
     color: ${({ theme }) => theme.colors.secondary};
@@ -181,7 +180,6 @@ export const ReadMore = styled.div`
 export const PaginationWrapper = styled.div`
   max-width: ${({ theme }) => theme.breakpoint.sm};
   margin: 24px auto 0;
-
   display: flex;
   justify-content: center;
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {

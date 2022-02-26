@@ -19,6 +19,11 @@ declare module "styled-components" {
     full: string;
   }
   export interface ColorType {
+    primary: string;
+    secondary: string;
+    tertiary: string;
+    bgColor: string;
+
     blendingGray: string;
     neroGray: string;
     whiteSmoke: string;
@@ -42,9 +47,7 @@ declare module "styled-components" {
     brightGray: string;
     shuttleGray: string;
     veryLightGrey: string;
-    primary: string;
-    secondary: string;
-    tertiary: string;
+
     danger: string;
     balticSea: string;
     shark: string;

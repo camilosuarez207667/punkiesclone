@@ -1,4 +1,12 @@
-import { FC, useState } from "react";
+import {
+  FC,
+  Key,
+  ReactChild,
+  ReactFragment,
+  ReactPortal,
+  useEffect,
+  useState,
+} from "react";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 import Arrow from "public/svgs/arrow";
 
@@ -8,7 +16,7 @@ import {
   Title,
   BlogWrapper,
   TitleWrapper,
-  Date,
+  Fecha,
   ReadWrapper,
   FullWrapper,
   Profile,
@@ -24,11 +32,12 @@ import {
   ArrowRight,
   TitleParagraph,
 } from "./blog.styled";
+
 interface BlogProps {
   blogs: {
     title: string;
     description: string;
-    date: Date;
+    date: string;
     brevedescripcion: string;
     image: {
       url: string;
@@ -39,14 +48,34 @@ interface BlogProps {
 
 const Blog: FC<BlogProps> = ({ blogs }) => {
   const [open, setOpen] = useState(false);
-  console.log(open);
+
+  function onlyUnique(value: any[]) {
+    const result = value.reduce((unique, o) => {
+      if (!unique.some((obj: { date: any }) => obj.date === o.date)) {
+        console.log(o);
+        unique.push(o);
+      }
+
+      return unique;
+    }, []);
+
+    return result.sort(function (a: any, b: any) {
+      return Number(new Date(b.date)) - Number(new Date(a.date));
+    });
+  }
+  const uniquePosts = blogs.length && onlyUnique(blogs);
+  // console.log(uniquePosts);
+
+  const resultofSort = blogs.sort(function (a: any, b: any) {
+    return Number(new Date(b.date)) - Number(new Date(a.date));
+  });
 
   return (
     <>
       <Breadcrumb
         title="Blog Jimmy Jazz"
         url={"/"}
-        headerDesktop={false}
+        headerDesktop={true}
         topPadding={false}
         goBack={true}
         backMessage={"volver"}
@@ -75,34 +104,39 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
         </DropdownWrapper>
       </TitleWrapper>
 
-      <FullWrapper>
+      <FullWrapper onClick={() => (open === true ? setOpen(!open) : "")}>
         <BlogComponent>
           <Wrapper>
-            {blogs.map((e, i) => (
-              <BlogWrapper key={i}>
-                <Title>{e.title}</Title>
-                <Date>
-                  <p>{e.date}</p>
-                </Date>
-                <Description>{e.brevedescripcion}</Description>
-                <ReadWrapper>
-                  <Profile>
-                    <div>
-                      <img
-                        src="/jimmy-jazz-profile.png"
-                        alt="Foto de perfil de Jimmy Jazz"
-                      />
-                    </div>
-                    <div>
-                      <h3>Jimmy Jazz</h3>
-                    </div>
-                  </Profile>
-                  <ReadMore>
-                    <p>leer más</p>
-                  </ReadMore>
-                </ReadWrapper>
-              </BlogWrapper>
-            ))}
+            {resultofSort.map(
+              (
+                e: { title: string; date: string; brevedescripcion: string },
+                i: Key
+              ) => (
+                <BlogWrapper key={i}>
+                  <Title>{e.title}</Title>
+                  <Fecha>
+                    <p>{e.date}</p>
+                  </Fecha>
+                  <Description>{e.brevedescripcion}</Description>
+                  <ReadWrapper>
+                    <Profile>
+                      <div>
+                        <img
+                          src="/jimmy-jazz-profile.png"
+                          alt="Foto de perfil de Jimmy Jazz"
+                        />
+                      </div>
+                      <div>
+                        <h3>Jimmy Jazz</h3>
+                      </div>
+                    </Profile>
+                    <ReadMore>
+                      <p>leer más</p>
+                    </ReadMore>
+                  </ReadWrapper>
+                </BlogWrapper>
+              )
+            )}
           </Wrapper>
         </BlogComponent>
       </FullWrapper>

@@ -7,7 +7,7 @@ interface BreadProps {
 
 export const FullWrapper = styled.div<BreadProps>`
   background-color: ${({ theme }) => theme.colors.primary};
-  padding-top: ${({ headerDesktop }) => (headerDesktop ? "140px" : "0px")};
+  padding-top: ${({ headerDesktop }) => (headerDesktop ? "20px" : "0px")};
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     padding-top: ${({ multipleHeader }) => (multipleHeader ? "48px" : "80px")};
   }

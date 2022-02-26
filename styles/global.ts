@@ -17,10 +17,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   body{
+    background-color: ${({ theme }) => theme.colors.bgColor};
     margin: 0;
     padding: 0;
     font-weight: normal;
-    background-color: #111;
   }
   h1,
   h2,

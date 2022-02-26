@@ -7,6 +7,7 @@ const colors: ColorType = {
   orange: "#ff9100",
   green: "#9aca3c",
   red: "#AC1713",
+  bgColor: "#141414",
 
   //Mobile Dropdown Color
   dropdown: "#161616",
@@ -59,6 +60,7 @@ const colors: ColorType = {
 colors["primary"] = colors.black;
 colors["secondary"] = colors.white;
 colors["tertiary"] = colors.red;
+colors["bgColor"] = colors.bgColor;
 
 const fonts = {
   primary: '"Metal Mania", cursive',
