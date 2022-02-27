@@ -171,6 +171,9 @@ export const ReadMore = styled.div`
     color: ${({ theme }) => theme.colors.tertiary};
     font-family: ${({ theme }) => theme.fonts.secondary};
     padding: 8px 0 16px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+      text-decoration: underline;
+    }
     :hover {
       cursor: pointer;
       text-decoration: underline;
@@ -179,9 +182,7 @@ export const ReadMore = styled.div`
 `;
 export const NumberCounter = styled.div`
   margin: 12px auto 0;
-
   max-width: ${({ theme }) => theme.breakpoint.sm};
-
   height: 24px;
   width: 24px;
   background-color: ${({ theme }) => theme.colors.tertiary};
@@ -196,8 +197,6 @@ export const PaginationWrapper = styled.div`
   margin: 16px auto 0;
   display: flex;
   justify-content: center;
-  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-  }
 `;
 
 export const ArrowLeft = styled.div`

@@ -65,3 +65,12 @@ export const ProfileName = styled.div`
     display: none;
   }
 `;
+export const Title = styled.div`
+  min-height: 50px;
+  border-bottom: 1px solid white;
+  background-color: ${({ theme }) => theme.colors.primary};
+  font-size: ${({ theme }) => theme.fontSizes["3xl"]};
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.fonts.primary};
+  padding-top: 6px;
+`;

@@ -1,5 +1,11 @@
 import { FC, Key, useState } from "react";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
+import { useRouter } from "next/router";
+
+import Head from "next/head";
+import { InferGetStaticPropsType, GetStaticPaths, GetStaticProps } from "next";
+
+import NavPadding from "components/Navigation/NavPadding/NavPadding";
 
 import {
   Wrapper,
@@ -11,32 +17,42 @@ import {
   BlogComponent,
   ProfileWrapper,
   ProfileName,
+  Title,
 } from "./blog-article.styled";
 
-interface BlogProps {
+type BlogData = {
   blogs: {
-    title: string;
-    description: string;
-    date: string;
-    brevedescripcion: string;
     image: {
       url: string;
     };
-    video: string;
+    video: {
+      url: string;
+    };
+    title: string;
+    description: string;
+    date: Date;
+    readMore?: string;
   }[];
-}
+};
 
-const BlogArticle: FC<BlogProps> = ({ blogs }) => {
-  const [open, setOpen] = useState(false);
+export default function Index({
+  blogs,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const router = useRouter();
+  const articleid = router.query.article;
 
-  const resultofSort = blogs.slice(0, 1).sort((a: any, b: any) => {
-    return Number(new Date(b.date)) - Number(new Date(a.date));
-  });
+  const artitleText = blogs.filter((e: any) => e.title === articleid);
 
   return (
-    <>
+    <div>
+      <Head>
+        <title>Blog - Punkies y Cerebro</title>
+        <meta name="description" content="Blog - Punkies y Cerebro" />
+      </Head>
+      <NavPadding />
+
       <Breadcrumb
-        title="Blog Jimmy Jazz"
+        title={"Artículo"}
         url={"/blog"}
         headerDesktop={true}
         topPadding={false}
@@ -47,7 +63,7 @@ const BlogArticle: FC<BlogProps> = ({ blogs }) => {
       <FullWrapper>
         <BlogComponent>
           <Wrapper>
-            {resultofSort.map(
+            {artitleText.map(
               (
                 e: {
                   title: string;
@@ -83,7 +99,7 @@ const BlogArticle: FC<BlogProps> = ({ blogs }) => {
                       </div>
                     </Fecha>
                   </ProfileWrapper>
-
+                  <Title>{e.title}</Title>
                   <Description>{e.description}</Description>
                 </BlogWrapper>
               )
@@ -91,8 +107,35 @@ const BlogArticle: FC<BlogProps> = ({ blogs }) => {
           </Wrapper>
         </BlogComponent>
       </FullWrapper>
-    </>
+    </div>
   );
+}
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const resBlogs = await fetch(`https://punkies-strapi.herokuapp.com/blogs`);
+  const blogs: BlogData = await resBlogs.json();
+
+  if (!blogs) {
+    console.log("posts false");
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {
+      blogs: blogs,
+    },
+    revalidate: 1,
+  };
 };
 
-export default BlogArticle;
+export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
+  return {
+    paths: [], //indicates that no page needs be created at build time
+    fallback: "blocking", //indicates the type of fallback
+  };
+};

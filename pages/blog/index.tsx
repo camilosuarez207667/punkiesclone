@@ -1,9 +1,8 @@
 import Head from "next/head";
 import { InferGetStaticPropsType } from "next";
 import { GetStaticProps } from "next";
-
 import NavPadding from "components/Navigation/NavPadding/NavPadding";
-import Blog from "components/Blog/Blog";
+import Blog from "components/Blog";
 
 type BlogData = {
   blogs: {

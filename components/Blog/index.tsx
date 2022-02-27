@@ -42,12 +42,9 @@ interface BlogProps {
 }
 
 const Blog: FC<BlogProps> = ({ blogs }) => {
-  const router = useRouter();
-  const { pid } = router.query;
-
   const [open, setOpen] = useState(false);
 
-  const resultofSort = blogs.slice(0, 4).sort((a: any, b: any) => {
+  const resultofSort = blogs.slice(0, 10).sort((a: any, b: any) => {
     return Number(new Date(b.date)) - Number(new Date(a.date));
   });
 
@@ -119,7 +116,8 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
                       </div>
                     </Profile>
                     <ReadMore>
-                      <Link href={"/"}>
+                      {/* <Link href={`/blog/${e.title.replace(/\s/g, "-")}`}> */}
+                      <Link href={`/blog/${e.title}`}>
                         <p>leer más</p>
                       </Link>
                     </ReadMore>

@@ -13,7 +13,7 @@ import {
 } from "./breadcrumb.styled";
 
 interface BreadProps {
-  title: string;
+  title?: string | string[];
   goBack?: boolean;
   url: string;
   headerDesktop: boolean;
