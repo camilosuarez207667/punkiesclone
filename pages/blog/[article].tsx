@@ -75,17 +75,9 @@ export default function Index({
               ) => (
                 <BlogWrapper key={i}>
                   <ProfileWrapper>
-                    <Profile>
-                      <div>
-                        <img
-                          src="/jimmy-jazz-profile.png"
-                          alt="Foto de perfil de Jimmy Jazz"
-                        />
-                      </div>
-                      <ProfileName>
-                        <h3>Jimmy Jazz</h3>
-                      </ProfileName>
-                    </Profile>
+                    <Title>
+                      <h1>{e.title}</h1>
+                    </Title>
                     <Fecha>
                       <div>
                         <p>
@@ -99,7 +91,7 @@ export default function Index({
                       </div>
                     </Fecha>
                   </ProfileWrapper>
-                  <Title>{e.title}</Title>
+
                   <Description>{e.description}</Description>
                 </BlogWrapper>
               )

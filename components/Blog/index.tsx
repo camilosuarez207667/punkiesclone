@@ -91,7 +91,9 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
                 i: Key
               ) => (
                 <BlogWrapper key={i}>
-                  <Title>{e.title}</Title>
+                  <Title>
+                    <h2>{e.title}</h2>
+                  </Title>
                   <Fecha>
                     <p>
                       {new Date(e.date).toLocaleDateString("es-ES", {

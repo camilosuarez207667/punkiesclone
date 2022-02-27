@@ -43,7 +43,12 @@ export const Fecha = styled.div`
 export const ProfileWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 16px 0 0px;
+  min-height: 50px;
+  border-bottom: 1px solid white;
+  margin: 16px 0;
+  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+    flex-direction: column-reverse;
+  }
 `;
 export const Profile = styled.div`
   display: flex;
@@ -66,12 +71,9 @@ export const ProfileName = styled.div`
   }
 `;
 export const Title = styled.div`
-  min-height: 50px;
-  border-bottom: 1px solid white;
-  background-color: ${({ theme }) => theme.colors.primary};
-  font-size: ${({ theme }) => theme.fontSizes["3xl"]};
-  color: ${({ theme }) => theme.colors.white};
-  font-family: ${({ theme }) => theme.fonts.primary};
-  padding-top: 6px;
-  margin-bottom: 16px;
+  h1 {
+    font-size: ${({ theme }) => theme.fontSizes["3xl"]};
+    color: ${({ theme }) => theme.colors.white};
+    font-family: ${({ theme }) => theme.fonts.primary};
+  }
 `;

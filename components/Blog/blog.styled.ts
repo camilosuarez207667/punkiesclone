@@ -60,7 +60,7 @@ export const Dropdown = styled.li`
   align-items: center;
   padding: 8px;
   perspective: 1000px;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   cursor: pointer;
   background-color: transparent;
   outline: 1px solid white;
@@ -99,7 +99,7 @@ export const DropdownList = styled.li`
   display: none;
   color: #fff;
   background-color: ${({ theme }) => theme.colors.shark};
-  padding: 10px 20px;
+  padding: 10px 20px 0;
   font-size: 16px;
   opacity: 0;
   text-align: center;
@@ -122,13 +122,16 @@ export const BlogWrapper = styled.div`
   width: 100%;
 `;
 export const Title = styled.div`
+  display: flex;
+  align-items: center;
   min-height: 50px;
   border-bottom: 1px solid white;
   background-color: ${({ theme }) => theme.colors.primary};
-  font-size: ${({ theme }) => theme.fontSizes["3xl"]};
-  color: ${({ theme }) => theme.colors.white};
-  font-family: ${({ theme }) => theme.fonts.primary};
-  padding-top: 6px;
+  h2 {
+    font-size: ${({ theme }) => theme.fontSizes["2xl"]};
+    color: ${({ theme }) => theme.colors.white};
+    font-family: ${({ theme }) => theme.fonts.primary};
+  }
 `;
 export const Description = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.lg};
@@ -141,7 +144,7 @@ export const Fecha = styled.div`
     color: ${({ theme }) => theme.colors.secondary};
     text-align: right;
     font-family: ${({ theme }) => theme.fonts.secondary};
-    padding: 4px 0 16px;
+    padding: 4px 0 8px;
   }
 `;
 export const ReadWrapper = styled.div`
@@ -149,6 +152,9 @@ export const ReadWrapper = styled.div`
   justify-content: space-between;
   margin-top: 24px;
   border-bottom: 1px solid white;
+  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+    margin-top: 12px;
+  }
 `;
 export const Profile = styled.div`
   display: flex;
