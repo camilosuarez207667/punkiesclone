@@ -1,12 +1,4 @@
-import {
-  FC,
-  Key,
-  ReactChild,
-  ReactFragment,
-  ReactPortal,
-  useEffect,
-  useState,
-} from "react";
+import { FC, Key, useState } from "react";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 import Arrow from "public/svgs/arrow";
 
@@ -48,23 +40,6 @@ interface BlogProps {
 
 const Blog: FC<BlogProps> = ({ blogs }) => {
   const [open, setOpen] = useState(false);
-
-  function onlyUnique(value: any[]) {
-    const result = value.reduce((unique, o) => {
-      if (!unique.some((obj: { date: any }) => obj.date === o.date)) {
-        console.log(o);
-        unique.push(o);
-      }
-
-      return unique;
-    }, []);
-
-    return result.sort(function (a: any, b: any) {
-      return Number(new Date(b.date)) - Number(new Date(a.date));
-    });
-  }
-  const uniquePosts = blogs.length && onlyUnique(blogs);
-  // console.log(uniquePosts);
 
   const resultofSort = blogs.sort(function (a: any, b: any) {
     return Number(new Date(b.date)) - Number(new Date(a.date));
@@ -115,7 +90,14 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
                 <BlogWrapper key={i}>
                   <Title>{e.title}</Title>
                   <Fecha>
-                    <p>{e.date}</p>
+                    <p>
+                      {new Date(e.date).toLocaleDateString("es-ES", {
+                        weekday: "long",
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </p>
                   </Fecha>
                   <Description>{e.brevedescripcion}</Description>
                   <ReadWrapper>

@@ -122,7 +122,7 @@ export const BlogWrapper = styled.div`
   width: 100%;
 `;
 export const Title = styled.div`
-  height: 50px;
+  min-height: 50px;
   border-bottom: 1px solid white;
   background-color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSizes["3xl"]};
