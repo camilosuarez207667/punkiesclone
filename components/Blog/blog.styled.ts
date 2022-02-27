@@ -177,14 +177,29 @@ export const ReadMore = styled.div`
     }
   }
 `;
+export const NumberCounter = styled.div`
+  margin: 12px auto 0;
+
+  max-width: ${({ theme }) => theme.breakpoint.sm};
+
+  height: 24px;
+  width: 24px;
+  background-color: ${({ theme }) => theme.colors.tertiary};
+  border-radius: 50%;
+
+  padding-top: 2px;
+  color: ${({ theme }) => theme.colors.white};
+  text-align: center;
+`;
 export const PaginationWrapper = styled.div`
   max-width: ${({ theme }) => theme.breakpoint.sm};
-  margin: 24px auto 0;
+  margin: 16px auto 0;
   display: flex;
   justify-content: center;
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
   }
 `;
+
 export const ArrowLeft = styled.div`
   margin-right: 20px;
   transform: rotate(270deg);

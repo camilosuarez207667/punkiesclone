@@ -23,6 +23,7 @@ import {
   ArrowLeft,
   ArrowRight,
   TitleParagraph,
+  NumberCounter,
 } from "./blog.styled";
 
 interface BlogProps {
@@ -41,7 +42,7 @@ interface BlogProps {
 const Blog: FC<BlogProps> = ({ blogs }) => {
   const [open, setOpen] = useState(false);
 
-  const resultofSort = blogs.sort(function (a: any, b: any) {
+  const resultofSort = blogs.slice(0, 4).sort((a: any, b: any) => {
     return Number(new Date(b.date)) - Number(new Date(a.date));
   });
 
@@ -122,7 +123,8 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
           </Wrapper>
         </BlogComponent>
       </FullWrapper>
-      {/* pagination */}
+
+      <NumberCounter>1</NumberCounter>
       <PaginationWrapper>
         <ArrowLeft>
           <Arrow />

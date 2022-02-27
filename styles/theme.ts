@@ -63,7 +63,8 @@ colors["tertiary"] = colors.red;
 colors["bgColor"] = colors.bgColor;
 
 const fonts = {
-  primary: '"Metal Mania", cursive',
+  primary: '"New Rocker", cursive',
+  // primary: '"Metal Mania", cursive',
   secondary: '"Lato", sans-serif',
   tertiary: '"Lato", sans-serif',
 };
