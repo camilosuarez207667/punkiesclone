@@ -1,6 +1,8 @@
 import { FC, Key, useState } from "react";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 import Arrow from "public/svgs/arrow";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 import {
   Wrapper,
@@ -40,6 +42,9 @@ interface BlogProps {
 }
 
 const Blog: FC<BlogProps> = ({ blogs }) => {
+  const router = useRouter();
+  const { pid } = router.query;
+
   const [open, setOpen] = useState(false);
 
   const resultofSort = blogs.slice(0, 4).sort((a: any, b: any) => {
@@ -114,7 +119,9 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
                       </div>
                     </Profile>
                     <ReadMore>
-                      <p>leer más</p>
+                      <Link href={"/"}>
+                        <p>leer más</p>
+                      </Link>
                     </ReadMore>
                   </ReadWrapper>
                 </BlogWrapper>

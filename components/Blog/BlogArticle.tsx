@@ -53,6 +53,7 @@ const BlogArticle: FC<BlogProps> = ({ blogs }) => {
                   title: string;
                   date: string;
                   brevedescripcion: string;
+                  description: string;
                 },
                 i: Key
               ) => (
