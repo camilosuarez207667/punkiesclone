@@ -18,7 +18,7 @@ import {
   ProfileWrapper,
   ProfileName,
   Title,
-} from "./blog-article.styled";
+} from "../../components/Blog/blog-article.styled";
 
 type BlogData = {
   blogs: {
