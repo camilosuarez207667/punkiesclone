@@ -66,9 +66,15 @@ export const ImagePadding = styled.div`
   height: 94px;
 `;
 export const ImagePaddingMobile = styled.div`
-  padding: 4px 0 4px 4px;
-  width: 160px;
+  padding-left: 24px;
   height: 60px;
+  display: flex;
+  align-items: center;
+  h1 {
+    font-family: ${({ theme }) => theme.fonts.primary};
+    color: ${({ theme }) => theme.colors.white};
+    font-size: 26px;
+  }
 `;
 ///**  Mobile Menu
 //In case mobile dropdown needs a color height.

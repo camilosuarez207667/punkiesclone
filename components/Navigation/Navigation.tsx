@@ -98,10 +98,11 @@ const Navigation: FC = () => {
       {/*  Mobile  */}
       <MobileNav>
         <MobileLogo>
-          <Link href="/contact">
+          <Link href="/">
             <a>
               <ImagePaddingMobile>
-                <img src="/punkies-logo.png" />
+                {/* <img src="/punkies-logo.png" /> */}
+                <h1>Punkies & Cerebro</h1>
               </ImagePaddingMobile>
             </a>
           </Link>
