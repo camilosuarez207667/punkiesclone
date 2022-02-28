@@ -186,7 +186,6 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
                         </div>
                       </Profile>
                       <ReadMore>
-                        {/* <Link href={`/blog/${e.title.replace(/\s/g, "-")}`}> */}
                         <Link href={`/blog/${e.title}`}>
                           <p>leer más</p>
                         </Link>
