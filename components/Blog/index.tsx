@@ -43,9 +43,23 @@ interface BlogProps {
 
 const Blog: FC<BlogProps> = ({ blogs }) => {
   const [open, setOpen] = useState(false);
+  const [year, setYear] = useState("");
+  const [updateUi, setUpdateUi] = useState(false);
 
+  console.log(year);
   const resultofSort = blogs.slice(0, 10).sort((a: any, b: any) => {
     return Number(new Date(b.date)) - Number(new Date(a.date));
+  });
+
+  const YearSort = blogs.map((e) => e.date.substring(0, 4));
+
+  const arrayYear = blogs.filter((e) => e.date.includes(year));
+
+  const seen = new Set();
+  const filteredArr = YearSort.filter((el) => {
+    const duplicate = seen.has(el);
+    seen.add(el);
+    return !duplicate;
   });
 
   return (
@@ -69,11 +83,19 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
 
         <DropdownWrapper onClick={() => setOpen(!open)}>
           <Dropdown className={open ? "dropdown" : " "}>
-            Archivo Blog
+            {!year ? " archivo blog" : year}
             <DropdownMenu className="dropdown_menu--animated dropdown_animation">
-              <DropdownList>2019</DropdownList>
-              <DropdownList>2020</DropdownList>
-              <DropdownList>2021</DropdownList>
+              {filteredArr.map((e, i) => (
+                <DropdownList
+                  key={i}
+                  onClick={() => {
+                    setYear(e);
+                    setUpdateUi(true);
+                  }}
+                >
+                  {e}
+                </DropdownList>
+              ))}
             </DropdownMenu>
             <ArrowContent>
               <Arrow />
@@ -84,53 +106,102 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
 
       <FullWrapper onClick={() => (open === true ? setOpen(!open) : "")}>
         <BlogComponent>
-          <Wrapper>
-            {resultofSort.map(
-              (
-                e: { title: string; date: string; brevedescripcion: string },
-                i: Key
-              ) => (
-                <BlogWrapper key={i}>
-                  <Title>
-                    <h2>{e.title}</h2>
-                  </Title>
-                  <Fecha>
-                    <p>
-                      {new Date(e.date).toLocaleDateString("es-ES", {
-                        weekday: "long",
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </p>
-                  </Fecha>
-                  <Description>{e.brevedescripcion}</Description>
-                  <ReadWrapper>
-                    <Profile>
-                      <div>
-                        <img
-                          src="/jimmy-jazz-profile.png"
-                          alt="Foto de perfil de Jimmy Jazz"
-                        />
-                      </div>
-                      <div>
-                        <h3>Jimmy Jazz</h3>
-                      </div>
-                    </Profile>
-                    <ReadMore>
-                      {/* <Link href={`/blog/${e.title.replace(/\s/g, "-")}`}> */}
-                      <Link href={`/blog/${e.title}`}>
-                        <p>leer más</p>
-                      </Link>
-                    </ReadMore>
-                  </ReadWrapper>
-                </BlogWrapper>
-              )
-            )}
-          </Wrapper>
+          {!updateUi ? (
+            <Wrapper>
+              {resultofSort.map(
+                (
+                  e: { title: string; date: string; brevedescripcion: string },
+                  i: Key
+                ) => (
+                  <BlogWrapper key={i}>
+                    <Title>
+                      <h2>{e.title}</h2>
+                    </Title>
+                    <Fecha>
+                      <p>
+                        {new Date(e.date).toLocaleDateString("es-ES", {
+                          weekday: "long",
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </p>
+                    </Fecha>
+                    <Description>{e.brevedescripcion}</Description>
+                    <ReadWrapper>
+                      <Profile>
+                        <div>
+                          <img
+                            src="/jimmy-jazz-profile.png"
+                            alt="Foto de perfil de Jimmy Jazz"
+                          />
+                        </div>
+                        <div>
+                          <h3>Jimmy Jazz</h3>
+                        </div>
+                      </Profile>
+                      <ReadMore>
+                        {/* <Link href={`/blog/${e.title.replace(/\s/g, "-")}`}> */}
+                        <Link href={`/blog/${e.title}`}>
+                          <p>leer más</p>
+                        </Link>
+                      </ReadMore>
+                    </ReadWrapper>
+                  </BlogWrapper>
+                )
+              )}
+            </Wrapper>
+          ) : (
+            <Wrapper>
+              {arrayYear.map(
+                (
+                  e: { title: string; date: string; brevedescripcion: string },
+                  i: Key
+                ) => (
+                  <BlogWrapper key={i}>
+                    <Title>
+                      <h2>{e.title}</h2>
+                    </Title>
+                    <Fecha>
+                      <p>
+                        {new Date(e.date).toLocaleDateString("es-ES", {
+                          weekday: "long",
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </p>
+                    </Fecha>
+                    <Description>{e.brevedescripcion}</Description>
+                    <ReadWrapper>
+                      <Profile>
+                        <div>
+                          <img
+                            src="/jimmy-jazz-profile.png"
+                            alt="Foto de perfil de Jimmy Jazz"
+                          />
+                        </div>
+                        <div>
+                          <h3>Jimmy Jazz</h3>
+                        </div>
+                      </Profile>
+                      <ReadMore>
+                        {/* <Link href={`/blog/${e.title.replace(/\s/g, "-")}`}> */}
+                        <Link href={`/blog/${e.title}`}>
+                          <p>leer más</p>
+                        </Link>
+                      </ReadMore>
+                    </ReadWrapper>
+                  </BlogWrapper>
+                )
+              )}
+            </Wrapper>
+          )}
         </BlogComponent>
       </FullWrapper>
-
+      {/* resultofSort
+              .filter((e) => e.date === year)
+              .map((e) => <h1>{e}</h1>)} */}
       <NumberCounter>1</NumberCounter>
       <PaginationWrapper>
         <ArrowLeft>
