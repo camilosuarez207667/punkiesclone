@@ -54,7 +54,7 @@ export default function Index({
       <Breadcrumb
         title={"In Sermo Rusticus"}
         url={"/blog"}
-        headerDesktop={true}
+        headerDesktop={false}
         topPadding={false}
         goBack={true}
         backMessage={"volver"}

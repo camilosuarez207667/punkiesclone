@@ -67,7 +67,7 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
       <Breadcrumb
         title="Blog Jimmy Jazz"
         url={"/"}
-        headerDesktop={true}
+        headerDesktop={false}
         topPadding={false}
         goBack={true}
         backMessage={"volver"}
