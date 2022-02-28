@@ -199,9 +199,6 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
           )}
         </BlogComponent>
       </FullWrapper>
-      {/* resultofSort
-              .filter((e) => e.date === year)
-              .map((e) => <h1>{e}</h1>)} */}
       <NumberCounter>1</NumberCounter>
       <PaginationWrapper>
         <ArrowLeft>
