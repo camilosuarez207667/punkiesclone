@@ -7,7 +7,7 @@ const Contact: FC = () => {
     <>
       <TitleWrapper id="contacto">
         <p>Contacto: 304 537 7640 - E-mail: punkiesycerebro@gmail.com</p>
-        <p>2022 © Punkies y Cerebro. Todos los derechos reservados.</p>
+        <p>2022 © Punkies y Cerebro.</p>
       </TitleWrapper>
     </>
   );
