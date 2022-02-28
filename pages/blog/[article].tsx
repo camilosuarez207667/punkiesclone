@@ -52,7 +52,7 @@ export default function Index({
       <NavPadding />
 
       <Breadcrumb
-        title={"Artículo"}
+        title={"In Sermo Rusticus"}
         url={"/blog"}
         headerDesktop={true}
         topPadding={false}

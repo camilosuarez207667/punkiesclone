@@ -39,13 +39,16 @@ export const Fecha = styled.div`
     color: ${({ theme }) => theme.colors.secondary};
     font-family: ${({ theme }) => theme.fonts.secondary};
   }
+  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+    padding-bottom: 4px;
+  }
 `;
 export const ProfileWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   min-height: 50px;
   border-bottom: 1px solid white;
-  margin: 16px 0;
+  margin: 24px 0 12px;
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
     flex-direction: column-reverse;
   }

@@ -52,8 +52,8 @@ export const Title = styled.div`
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     h1 {
-      padding: 4px 0 0 0;
-      font-size: ${({ theme }) => theme.fontSizes.titleMobile};
+      padding: 8px 0 0 0;
+      font-size: ${({ theme }) => theme.fontSizes["2xl"]};
     }
   }
 `;
