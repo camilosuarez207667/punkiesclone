@@ -29,14 +29,14 @@ const Navigation: FC = () => {
               <Link href="/">
                 <li>
                   <a className={router.pathname == "/" ? "active" : ""}>
-                    Inicio
+                    inicio
                   </a>
                 </li>
               </Link>
               <Link href="/noticias">
                 <li>
                   <a className={router.pathname == "/noticias" ? "active" : ""}>
-                    Noticias
+                    noticias
                   </a>
                 </li>
               </Link>
@@ -50,7 +50,7 @@ const Navigation: FC = () => {
               <Link href="media">
                 <li>
                   <a className={router.pathname == "/media" ? "active" : ""}>
-                    Media
+                    media
                   </a>
                 </li>
               </Link>
@@ -66,19 +66,19 @@ const Navigation: FC = () => {
               <Link href="/tienda">
                 <li>
                   <a className={router.pathname == "/tienda" ? "active" : ""}>
-                    Tienda
+                    tienda
                   </a>
                 </li>
               </Link>
               <Link href="/">
                 <li>
-                  <a>Eventos</a>
+                  <a>eventos</a>
                 </li>
               </Link>
               <Link href="/blog">
                 <li>
                   <a className={router.pathname == "/blog" ? "active" : ""}>
-                    Blog
+                    blog
                   </a>
                 </li>
               </Link>
