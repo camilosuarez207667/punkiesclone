@@ -56,16 +56,21 @@ const Slider: FC<ImageProps> = ({ images }) => {
       </ImagesStylesDesktop>
       <ImagesStylesMobile>
         <Carousel auto loop widgets={[IndicatorDots]}>
-          {mobileImages.map((img) => (
-            <Image
-              key={img.id}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="top center"
-              src={`${img.image.url}`}
-              alt={`${img.image.alt}`}
-            />
-          ))}
+          {mobileImages.map(
+            (img: {
+              id: Key | null | undefined;
+              image: { url: any; alt: any };
+            }) => (
+              <Image
+                key={img.id}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="top center"
+                src={`${img.image.url}`}
+                alt={`${img.image.alt}`}
+              />
+            )
+          )}
         </Carousel>
       </ImagesStylesMobile>
     </FullWrapper>
