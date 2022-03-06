@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, Key } from "react";
 import {
   ImagesStylesDesktop,
   ImagesStylesMobile,
@@ -11,31 +11,47 @@ import IndicatorDots from "./indicator-dots";
 interface ImageProps {
   images: {
     id: number;
+    mobile: boolean;
+    published_at: string;
     image: {
       url: string;
+      alt: string;
     };
   }[];
 }
 
 const Slider: FC<ImageProps> = ({ images }) => {
-  let imgesArr = [...images];
-  let mobileImages = imgesArr.splice(2, 5);
-  let desktopImages = imgesArr.splice(0, 2);
+  let sortByDate: any = images.sort(
+    (a, b) =>
+      new Date(b.published_at).valueOf() - new Date(a.published_at).valueOf()
+  );
+
+  let mobileImages = sortByDate.filter(
+    (e: { mobile: boolean }) => e.mobile === true
+  );
+  let desktopImages = sortByDate.filter(
+    (e: { mobile: boolean }) => e.mobile === false
+  );
 
   return (
     <FullWrapper>
       <ImagesStylesDesktop id="home">
         <Carousel auto loop widgets={[IndicatorDots]}>
-          {desktopImages.map((img) => (
-            <Image
-              key={img.id}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="top center"
-              src={`${img.image.url}`}
-              alt="punkies y cerebro showcase"
-            />
-          ))}
+          {desktopImages.map(
+            (img: {
+              id: Key | null | undefined;
+              image: { url: string; alt: string };
+            }) => (
+              <Image
+                key={img.id}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="top center"
+                src={`${img.image.url}`}
+                alt={`${img.image.alt}`}
+              />
+            )
+          )}
         </Carousel>
       </ImagesStylesDesktop>
       <ImagesStylesMobile>
@@ -47,7 +63,7 @@ const Slider: FC<ImageProps> = ({ images }) => {
               objectFit="cover"
               objectPosition="top center"
               src={`${img.image.url}`}
-              alt="punkies y cerebro showcase"
+              alt={`${img.image.alt}`}
             />
           ))}
         </Carousel>
