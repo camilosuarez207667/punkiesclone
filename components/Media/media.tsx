@@ -6,6 +6,7 @@ import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 import Discografia from "components/Discografia/Discrografia";
 
 import { disco_streaming } from "./MOCK_DATA";
+
 interface DiscoProps {
   discos: {
     image: {

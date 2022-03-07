@@ -78,10 +78,10 @@ const Discografia: FC<DiscoProps> = ({ discos }) => {
             ))}
         </Wrapper>
 
-        {/* <WrapperMobile>
+        <WrapperMobile>
           <Carousel auto loop>
-            {gpSortedByYear.length &&
-              gpSortedByYear.map((e, i) => (
+            {discos.length &&
+              discos.map((e, i) => (
                 <Card key={i}>
                   <ImageHeading>
                     <img
@@ -92,7 +92,7 @@ const Discografia: FC<DiscoProps> = ({ discos }) => {
                 </Card>
               ))}
           </Carousel>
-        </WrapperMobile> */}
+        </WrapperMobile>
       </BodyWrapper>
     </>
   );

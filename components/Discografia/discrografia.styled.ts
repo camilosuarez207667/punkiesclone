@@ -15,29 +15,65 @@ export const SocialWrapper = styled.div`
     svg {
       width: 44px;
     }
+    @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+      svg {
+        width: 32px;
+      }
+    }
   }
   .spotify {
     svg {
       width: 40px;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+      svg {
+        width: 32px;
+      }
     }
   }
   .youtube {
     svg {
       width: 44px;
     }
+    @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+      svg {
+        width: 32px;
+      }
+    }
   }
   .sound {
     svg {
       width: 56px;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+      svg {
+        width: 32px;
+      }
     }
   }
   .download {
     svg {
       width: 36px;
     }
+    @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+      svg {
+        width: 32px;
+      }
+    }
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
     -webkit-tap-highlight-color: transparent;
+    padding: 0 0 0 24px;
+  }
+`;
+
+export const SocialText = styled.p`
+  color: ${({ theme }) => theme.colors.secondary};
+  font-size: ${({ theme }) => theme.fontSizes["2xl"]};
+  font-family: ${({ theme }) => theme.fonts.primary};
+  padding-right: 16px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+    padding-right: 8px;
   }
 `;
 export const SocialItems = styled.div`
@@ -46,19 +82,22 @@ export const SocialItems = styled.div`
   svg:hover {
     fill: ${({ theme }) => theme.colors.tertiary};
   }
-`;
-export const SocialText = styled.p`
-  color: ${({ theme }) => theme.colors.secondary};
-  font-size: ${({ theme }) => theme.fontSizes["2xl"]};
-  font-family: ${({ theme }) => theme.fonts.primary};
-  padding-right: 16px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+    padding: 0 4px;
+  }
 `;
 export const Wrapper = styled.div`
   max-width: ${({ theme }) => theme.breakpoint.md};
   margin: 16px auto 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
     display: none;
   }
   .both:hover .button-active {
@@ -76,10 +115,7 @@ export const Card = styled.section`
   margin-bottom: 48px;
   cursor: pointer;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    width: auto;
+    margin-bottom: 0px;
   }
 `;
 export const ImageHeading = styled.div`
@@ -116,27 +152,9 @@ export const WrapperSvg = styled.div`
 
 export const WrapperMobile = styled.div`
   display: none;
-  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    display: flex;
-    height: 450px;
-    padding: 0 24px;
-    flex-direction: column;
-    width: 500px;
-    margin: 0 auto;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
-    display: flex;
-    height: 450px;
-    padding: 0 24px;
-    flex-direction: column;
-    margin: none;
-  }
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
     display: flex;
-    height: 450px;
-    padding: 0 24px;
-    flex-direction: column;
-    width: auto;
-    margin: none;
+    height: 304px;
+    padding: 24px 24px 0;
   }
 `;
