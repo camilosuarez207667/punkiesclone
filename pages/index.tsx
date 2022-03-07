@@ -4,7 +4,6 @@ import { GetStaticProps } from "next";
 import Slider from "components/Showcase/Slider/Slider";
 import Title from "components/Title/Title";
 import Noticias from "components/Noticias/Noticias";
-import Discografia from "components/Discografia/Discrografia";
 import Conciertos from "components/Conciertos/Conciertos";
 import Multimedia from "components/Multimedia/Multimedia";
 
@@ -38,18 +37,6 @@ type MediaData = {
   }[];
 };
 
-interface DiscoProps {
-  discos: {
-    image: {
-      url: string;
-    };
-    id: number;
-    title: string;
-    description?: string;
-    year?: number;
-  }[];
-}
-
 interface NoticiasProps {
   discos: {
     id: number;
@@ -80,13 +67,7 @@ export default function Index({
       <Multimedia media={multimedia} backgroundColor={true} seeMore={true} />
 
       <Noticias news={news} />
-      <Title
-        id="discos"
-        title={"Discos"}
-        message={``}
-        backgroundColor={"white"}
-      />
-      <Discografia discos={discos} />
+
       <Title
         id="conciertos"
         title={"Eventos"}
@@ -110,11 +91,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   );
   const multimedia: MediaData = await resMultimedia.json();
 
-  const resDisco = await fetch(
-    `https://punkies-strapi.herokuapp.com/discografias`
-  );
-  const discos: DiscoProps = await resDisco.json();
-
   const resConciertos = await fetch(
     `https://punkies-strapi.herokuapp.com/conciertos`
   );
@@ -134,7 +110,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       images,
       news,
-      discos,
       conciertos,
       multimedia,
     },

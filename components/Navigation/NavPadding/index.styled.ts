@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const DesktopNav = styled.div`
-  height: 120px;
+  height: 140px;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     display: none;
   }

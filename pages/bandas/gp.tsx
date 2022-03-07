@@ -20,6 +20,7 @@ type MediaData = {
 export default function GpBand({
   multimedia,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log({ multimedia });
   const data = { ...mockData_bandProps };
   return (
     <>
@@ -33,7 +34,7 @@ export default function GpBand({
       />
       <Hero
         description={data.bands[0].description}
-        imgUrl="/gp-inicios-bw.jpg"
+        imgUrl="/gp-band.jpg"
         imgAlt={data.bands[0].imgAlt}
         viewMore={data.bands[0].viewMore}
         fullDisco={data.bands[0].fullDisco}

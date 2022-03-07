@@ -2,7 +2,6 @@ import { FC, Key, useState } from "react";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 import Arrow from "public/svgs/arrow";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 import {
   Wrapper,
@@ -46,7 +45,6 @@ const Blog: FC<BlogProps> = ({ blogs }) => {
   const [year, setYear] = useState("");
   const [updateUi, setUpdateUi] = useState(false);
 
-  console.log(year);
   const resultofSort = blogs.slice(0, 10).sort((a: any, b: any) => {
     return Number(new Date(b.date)) - Number(new Date(a.date));
   });

@@ -11,7 +11,7 @@ import {
   Wrapper,
 } from "./hero.styled";
 
-interface PeroProps {
+interface HeroProps {
   description: string;
   imgUrl: string;
   imgAlt: string;
@@ -19,7 +19,7 @@ interface PeroProps {
   fullDisco: string;
 }
 
-const Hero: FC<PeroProps> = ({
+const Hero: FC<HeroProps> = ({
   description,
   imgUrl,
   imgAlt,
