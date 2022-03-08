@@ -57,7 +57,7 @@ export const SocialWrapper = styled.div`
     }
     @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
       svg {
-        width: 32px;
+        width: 24px;
       }
     }
   }
@@ -66,7 +66,6 @@ export const SocialWrapper = styled.div`
     padding: 0 0 0 24px;
   }
 `;
-
 export const SocialText = styled.p`
   color: ${({ theme }) => theme.colors.secondary};
   font-size: ${({ theme }) => theme.fontSizes["2xl"]};
@@ -114,9 +113,6 @@ export const Card = styled.section`
   align-items: center;
   margin-bottom: 48px;
   cursor: pointer;
-  @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
-    margin-bottom: 0px;
-  }
 `;
 export const ImageHeading = styled.div`
   max-width: 280px;
@@ -136,20 +132,17 @@ export const MoreButton = styled.div`
   color: white;
   z-index: 2000;
 `;
-
 export const MoreIcon = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   color: white;
   font-size: 16px;
   padding: 16px 32px;
 `;
-
 export const WrapperSvg = styled.div`
   width: 40px;
   margin: 0 auto;
   padding-bottom: 8px;
 `;
-
 export const WrapperMobile = styled.div`
   display: none;
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {

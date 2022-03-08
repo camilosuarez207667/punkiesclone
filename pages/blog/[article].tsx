@@ -41,6 +41,7 @@ export default function Index({
   const router = useRouter();
   const articleid = router.query.article;
 
+  //router sirve para coger el url , lo comparo con el title para hacerle un map y extraer el object
   const artitleText = blogs.filter((e: any) => e.title === articleid);
 
   return (

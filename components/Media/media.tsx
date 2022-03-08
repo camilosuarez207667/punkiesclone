@@ -5,16 +5,14 @@ import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 
 import Discografia from "components/Discografia/Discrografia";
 
-import { disco_streaming } from "./MOCK_DATA";
-
 interface DiscoProps {
   discos: {
     image: {
       url: string;
     };
-    id: number;
+    alt: string;
     title: string;
-    description: string;
+    slug: string;
     year: number;
     banda: string;
   }[];
@@ -35,7 +33,6 @@ const Media: FC<DiscoProps> = ({ discos }) => {
   const jimmySortedByYear = jimmyArr.sort((a, b) => {
     return b.year - a.year;
   });
-
   return (
     <>
       <FullWrapper>

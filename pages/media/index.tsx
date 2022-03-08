@@ -10,9 +10,9 @@ interface DiscoProps {
     };
     id: number;
     title: string;
-    description: string;
+    slug: string;
     year: number;
-    band: string;
+    banda: string;
   }[];
 }
 
