@@ -68,7 +68,7 @@ export default function Index({
   return (
     <div>
       <Head>
-        <title>Blog - Punkies y Cerebro</title>
+        <title>Discografía - Punkies y Cerebro</title>
         <meta name="description" content="Blog - Punkies y Cerebro" />
       </Head>
       <NavPadding />
