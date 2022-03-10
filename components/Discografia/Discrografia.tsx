@@ -37,23 +37,34 @@ interface DiscoProps {
   }[];
 }
 const Discografia: FC<DiscoProps> = ({ discos }) => {
+  const [img, setImg] = useState("");
+
+  function saveImgToLocal(url: string) {
+    localStorage.setItem("albumImg", url);
+  }
   return (
     <>
       <BodyWrapper>
         <SocialWrapper>
           <SocialText>escucha en:</SocialText>
-          <SocialItems className="youtube">
-            <YoutubeRed />
-          </SocialItems>
+          <Link href=" https://www.youtube.com/c/punkiesycerebro/featured">
+            <SocialItems className="youtube">
+              <YoutubeRed />
+            </SocialItems>
+          </Link>
           <SocialItems className="amazon">
             <AmazonMusic />
           </SocialItems>
-          <SocialItems className="spotify">
-            <Spotify />
-          </SocialItems>
-          <SocialItems className="sound">
-            <SoundCloud />
-          </SocialItems>
+          <Link href="https://open.spotify.com/artist/6Nq4YQd4JdWvtY3HrgvYK7?si=0SiS5KoATbqG63JtQtl_0w ">
+            <SocialItems className="spotify">
+              <Spotify />
+            </SocialItems>
+          </Link>
+          <Link href="https://soundcloud.com/punkiesycerebro">
+            <SocialItems className="sound">
+              <SoundCloud />
+            </SocialItems>
+          </Link>
           <SocialItems className="download">
             <Download />
           </SocialItems>
@@ -63,7 +74,7 @@ const Discografia: FC<DiscoProps> = ({ discos }) => {
             discos.map((e, i) => (
               <Card key={i} className="both">
                 <Link href={`/media/${e.slug}`}>
-                  <a>
+                  <a onClick={() => saveImgToLocal(e.image.url)}>
                     <MoreButton className="button-active">
                       <WrapperSvg>
                         <PlusSvg />

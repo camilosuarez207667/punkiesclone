@@ -1,7 +1,7 @@
 import { FC, Key, useState, useEffect } from "react";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 import { useRouter } from "next/router";
-
+import Arrow from "public/svgs/arrow";
 import Head from "next/head";
 import { InferGetStaticPropsType, GetStaticPaths, GetStaticProps } from "next";
 
@@ -20,6 +20,11 @@ import {
   SongWriter,
   SongTitle,
   DynamicLyrics,
+  DropdownWrapper,
+  Dropdown,
+  DropdownMenu,
+  DropdownList,
+  ArrowContent,
 } from "../../components/Discografia/Letras/letras.styled";
 
 type LyricsData = {
@@ -56,6 +61,10 @@ export default function Index({
     .map((e: any) => e)
     .filter((e: { song: unknown }) => e.song == songTitle);
 
+  const songs = albumArray.map((e: { song: any }) => e.song);
+
+  const [open, setOpen] = useState(false);
+
   return (
     <div>
       <Head>
@@ -78,7 +87,7 @@ export default function Index({
           <AlbumHeader>
             <ImageWrapper>
               <AlbumImage>
-                <img src="/album-mock.jpeg" />
+                <img src="/cualquierparecido.jpeg" alt="" />
               </AlbumImage>
               <AlbumTracks>
                 <span className="tracklist">Track list: </span>
@@ -102,32 +111,50 @@ export default function Index({
                   {capitalizeTitle}
                 </h1>
               </AlbumTitle>
+              <DropdownWrapper onClick={() => setOpen(!open)}>
+                <Dropdown className={open ? "dropdown" : " "}>
+                  {!songTitle ? " Track list" : songTitle}
+                  <DropdownMenu className="dropdown_menu--animated dropdown_animation">
+                    {songs.map((e: any, i: any) => (
+                      <DropdownList
+                        key={i}
+                        onClick={() => {
+                          setSongTitle(e);
+                        }}
+                      >
+                        {e}
+                      </DropdownList>
+                    ))}
+                  </DropdownMenu>
+                  <ArrowContent>
+                    <Arrow />
+                  </ArrowContent>
+                </Dropdown>
+              </DropdownWrapper>
 
               {songInfo.map((e: any, i: any) => (
-                <>
-                  <DynamicLyrics key={i}>
-                    <SongWriter>
+                <DynamicLyrics key={i}>
+                  <SongWriter>
+                    <p>
+                      <span>Letra:</span> {e.compositor}
+                    </p>
+                  </SongWriter>
+                  <SongTitle>
+                    <div>
                       <p>
-                        <span>Letra:</span> {e.compositor}
+                        <span>{e.track}:</span> {e.song}
                       </p>
-                    </SongWriter>
-                    <SongTitle>
-                      <div>
-                        <p>
-                          <span>{e.track}:</span> {e.song}
-                        </p>
-                      </div>
-                      <div className="song-duration">
-                        <p>
-                          <span> {e.time}</span>
-                        </p>
-                      </div>
-                    </SongTitle>
-                    <Song>
-                      <p>{e.letra}</p>
-                    </Song>
-                  </DynamicLyrics>
-                </>
+                    </div>
+                    <div className="song-duration">
+                      <p>
+                        <span> {e.time}</span>
+                      </p>
+                    </div>
+                  </SongTitle>
+                  <Song>
+                    <p>{e.letra}</p>
+                  </Song>
+                </DynamicLyrics>
               ))}
             </TitleWrapper>
           </AlbumHeader>
