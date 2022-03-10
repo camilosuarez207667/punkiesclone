@@ -70,12 +70,12 @@ const Navigation: FC = () => {
                   </a>
                 </li>
               </Link>
-              <Link href="/">
+              <Link href="/libros">
                 <li>
                   <a>libros</a>
                 </li>
               </Link>
-              <Link href="/libros">
+              <Link href="/blog">
                 <li>
                   <a className={router.pathname == "/blog" ? "active" : ""}>
                     blog
