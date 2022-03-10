@@ -100,9 +100,11 @@ const Discografia: FC<DiscoProps> = ({ discos }) => {
             {discos.length &&
               discos.map((e, i) => (
                 <Card key={i}>
-                  <ImageHeading>
-                    <img src={`${e.image.url}`} alt={`${e.alt}`} />
-                  </ImageHeading>
+                  <Link href={`/media/${e.slug}`}>
+                    <ImageHeading>
+                      <img src={`${e.image.url}`} alt={`${e.alt}`} />
+                    </ImageHeading>
+                  </Link>
                 </Card>
               ))}
           </Carousel>
