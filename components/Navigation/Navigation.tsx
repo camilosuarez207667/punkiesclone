@@ -72,10 +72,10 @@ const Navigation: FC = () => {
               </Link>
               <Link href="/">
                 <li>
-                  <a>eventos</a>
+                  <a>libros</a>
                 </li>
               </Link>
-              <Link href="/blog">
+              <Link href="/libros">
                 <li>
                   <a className={router.pathname == "/blog" ? "active" : ""}>
                     blog
