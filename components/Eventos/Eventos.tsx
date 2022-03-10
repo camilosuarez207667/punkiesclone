@@ -8,7 +8,7 @@ import {
   NewsWrapper,
   TitleWrapper,
   FullWrapper,
-} from "./noticias.styled";
+} from "./eventos.styled";
 
 interface NewsProps {
   news: {
@@ -23,7 +23,7 @@ interface NewsProps {
   }[];
 }
 
-const Noticias: FC<NewsProps> = ({ news }) => {
+const Eventos: FC<NewsProps> = ({ news }) => {
   return (
     <>
       <TitleWrapper>
@@ -55,4 +55,4 @@ const Noticias: FC<NewsProps> = ({ news }) => {
   );
 };
 
-export default Noticias;
+export default Eventos;

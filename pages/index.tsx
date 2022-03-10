@@ -3,7 +3,7 @@ import { InferGetStaticPropsType } from "next";
 import { GetStaticProps } from "next";
 import Slider from "components/Showcase/Slider/Slider";
 import Title from "components/Title/Title";
-import Noticias from "components/Noticias/Noticias";
+import Eventos from "components/Eventos/Eventos";
 import Conciertos from "components/Conciertos/Conciertos";
 import Multimedia from "components/Multimedia/Multimedia";
 
@@ -63,18 +63,10 @@ export default function Index({
         />
       </Head>
       <Slider images={images} />
-      <Title title={"Media"} message={``} backgroundColor={"white"} />
+      <Title title={"Videos"} message={``} backgroundColor={"white"} />
       <Multimedia media={multimedia} backgroundColor={true} seeMore={true} />
 
-      <Noticias news={news} />
-
-      <Title
-        id="conciertos"
-        title={"Eventos"}
-        message={``}
-        backgroundColor={""}
-      />
-      <Conciertos conciertos={conciertos} />
+      <Eventos news={news} />
     </div>
   );
 }
@@ -91,11 +83,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   );
   const multimedia: MediaData = await resMultimedia.json();
 
-  const resConciertos = await fetch(
-    `https://punkies-strapi.herokuapp.com/conciertos`
-  );
-  const conciertos: NoticiasProps = await resConciertos.json();
-
   if (!images) {
     console.log("posts false");
     return {
@@ -110,7 +97,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       images,
       news,
-      conciertos,
       multimedia,
     },
     revalidate: 1,

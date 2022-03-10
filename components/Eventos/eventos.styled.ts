@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 16px;
   @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
@@ -33,7 +33,7 @@ export const NewsWrapper = styled.div`
 
 export const Title = styled.div`
   font-size: ${({ theme }) => theme.fontSizes["3xl"]};
-  color: ${({ theme }) => theme.colors.tertiary};
+  color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fonts.primary};
   margin: 0 auto;
   padding: 8px 0;

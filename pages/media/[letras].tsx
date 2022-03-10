@@ -1,4 +1,4 @@
-import { FC, Key, useState } from "react";
+import { FC, Key, useState, useEffect } from "react";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 import { useRouter } from "next/router";
 
@@ -14,7 +14,12 @@ import {
   AlbumImage,
   AlbumTitle,
   TitleWrapper,
-  AlbumSubTitle,
+  AlbumTracks,
+  ImageWrapper,
+  Song,
+  SongWriter,
+  SongTitle,
+  DynamicLyrics,
 } from "../../components/Discografia/Letras/letras.styled";
 
 type LyricsData = {
@@ -33,14 +38,23 @@ export default function Index({
   letras,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter();
-  const articleid = router.query.article;
+  const articleid: any = router.query.letras;
+  const nudeUrl = articleid.replace(/-/g, " ");
 
-  // const artitleText = letras.filter((e: any) => e.title === articleid);
+  function capitalizeFirstLetter(sentence: string) {
+    return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+  }
+  const capitalizeTitle = capitalizeFirstLetter(nudeUrl);
 
-  console.log(articleid);
+  const albumArray = letras.filter(
+    (e: { album: string }) => e.album == capitalizeTitle
+  );
 
-  console.log("Letras");
-  // console.log(letras.filter.);
+  const [songTitle, setSongTitle] = useState(Object.values(albumArray[0])[3]);
+
+  const songInfo = albumArray
+    .map((e: any) => e)
+    .filter((e: { song: unknown }) => e.song == songTitle);
 
   return (
     <div>
@@ -51,8 +65,8 @@ export default function Index({
       <NavPadding />
 
       <Breadcrumb
-        title={"Contrucción"}
-        url={"/blog"}
+        title={"Discografía"}
+        url={"/media"}
         headerDesktop={false}
         topPadding={false}
         goBack={true}
@@ -62,10 +76,59 @@ export default function Index({
       <BodyWrapper>
         <Wrapper>
           <AlbumHeader>
-            <AlbumImage></AlbumImage>
+            <ImageWrapper>
+              <AlbumImage>
+                <img src="/album-mock.jpeg" />
+              </AlbumImage>
+              <AlbumTracks>
+                <span className="tracklist">Track list: </span>
+                {albumArray.map((e: any, i: Key | null | undefined) => (
+                  <ul key={i}>
+                    <li onClick={() => setSongTitle(e.song)}>
+                      {e.track}:<span> {e.song} </span>
+                    </li>
+                  </ul>
+                ))}
+              </AlbumTracks>
+            </ImageWrapper>
+
             <TitleWrapper>
-              <AlbumTitle>hello</AlbumTitle>
-              <AlbumSubTitle></AlbumSubTitle>
+              {/* <p>
+                Publicado:<span> 2007 </span>
+              </p> */}
+              <AlbumTitle>
+                <h1>
+                  <span>Album: </span>
+                  {capitalizeTitle}
+                </h1>
+              </AlbumTitle>
+
+              {songInfo.map((e: any, i: any) => (
+                <>
+                  <DynamicLyrics key={i}>
+                    <SongWriter>
+                      <p>
+                        <span>Letra:</span> {e.compositor}
+                      </p>
+                    </SongWriter>
+                    <SongTitle>
+                      <div>
+                        <p>
+                          <span>{e.track}:</span> {e.song}
+                        </p>
+                      </div>
+                      <div className="song-duration">
+                        <p>
+                          <span> {e.time}</span>
+                        </p>
+                      </div>
+                    </SongTitle>
+                    <Song>
+                      <p>{e.letra}</p>
+                    </Song>
+                  </DynamicLyrics>
+                </>
+              ))}
             </TitleWrapper>
           </AlbumHeader>
         </Wrapper>

@@ -8,6 +8,7 @@ export const TitleWrapper = styled.div<TitleProps>`
   background-color: ${({ theme, backgroundColor }) =>
     backgroundColor === "white" ? theme.colors.white : theme.colors.black};
   margin: 0 auto;
+  padding: 16px 0;
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     padding: 64px 0 24px;
   }

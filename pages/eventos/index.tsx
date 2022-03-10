@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { InferGetStaticPropsType } from "next";
 import { GetStaticProps } from "next";
-import NoticiasComponent from "components/Noticias/Noticias";
+import EventosComponent from "components/Eventos/Eventos";
 import NavPadding from "components/Navigation/NavPadding/NavPadding";
 
 type NewsData = {
@@ -27,7 +27,7 @@ export default function Noticias({
         <meta name="description" content="Noticias - Punkies y Cerebro" />
       </Head>
       <NavPadding />
-      <NoticiasComponent news={news} />
+      <EventosComponent news={news} />
     </div>
   );
 }

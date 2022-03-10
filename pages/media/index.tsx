@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Media from "components/Media/media";
+import Media from "components/Media";
 import { InferGetStaticPropsType } from "next";
 import { GetStaticProps } from "next";
 

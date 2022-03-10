@@ -33,10 +33,10 @@ const Navigation: FC = () => {
                   </a>
                 </li>
               </Link>
-              <Link href="/noticias">
+              <Link href="/eventos">
                 <li>
-                  <a className={router.pathname == "/noticias" ? "active" : ""}>
-                    noticias
+                  <a className={router.pathname == "/eventos" ? "active" : ""}>
+                    eventos
                   </a>
                 </li>
               </Link>
@@ -47,7 +47,7 @@ const Navigation: FC = () => {
                   </a>
                 </li>
               </Link>
-              <Link href="media">
+              <Link href="/media">
                 <li>
                   <a className={router.pathname == "/media" ? "active" : ""}>
                     media
