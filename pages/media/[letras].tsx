@@ -31,6 +31,7 @@ type LyricsData = {
   letras: {
     album: string;
     banda: string;
+    comparedAlbum: string;
     song: string;
     time: string;
     track: string;
@@ -44,6 +45,7 @@ interface DiscoProps {
     image: {
       url: string;
     };
+    comparedAlbum: string;
     description: string;
     alt: string;
     title: string;
@@ -64,27 +66,20 @@ export default function Index({
   const [nudeUrl] = useState(articleid.replace(/-/g, " "));
   const [open, setOpen] = useState(false);
 
-  function capitalizeFirstLetter(sentence: string) {
-    return sentence.charAt(0).toUpperCase() + sentence.slice(1);
-  }
-  const capitalizeTitle = capitalizeFirstLetter(nudeUrl);
-
-  const albumArray = letras.filter(
-    (e: { album: string }) => e.album == capitalizeTitle
-  );
+  const albumArray = letras.filter((e: any) => e.comparedAlbum == nudeUrl);
 
   const caratulaArray = discos.filter(
-    (e: { album: string }) => e.album == capitalizeTitle
+    (e: { comparedAlbum: string }) => e.comparedAlbum == nudeUrl
   );
 
-  //first song for the initial load
-  const [songTitle, setSongTitle] = useState(Object.values(albumArray[0])[3]);
+  const firstSong = albumArray.filter((e: any) => e.track == 1);
+  const song = firstSong[0].song;
 
-  // const [songTitle, setSongTitle] = useState("intro");
+  const [songTitle, setSongTitle] = useState(song);
 
   const songInfo = albumArray
     .map((e: any) => e)
-    .filter((e: { song: unknown }) => e.song == songTitle);
+    .filter((e: any) => e.song == songTitle);
 
   const songs = albumArray.map((e: { song: any }) => e.song);
 
@@ -132,13 +127,11 @@ export default function Index({
             </ImageWrapper>
 
             <TitleWrapper>
-              {/* <p>
-                Publicado:<span> 2007 </span>
-              </p> */}
               <AlbumTitle>
                 <h1>
-                  <span>Album: </span>
-                  {capitalizeTitle}
+                  {caratulaArray.map((e: any, i: any) => (
+                    <span key={i}>Album: {e.album}</span>
+                  ))}
                 </h1>
               </AlbumTitle>
               <DropdownWrapper onClick={() => setOpen(!open)}>

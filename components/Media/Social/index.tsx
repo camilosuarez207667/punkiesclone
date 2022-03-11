@@ -12,7 +12,6 @@ interface SocialProps {
 }
 
 const Media: FC<SocialProps> = ({ punkies }) => {
-  console.log(punkies);
   return (
     <SocialWrapper>
       <SocialText>escucha en:</SocialText>
