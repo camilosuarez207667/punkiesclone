@@ -1,9 +1,11 @@
 import { useEffect, useState, FC } from "react";
 
-import { FullWrapper } from "./media.styled";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
 
 import Discografia from "components/Discografia/Discrografia";
+import Social from "components/Media/Social";
+
+import { FullWrapper, GpPadding } from "./media.styled";
 
 interface DiscoProps {
   discos: {
@@ -44,16 +46,8 @@ const Media: FC<DiscoProps> = ({ discos }) => {
           goBack={true}
           backMessage={"volver"}
         />
+        <Social punkies={true}></Social>
         <Discografia discos={punkiesSortedByYear} />
-        <Breadcrumb
-          title="GP"
-          url={"/"}
-          headerDesktop={false}
-          topPadding={false}
-          goBack={false}
-          backMessage={"volver"}
-        />
-        <Discografia discos={gpSortedByYear} />
         <Breadcrumb
           title="Jimmy Jazz"
           url={"/"}
@@ -62,7 +56,18 @@ const Media: FC<DiscoProps> = ({ discos }) => {
           goBack={false}
           backMessage={"volver"}
         />
+        <Social punkies={false}></Social>
         <Discografia discos={jimmySortedByYear} />
+        <Breadcrumb
+          title="GP"
+          url={"/"}
+          headerDesktop={false}
+          topPadding={false}
+          goBack={false}
+          backMessage={"volver"}
+        />
+        <GpPadding />
+        <Discografia discos={gpSortedByYear} />
       </FullWrapper>
     </>
   );

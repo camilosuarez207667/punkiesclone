@@ -39,12 +39,30 @@ type LyricsData = {
   }[];
 };
 
+interface DiscoProps {
+  discos: {
+    image: {
+      url: string;
+    };
+    description: string;
+    alt: string;
+    title: string;
+    slug: string;
+    year: number;
+    banda: string;
+    album: string;
+  }[];
+}
+
 export default function Index({
   letras,
+  discos,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter();
   const articleid: any = router.query.letras;
-  const nudeUrl = articleid.replace(/-/g, " ");
+
+  const [nudeUrl] = useState(articleid.replace(/-/g, " "));
+  const [open, setOpen] = useState(false);
 
   function capitalizeFirstLetter(sentence: string) {
     return sentence.charAt(0).toUpperCase() + sentence.slice(1);
@@ -55,15 +73,20 @@ export default function Index({
     (e: { album: string }) => e.album == capitalizeTitle
   );
 
+  const caratulaArray = discos.filter(
+    (e: { album: string }) => e.album == capitalizeTitle
+  );
+
+  //first song for the initial load
   const [songTitle, setSongTitle] = useState(Object.values(albumArray[0])[3]);
+
+  // const [songTitle, setSongTitle] = useState("intro");
 
   const songInfo = albumArray
     .map((e: any) => e)
     .filter((e: { song: unknown }) => e.song == songTitle);
 
   const songs = albumArray.map((e: { song: any }) => e.song);
-
-  const [open, setOpen] = useState(false);
 
   return (
     <div>
@@ -87,11 +110,18 @@ export default function Index({
           <AlbumHeader>
             <ImageWrapper>
               <AlbumImage>
-                <img src="/cualquierparecido.jpeg" alt="" />
+                {caratulaArray.map(
+                  (
+                    e: { image: { url: string | undefined } },
+                    i: Key | null | undefined
+                  ) => (
+                    <img key={i} src={e.image.url} alt="" />
+                  )
+                )}
               </AlbumImage>
               <AlbumTracks>
                 <span className="tracklist">Track list: </span>
-                {albumArray.map((e: any, i: Key | null | undefined) => (
+                {albumArray.map((e: any, i: any) => (
                   <ul key={i}>
                     <li onClick={() => setSongTitle(e.song)}>
                       {e.track}:<span> {e.song} </span>
@@ -168,6 +198,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const resletras = await fetch(`https://punkies-strapi.herokuapp.com/letras`);
   const letras: LyricsData = await resletras.json();
 
+  const resDiscos = await fetch(
+    `https://punkies-strapi.herokuapp.com/discografias`
+  );
+  const discos: DiscoProps = await resDiscos.json();
+
   if (!letras) {
     console.log("posts false");
     return {
@@ -181,6 +216,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       letras: letras,
+      discos: discos,
     },
     revalidate: 1,
   };

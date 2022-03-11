@@ -3,88 +3,6 @@ import styled from "styled-components";
 export const BodyWrapper = styled.div`
   width: 100%;
 `;
-export const SocialWrapper = styled.div`
-  max-width: ${({ theme }) => theme.breakpoint.md};
-  margin: 16px auto 0;
-  display: flex;
-  height: 40px;
-  align-items: center;
-  padding: 0 0 0 24px;
-
-  .amazon {
-    svg {
-      width: 44px;
-    }
-    @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-      svg {
-        width: 32px;
-      }
-    }
-  }
-  .spotify {
-    svg {
-      width: 40px;
-    }
-    @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-      svg {
-        width: 32px;
-      }
-    }
-  }
-  .youtube {
-    svg {
-      width: 44px;
-    }
-    @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-      svg {
-        width: 32px;
-      }
-    }
-  }
-  .sound {
-    svg {
-      width: 56px;
-    }
-    @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-      svg {
-        width: 32px;
-      }
-    }
-  }
-  .download {
-    svg {
-      width: 36px;
-    }
-    @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-      svg {
-        width: 24px;
-      }
-    }
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-    -webkit-tap-highlight-color: transparent;
-    padding: 0 0 0 24px;
-  }
-`;
-export const SocialText = styled.p`
-  color: ${({ theme }) => theme.colors.secondary};
-  font-size: ${({ theme }) => theme.fontSizes["2xl"]};
-  font-family: ${({ theme }) => theme.fonts.primary};
-  padding-right: 16px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-    padding-right: 8px;
-  }
-`;
-export const SocialItems = styled.div`
-  padding: 0 8px;
-  cursor: pointer;
-  svg:hover {
-    fill: ${({ theme }) => theme.colors.tertiary};
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-    padding: 0 4px;
-  }
-`;
 export const Wrapper = styled.div`
   max-width: ${({ theme }) => theme.breakpoint.md};
   margin: 16px auto 0;
@@ -106,11 +24,12 @@ export const Wrapper = styled.div`
     opacity: 0.3;
   }
 `;
-export const Card = styled.section`
+export const Card = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0;
   margin-bottom: 48px;
   cursor: pointer;
 `;
@@ -130,7 +49,7 @@ export const MoreButton = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  z-index: 2000;
+  z-index: 10;
 `;
 export const MoreIcon = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
