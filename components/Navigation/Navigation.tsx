@@ -29,28 +29,28 @@ const Navigation: FC = () => {
               <Link href="/">
                 <li>
                   <a className={router.pathname == "/" ? "active" : ""}>
-                    inicio
+                    Inicio
                   </a>
                 </li>
               </Link>
               <Link href="/eventos">
                 <li>
                   <a className={router.pathname == "/eventos" ? "active" : ""}>
-                    eventos
+                    Eventos
                   </a>
                 </li>
               </Link>
               <Link href="/historia">
                 <li>
                   <a className={router.pathname == "/historia" ? "active" : ""}>
-                    historia
+                    Historia
                   </a>
                 </li>
               </Link>
               <Link href="/media">
                 <li>
                   <a className={router.pathname == "/media" ? "active" : ""}>
-                    media
+                    Media
                   </a>
                 </li>
               </Link>
@@ -66,26 +66,26 @@ const Navigation: FC = () => {
               <Link href="/tienda">
                 <li>
                   <a className={router.pathname == "/tienda" ? "active" : ""}>
-                    tienda
+                    Tienda
                   </a>
                 </li>
               </Link>
               <Link href="/libros">
                 <li>
-                  <a>libros</a>
+                  <a>Libros</a>
                 </li>
               </Link>
               <Link href="/blog">
                 <li>
                   <a className={router.pathname == "/blog" ? "active" : ""}>
-                    blog
+                    Blog
                   </a>
                 </li>
               </Link>
               <Link href="#contacto">
                 <li>
                   <a className={router.pathname == "/contacto" ? "active" : ""}>
-                    contacto
+                    Contacto
                   </a>
                 </li>
               </Link>

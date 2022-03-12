@@ -24,42 +24,42 @@ const Hamburger = () => {
           <Links>
             <Link href="/">
               <li onClick={() => setMenuOpen(false)}>
-                <a>inicio</a>
+                <a>Inicio</a>
               </li>
             </Link>
             <Link href="/eventos">
               <li onClick={() => setMenuOpen(false)}>
-                <a>eventos</a>
+                <a>Eventos</a>
               </li>
             </Link>
             <Link href="/historia">
               <li onClick={() => setMenuOpen(false)}>
-                <a>historia</a>
+                <a>Historia</a>
               </li>
             </Link>
             <Link href="/media">
               <li onClick={() => setMenuOpen(false)}>
-                <a>media</a>
+                <a>Media</a>
               </li>
             </Link>
             <Link href="/tienda">
               <li onClick={() => setMenuOpen(false)}>
-                <a>tienda</a>
+                <a>Tienda</a>
               </li>
             </Link>
             <Link href="/libros">
               <li onClick={() => setMenuOpen(false)}>
-                <a>libros</a>
+                <a>Libros</a>
               </li>
             </Link>
             <Link href="/blog">
               <li onClick={() => setMenuOpen(false)}>
-                <a>blog</a>
+                <a>Blog</a>
               </li>
             </Link>
             <Link href="#contacto">
               <li onClick={() => setMenuOpen(false)}>
-                <a>contacto</a>
+                <a>Contacto</a>
               </li>
             </Link>
           </Links>
