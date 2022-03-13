@@ -34,6 +34,7 @@ export default function PycBand({
         backMessage={"volver"}
       />
       <Hero
+      fulldiscoUrl="/media"
         description={data.bands[1].description}
         imgUrl={data.bands[1].imgUrl}
         imgAlt={data.bands[1].imgAlt}

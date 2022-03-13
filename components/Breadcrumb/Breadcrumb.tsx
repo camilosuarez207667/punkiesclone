@@ -19,6 +19,7 @@ interface BreadProps {
   headerDesktop: boolean;
   topPadding: boolean;
   backMessage: string;
+  breadcrumId?: string;
 }
 
 const Breadcrumb: FC<BreadProps> = ({
@@ -28,12 +29,13 @@ const Breadcrumb: FC<BreadProps> = ({
   headerDesktop,
   topPadding,
   backMessage,
+  breadcrumId,
 }) => {
   return (
     <FullWrapper headerDesktop={headerDesktop} multipleHeader={topPadding}>
       <RedLineDesktop />
 
-      <TitleWrapper>
+      <TitleWrapper id={breadcrumId}>
         <Title>
           <h1>{title}</h1>
         </Title>

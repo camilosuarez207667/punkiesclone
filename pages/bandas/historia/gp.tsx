@@ -4,7 +4,6 @@ import Historia from "components/Discografia/Historia/Historia";
 
 export default function GpBand() {
   const data = { ...mockData_bandProps };
-  console.log(data);
   return (
     <>
       <Breadcrumb

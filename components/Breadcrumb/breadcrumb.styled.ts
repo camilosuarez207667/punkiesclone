@@ -11,6 +11,10 @@ export const FullWrapper = styled.div<BreadProps>`
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {
     padding-top: ${({ multipleHeader }) => (multipleHeader ? "48px" : "80px")};
   }
+  #gp-discography {
+    scroll-margin: 2000px;
+    scroll-behavior: smooth;
+  }
 `;
 export const RedLineDesktop = styled.div`
   outline: 1px solid white;
@@ -43,6 +47,7 @@ export const GoBackWrapper = styled.div`
 export const Title = styled.div`
   margin-top: 10px;
   z-index: ${({ theme }) => theme.zIndices.docked};
+  scroll-behavior: smooth;
   h1 {
     padding: 1px 48px 0 0;
     font-family: ${({ theme }) => theme.fonts.primary};

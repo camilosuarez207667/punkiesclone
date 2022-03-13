@@ -34,7 +34,7 @@ export const BandDescription = styled.p`
   }
 `;
 
-export const ReadMore = styled.span`
+export const ReadMore = styled.a`
   font-size: ${({ theme }) => theme.fontSizes.lg};
   font-family: ${({ theme }) => theme.fonts.secondary};
   color: ${({ theme }) => theme.colors.tertiary};
@@ -62,6 +62,9 @@ export const ReadMoreDisco = styled.div`
     font-family: ${({ theme }) => theme.fonts.primary};
     color: ${({ theme }) => theme.colors.white};
     padding: 0 48px 0 0;
+  }
+  h3:hover {
+    color: ${({ theme }) => theme.colors.tertiary};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.md}) {

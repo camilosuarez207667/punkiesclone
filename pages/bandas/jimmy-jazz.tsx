@@ -32,6 +32,7 @@ export default function JimmyJazz({
         backMessage={"volver"}
       />
       <Hero
+      fulldiscoUrl="/media"
         description={data.bands[2].description}
         imgUrl={data.bands[2].imgUrl}
         imgAlt={data.bands[2].imgAlt}

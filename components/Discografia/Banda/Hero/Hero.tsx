@@ -17,6 +17,7 @@ interface HeroProps {
   imgAlt: string;
   viewMore: string;
   fullDisco: string;
+  fulldiscoUrl: any;
 }
 
 const Hero: FC<HeroProps> = ({
@@ -25,6 +26,7 @@ const Hero: FC<HeroProps> = ({
   imgAlt,
   viewMore,
   fullDisco,
+  fulldiscoUrl,
 }) => {
   return (
     <>
@@ -32,9 +34,12 @@ const Hero: FC<HeroProps> = ({
         <Wrapper>
           <BandWrapper>
             <BandDescription>
-              {description}&nbsp;&nbsp;
+              {description}
               <Link href={viewMore}>
-                <ReadMore>leer más</ReadMore>
+                <ReadMore>
+                  <br />
+                  leer más
+                </ReadMore>
               </Link>
             </BandDescription>
 
@@ -44,7 +49,11 @@ const Hero: FC<HeroProps> = ({
               </div>
               <Link href={fullDisco}>
                 <ReadMoreDisco>
-                  <h3>ver discografia completa</h3>
+                  <Link href={fulldiscoUrl}>
+                    <a>
+                      <h3>ver discografia completa</h3>
+                    </a>
+                  </Link>
                 </ReadMoreDisco>
               </Link>
             </ImageDiv>

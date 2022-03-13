@@ -33,7 +33,7 @@ export const AlbumTracks = styled.div`
   .tracklist {
     color: ${({ theme }) => theme.colors.tertiary};
   }
-  padding: 8px 0;
+  padding: 8px 24px 8px 0;
   span {
     font-size: 16px;
 

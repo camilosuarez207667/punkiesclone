@@ -39,6 +39,7 @@ const Media: FC<DiscoProps> = ({ discos }) => {
     <>
       <FullWrapper>
         <Breadcrumb
+          breadcrumId="pyc-discography"
           title="Punkies &amp; Cerebro"
           url={"/"}
           headerDesktop={true}
@@ -49,6 +50,7 @@ const Media: FC<DiscoProps> = ({ discos }) => {
         <Social punkies={true}></Social>
         <Discografia discos={punkiesSortedByYear} />
         <Breadcrumb
+          breadcrumId="jimmy-jazz-discography"
           title="Jimmy Jazz"
           url={"/"}
           headerDesktop={false}
@@ -59,6 +61,7 @@ const Media: FC<DiscoProps> = ({ discos }) => {
         <Social punkies={false}></Social>
         <Discografia discos={jimmySortedByYear} />
         <Breadcrumb
+          breadcrumId="gp-discography"
           title="GP"
           url={"/"}
           headerDesktop={false}
