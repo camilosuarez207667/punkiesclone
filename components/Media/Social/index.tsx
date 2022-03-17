@@ -67,7 +67,7 @@ const Media: FC<SocialProps> = ({ punkies }) => {
           </SocialItems>
         </a>
       </Link>
-      <Link href={punkies ? "" : ""}>
+      <Link href={punkies ? "/" : "/"}>
         <a target="">
           <SocialItems className="download">
             <Download />

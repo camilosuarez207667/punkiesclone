@@ -7,6 +7,8 @@ import { InferGetStaticPropsType, GetStaticPaths, GetStaticProps } from "next";
 
 import NavPadding from "components/Navigation/NavPadding/NavPadding";
 
+import { dataLyricsProps } from "components/Discografia/Data/letra";
+
 import {
   Wrapper,
   BodyWrapper,
@@ -29,14 +31,14 @@ import {
 
 type LyricsData = {
   letras: {
+    band: string;
     album: string;
-    banda: string;
-    comparedAlbum: string;
     song: string;
+    lyrics?: string;
     time: string;
     track: string;
-    compositor?: string;
-    letra: string;
+    composer?: string;
+    comparedAlbum: string;
   }[];
 };
 
@@ -63,23 +65,47 @@ export default function Index({
   const router = useRouter();
   const articleid: any = router.query.letras;
 
+  // const [nudeUrl] = useState(articleid.replace(/-/g, " "));
+  // const [open, setOpen] = useState(false);
+
+  // const albumArray = letras.filter((e: any) => e.comparedAlbum == nudeUrl);
+
+  // const caratulaArray = discos.filter(
+  //   (e: { comparedAlbum: string }) => e.comparedAlbum == nudeUrl
+  // );
+
+  // const firstSong = albumArray.filter((e: any) => e.track == 1);
+  // const song = firstSong[0].song;
+  // const [songTitle, setSongTitle] = useState(song);
+
+  // const songInfo = albumArray
+  //   .map((e: any) => e)
+  //   .filter((e: any) => e.song == songTitle);
+
+  // const songs = albumArray.map((e: { song: any }) => e.song);
+
   const [nudeUrl] = useState(articleid.replace(/-/g, " "));
   const [open, setOpen] = useState(false);
-
-  const albumArray = letras.filter((e: any) => e.comparedAlbum == nudeUrl);
-
   const caratulaArray = discos.filter(
     (e: { comparedAlbum: string }) => e.comparedAlbum == nudeUrl
   );
 
-  const firstSong = albumArray.filter((e: any) => e.track == 1);
-  const song = firstSong[0].song;
+  const albumArray = dataLyricsProps.lyrics.filter(
+    (e) => e.comparedAlbum == nudeUrl
+  );
+
+  console.log({ albumArray });
+
+  const firstSongForDropdown = albumArray.filter((e: any) => e.track == "1");
+  const song = firstSongForDropdown[0].song;
 
   const [songTitle, setSongTitle] = useState(song);
 
   const songInfo = albumArray
     .map((e: any) => e)
     .filter((e: any) => e.song == songTitle);
+
+  console.log({ songInfo });
 
   const songs = albumArray.map((e: { song: any }) => e.song);
 
@@ -159,7 +185,7 @@ export default function Index({
                 <DynamicLyrics key={i}>
                   <SongWriter>
                     <p>
-                      <span>Letra:</span> {e.compositor}
+                      <span>Letra:</span> {e.composer}
                     </p>
                   </SongWriter>
                   <SongTitle>
@@ -175,7 +201,7 @@ export default function Index({
                     </div>
                   </SongTitle>
                   <Song>
-                    <p>{e.letra}</p>
+                    <p>{e.lyrics}</p>
                   </Song>
                 </DynamicLyrics>
               ))}
