@@ -17,7 +17,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Intro Punkies",
       lyrics:
-        "Si te señalan por borracho\nSi trabajo ya no encuentro\nSi lo tuyo es protestar y pensar\nY disfrutas la revolución social\n\nHoy no vino Hermes a anunciar\nCon Punkies y Cerebro en su lugar\n\nSi te señalan por borracho\nSi trabajo ya no encuentro\nSi lo tuyo es protestar y pensar\n(Y disfrutas la revolución social)\n\nHoy no vino Hermes a anunciar\nCon Punkies y Cerebro en tu lugar\nCon Punkies y Cerebro\nCon Punkies y Cerebro\nCon Punkies y Cerebro en tu lugar",
+        "Sí te señalan por borracho\nSí trabajo ya no encuentras\nSí lo tuyo es protestar y pensar\nY disfrutas la revolución social\n\nHoy no vino Hermes a anunciar\nCon Punkies y Cerebro en tu lugar\n\nSí te señalan por borracho\nSi trabajo ya no encuentras\nSí lo tuyo es protestar y pensar\nY disfrutas la revolución social\n\nHoy no vino Hermes a anunciar\nCon Punkies y Cerebro en tu lugar\nCon Punkies y Cerebro\nCon Punkies y Cerebro\nCon Punkies y Cerebro en tu lugar",
       time: "1:13",
       track: "1",
       composer: "Juan Camilo Restrepo",
@@ -28,7 +28,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Bobo Fest",
       lyrics:
-        "La sociedad ha cobijado dos modelos anímicos\nuno de ellos alimenta los festivales\nlas revistas del corazón\nlas redes sociales y los canales de YouTube\nEl otro, es el que permanece escondido produciendo contra la tiranía\n\nBuen festival promocionando\nal político en tu barrio\nmuchas bandas de la escena\nla campaña está muy buena\n\nBuen cartel revolucionario\nahora todo controlado\nque no digan los de izquierda\nque esta farsa no está buena\n\nSi tocas mal, no ha de importar\nno se te olvide es un asunto cultural\nque lo importante es participar\ny que hagas parte de esta mafia musical\nHa Ha!\n\nMucho tiempo invertido en mentir\nun buen sonido y con mucho gusto\nla entrada gratis atrae a cualquiera\nTe quitamos todos los taches, la correa y la cerveza\n\nNo intentes ir a ningún lado\nte acogemos con tu pelo parado\nlo importante es que te olvides de tu revolución\nno hagas parte del conflicto ayuda a la solución\n\nLaralala Lalara Laralalaaa\nLaralala Lalala La La La La\nLaralala Larala Laralalaaa\nLaralalala La Larailala\nHEY!\n\nBuen festival\nUn gancho claro\nnos veremos el próximo año!\ncon más artistas y su verborrea\nserán la envidia de cualquiera\n\nOtro cartel revolucionario\nahora todo controlado\nque no digan los de izquierda\nque esta farsa no está buena\n\nSi tocas mal!\nno ha de importar!\nno se te olvide es un asunto cultural\nque lo importante es participar\nY que hagas parte de esta mafia musical\n\nSi tocas mal!\nno ha de importar!\nno se te olvide es un asunto cultural\nque lo importante es participar\ny que hagas parte de esta mafia musical\nAaa! Aaa! Aaaaa!",
+        "La sociedad ha cobijado dos modelos anímicos\nUno de ellos alimenta los festivales\nLas revistas del corazón\nLas redes sociales y los canales de YouTube\nEl otro, es el que permanece escondido produciendo contra la tiranía\n\nBuen festival promocionando\nAl político en tu barrio\nMuchas bandas de la escena\nLa campaña está muy buena\n\nBuen cartel revolucionario\nAhora todo controlado\nQue no digan los de izquierda\nQue esta farsa no está buena\n\nSí tocas mal, no ha de importar\nNo se te olvide es un asunto cultural\nQue lo importante es participar\nY que hagas parte de esta mafia musical\n\nHa Ha!\n\nMucho tiempo invertido en mentir\nUn buen sonido y con mucho gusto\nLa entrada gratis atrae a cualquiera\nTe quitamos todos los taches, la correa y la cerveza\n\nNo intentes ir a ningún lado\nTe acogemos con tu pelo parado\nLo importante es que te olvides de tu revolución\nNo hagas parte del conflicto ayuda a la solución\n\nLaralala Lalara Laralalaaa\nLaralala Lalala La La La La\nLaralala Larala Laralalaaa\nLaralalala La Larailala\n\nHEY!\n\nBuen festival\nUn gancho claro\nNos veremos el próximo año!\nCon más artistas y su verborrea\nSerán la envidia de cualquiera\n\nOtro cartel revolucionario\nAhora todo controlado\nQue no digan los de izquierda\nQue esta farsa no está buena\n\nSí tocas mal!\nNo ha de importar!\nNo se te olvide es un asunto cultural\nQue lo importante es participar\nY que hagas parte de esta mafia musical\n\nSi tocas mal!\nNo ha de importar!\nNo se te olvide es un asunto cultural\nQue lo importante es participar\nY que hagas parte de esta mafia musical\nAaa! Aaa! Aaaaa!",
       time: "3:25",
       track: "2",
       composer: "Juan Camilo Restrepo",
@@ -39,7 +39,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Copiacabana",
       lyrics:
-        "No están en la lista de los vetados\nsolo tocan en los conciertos privado\nInstrumentos no alquilaron jamás\nsus papás se los compran de la mejor calidad\n\nY aparentan que son rebeldes\nHacen la campaña al alcalde y lo que vende\nson la sensación tocando en el Altavoz\n\nLas canciones no fueron problema\ncuando se lo aprendieron a un Juanes\nque no sabe no entiende de revolución\n\nRevolución!\n\nSè que no hay nada!\nNada que hacer\nSe vendieron estas putas de burdel!\n\nSè que no hay nada!\nNada que hacer\nSon muy pocas las que follan por placer!\n\nMiralos!\nLos intereses prevalecen sobre el contenido\nLos payasos más pagados protagonizan este circo\nLas ideas se han perdido\nNuestro Punk Rock no se vende a esta gran farsa!\n\nSalieron en la televisión\nEn comerciales y reality shows\nHasta MTV les publicó un tal unplugged\n\nEstán sonando en la radio todo el día\nSon los más vendidos!\nDe día y de noche tendrás los atuismo-rock\nAy! Qué emoción! Qué emoción!\n\nSé que no hay nada!\nNada que hacer\nSe vendieron estas putas de burdel!\n\nSé que no hay nada!\nNada que hacer\nSon muy pocas las que follan por placer!\n\n(Solo)\n\nConsiguieron una enorme mansión\nLas humildes estrellas del Rock and Roll\nYa son portada en la Rolling Stone\n\nEl rock no está en venta\nQue nunca se venda este Punk Rock\nEste Punk Rock!\n\nSé que no hay nada!\nNada que hacer\nSe vendieron estas putas de burdel!\n\nSé que no hay nada!\nNada que hacer\nSon muy pocas las que follan por placer!\n\nSé que no hay nada!\nSé que no hay nada!\nNada que hacer!\nNada que hacer!\n\nSé que no hay nada!\nSé que no hay nada!\nNada que hacer!\nNada que hacer!",
+        "No están en la lista de los vetados\nSolo tocan en los conciertos privado\nInstrumentos no alquilaron jamás\nSus papás se los compran de la mejor calidad\n\nY aparentan que son rebeldes\nHacen la campaña al alcalde y lo que vende\nSon la sensación tocando en el Altavoz\n\nLas canciones no fueron problema\nCuando se lo aprendieron a un Juanes\nQue no sabe no entiende de revolución\n\nRevolución!\n\nSé que no hay nada!\nNada que hacer\nSé vendieron estas putas de burdel!\n\nSé que no hay nada!\nNada que hacer\nSon muy pocas las que follan por placer!\n\nMíralos!\nLos intereses prevalecen sobre el contenido\nLos payasos más pagados protagonizan este circo\nLas ideas se han perdido\nNuestro Punk Rock no se vende a esta gran farsa!\n\nSalieron en la televisión\nEn comerciales y reality shows\nHasta MTV les publicó un tal unplugged\n\nEstán sonando en la radio todo el día\nSon los más vendidos!\nDe día y de noche tendrás los atuismo-rock\nAy! Qué emoción! Qué emoción!\n\nSé que no hay nada!\nNada que hacer\nSe vendieron estas putas de burdel!\n\nSé que no hay nada!\nNada que hacer\nSon muy pocas las que follan por placer!\n\n(Solo)\n\nConsiguieron una enorme mansión\nLas humildes estrellas del Rock and Roll\nYa son portada en la Rolling Stone\n\nEl rock no está en venta\nQue nunca se venda este Punk Rock\nEste Punk Rock!\n\nSé que no hay nada!\nNada que hacer\nSe vendieron estas putas de burdel!\n\nSé que no hay nada!\nNada que hacer\nSon muy pocas las que follan por placer!\n\nSé que no hay nada!\nSé que no hay nada!\nNada que hacer!\nNada que hacer!\n\nSé que no hay nada!\nSé que no hay nada!\nNada que hacer!\nNada que hacer!",
       time: "2:59",
       track: "3",
       composer: "Juan Camilo Restrepo",
@@ -50,7 +50,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Puerto Libertad",
       lyrics:
-        "La libertad es un maravilloso monstruo mitológico\n\nDoy una vuelta por América\nbuscando el puerto libertad\nY nos quedamos con el alma abierta\nno hubo un puerto donde atracar\nAlguien nos jugó una broma\nno existe el puerto libertad\n\nTambién buscamos en Europa\nEl Reino Unido, Rusia oriental\nEn Australia, en Indonesia\nÁfrica, Asia y New Zealand\ny nos quedamos de una pieza\nNo existe el puerto libertad\n\nNo hay remedio y no hay receta\nNo existe el puerto libertad\nGrita, brinca, escupe y muerde\nPégate a la realidad\nSáltate todas las leyes\nO márchate hacia alta mar\nQue no hay libertad completa\nNo existe el puerto libertad\n\n\n¡No existe el puerto!\n¡Libertad!",
+        "La libertad es un maravilloso monstruo mitológico\n\nDoy una vuelta por América\nBuscando el puerto libertad\nY nos quedamos con el alma abierta\nNo hubo un puerto donde atracar\nAlguien nos jugó una broma\nNo existe el puerto libertad\n\nTambién buscamos en Europa\nEl Reino Unido, Rusia oriental\nEn Australia, en Indonesia\nÁfrica, Asia y New Zealand\nY nos quedamos de una pieza\nNo existe el puerto libertad\n\nNo hay remedio y no hay receta\nNo existe el puerto libertad\nGrita, brinca, escupe y muerde\nPégate a la realidad\nSáltate todas las leyes\nO márchate hacia alta mar\nQue no hay libertad completa\nNo existe el puerto libertad\n\n\n¡No existe el puerto!\n¡Libertad!",
       time: "2:40",
       track: "4",
       composer: "Jaime López",
@@ -61,7 +61,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Relámpagos",
       lyrics:
-        "Seguro de que estoy controvertido\nbajo un brusco disfrazado de arrogante\nPero no me oyes bien cuando critico\nQue caiga lo que apeste a poder\n\nQue con mis notas paso de pedante\nQue mi atuendo está perdiendo lucidez\nPero no me oyes bien cuando maldigo\na ti, a tu mundo y a mi inmediatez\nMi pudor es burla y no castigo\nNo es presunción es temeridad\n\nEl sacrilegio de no poder parar\nEs nuestro destino luchar hasta el final\n\n(Solo)\n\nTe debo una canción que hable del alma\nTe debo una canción con lucidez\nTe debo cada parte de mi calma\nTe debo cada parte de mi ser\nPues yo vivo por mis enemigos\nPor ellos es que el odio hoy no murió\n\nEl sacrilegio de no poder parar\nEs nuestro destino luchar hasta el final",
+        "Seguro de que estoy controvertido\nBajo un brusco disfrazado de arrogante\nPero no me oyes bien cuando critico\nQue caiga lo que apeste a poder\n\nQue con mis notas paso de pedante\nQue mi atuendo está perdiendo lucidez\nPero no me oyes bien cuando maldigo\nA ti, a tu mundo y a mi inmediatez\nMi pudor es burla y no castigo\nNo es presunción es temeridad\n\nEl sacrilegio de no poder parar\nEs nuestro destino luchar hasta el final\n\nTe debo una canción que hable del alma\nTe debo una canción con lucidez\nTe debo cada parte de mi calma\nTe debo cada parte de mi ser\nPues yo vivo por mis enemigos\nPor ellos es que el odio hoy no murió\n\nEl sacrilegio de no poder parar\nEs nuestro destino luchar hasta el final",
       time: "3:28",
       track: "5",
       composer: "Jaime López",
@@ -72,7 +72,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Inri",
       lyrics:
-        "La morada del justo es el templo de un pecador\nTu cristiano insolente ignoras a tu propio dios\nPensar se te hace difícil mejor hacer tu donación\nPara que gastar neuronas si todo lo sabe el pastor\n\nCristiano tu dios duerme en las calles\nCristiano tu dios aguanta hambre\nCristiano tu dios está esperando tu triste caridad\nCristiano tu dios no tiene techo\nCristiano tu dios anda maltrecho\nCristiano tu dios no encuentra un templo solo desigualdad\n\nLos caminos se cruzan todo es cuestión de vocación\nEs la trama inconclusa al efecto de compasión",
+        "La morada del justo es el templo de un pecador\nTú cristiano insolente ignoras a tu propio dios\nPensar se te hace difícil, mejor hacer tu donación\nPara que gastar neuronas, si todo lo sabe el pastor\n\nCristiano tu dios duerme en las calles\nCristiano tu dios aguanta hambre\nCristiano tu dios está esperando tu triste caridad\nCristiano tu dios no tiene techo\nCristiano tu dios anda maltrecho\nCristiano tu dios no encuentra un templo solo desigualdad\n\nLos caminos se cruzan todo es cuestión de vocación\nEs la trama inconclusa al efecto de compasión",
       time: "2:04",
       track: "6",
       composer: "Cesar Jaramillo",
@@ -83,7 +83,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "El Tío Brabucón",
       lyrics:
-        "Desde que cursaba la primaria\nArrasaba con todo el tío Sam\nNunca le temió al islamismo\nLe hacía un calzón chino al Alyatollah\n\nTío Sam (Tío Sam)\n\nLes ponía una tachuela a los asientos\nde Cuba, Nicaragua y Salvador\n\nGozaba entre los brutos de ser hijo de Sumatra\nde tener algún trabuco e insultar en la mayor\n\nTío Sam (Tío Sam)\n\nLe tiraba papelitos a Colombia\nY avionsitos al Corea y al Vietnam\nAlquilaba su fuerza intimidatoria por petrodólares a una débil Kuwait\n\nTío Sam (Tío Sam)\n\n\nSe llenaba de un orgullo nacional\ncuando hablaba de la hendidura de Panamá\nSalía con Filipinas, burló el patio de Irak\na México dominaba y cobraba puerto en Shanghái \n\nTío Sam (Tío Sam)\n\nTe recordamos con cariño tío Sam\nOjalá nunca aprendas la quemadura India!",
+        "Desde que cursaba la primaria\nArrasaba con todo el tío Sam\nNunca le temió al Islamismo\nLe hacía un calzón chino al Alyatollah\n\nTío Sam\nTío Sam\n\nLes ponía una tachuela a los asientos\nDe Cuba, Nicaragua y Salvador\n\nGozaba entre los brutos de ser hijo de Sumatra\nDe tener algún trabuco e insultar en la mayor\n\nTío Sam (Tío Sam)\n\nLe tiraba papelitos a Colombia\nY avionsitos al Corea y a un Vietnam\nAlquilaba su fuerza intimidatoria por petrodólares a una débil Kuwait\n\nTío Sam\nTío Sam\n\nSe llenaba de un orgullo nacional\ncuando hablaba de la hendidura de Panamá\nSalía con Filipinas, burló el patio de Irak\na México dominaba y cobraba puerto en Shanghái \n\nTío Sam\nTío Sam\n\nTe recordamos con cariño tío Sam\nOjalá nunca prendas la quemadura India!",
       time: "2:14",
       track: "7",
       composer: "Jaime López",
@@ -94,7 +94,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Himno Institucional",
       lyrics:
-        "Para dar no recibir, para no criticar, para colaborar\npara identificar, qué es lo que anda mal\naquí está la policía nacional\n\nSí estás haciendo pintas, hermano caridad\nla multa que te apuntan no la podrás pagar\nSi estás tarde en la calle nadie te va a salvar\nEl código es muy claro platica pro privar\n\nPara proteger, también para servir, para controlar\npara hacerte dudar y para conspirar\naquí está la policía nacional\n\nSi fumas o te inyectas, aquí está tu paz\nSi haces malabares o te da por evacuar\nNo presentar la cédula y hasta protestar\nMedida correctiva, comparendo oficial\n\nPara hacer lo bien, sin abusar la ley\nCon botas y guantes, con dios por general\nPresente y a sus pies\naquí está la policía nacional",
+        "Para dar no recibir, para no criticar, para colaborar\nPara identificar, qué es lo que anda mal\nAquí está la policía nacional\n\nSí estás haciendo pintas, hermano caridad\nLa multa que te apuntan no la podrás pagar\nSi estás tarde en la calle nadie te va a salvar\nEl código es muy claro, platica pro privar\n\nPara proteger, también para servir, para controlar\nPara hacerte dudar y para conspirar\nAquí está la policía nacional\n\nSí fumas o te inyectas, aquí está tu paz\nSi haces malabares o te da por evacuar\nNo presentar la cédula y hasta protestar\nMedida correctiva, comparendo oficial\n\nPara hacer lo bien, sin abusar la ley\nCon botas y guantes, con dios por general\nPresente y a sus pies\naquí está la policía nacional",
       time: "2:12",
       track: "8",
       composer: "Jaime López",
@@ -105,7 +105,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Miserable",
       lyrics:
-        'Ya no decimos "Homo homini lupus"\nSino: "Vigilum est civis lupus"\nEs decir, ya no es: "el hombre es un lobo para el hombre"\nSino: "La policía es un lobo para el ciudadano"\n\nAcechando gente por seguridad\nTodo un peligro para la humanidad\nY no están presos\nAhora está en veremos mi libertad\nPor estar bebiendo en el mismo bar\nPor no estar de acuerdo\n\nVarios golpes ponen en shock mi corazón\nLa saliva sabe a sangre y se mezcla con sudor\nEl mañana no está claro, Morfeo lo advirtió\n¡En mis sueños no hay futuro!\nMi presente es un fracaso\n\nLentamente levanto la cabeza\nYo soy la nueva presa\nVomito sangre y la policía\nSe divierte propinando otra paliza\nY no estoy muerto, sigo despierto\nBienvenido al infierno\n\n¡Delito es saber y opinar\nDe este estado criminal!\n\nVarios golpes ponen en shock mi corazón\nLa saliva sabe a sangre y se mezcla con sudor\nEl mañana no está claro, Morfeo lo advirtió\n¡En mis sueños no hay futuro!\n\nEsta patria de unos cuantos\nConquistada de un ladrón\nDonde el pobre es condenado\nAl hambre y la explotación\nEl que opina se castiga\nY se encarcela por bocón\n¡En mis sueños no hay futuro!\n\nVarios golpes ponen en shock mi corazón\nLa saliva sabe a sangre y se mezcla con sudor\nEl mañana no está claro, Morfeo lo advirtió\n¡En mis sueños no hay futuro!\nMi presente es un fracaso',
+        'Ya no decimos "Homo homini lupus"\nSino: "Vigilum est civis lupus"\nEs decir, ya no es: "el hombre es un lobo para el hombre"\nSino: "La policía es un lobo para el ciudadano"\n\nAcechando gente por seguridad\nSon un peligro para la humanidad\nY no están presos\nAhora está en veremos mi libertad\nPor estar bebiendo en el mismo bar\nPor no estar de acuerdo\n\nVarios golpes ponen en shock mi corazón\nLa saliva sabe a sangre y se mezcla con sudor\nEl mañana no está claro, Morfeo lo advirtió\n¡En mis sueños no hay futuro!\nMi presente es un fracaso\n\nLentamente levanto la cabeza\nYo soy la nueva presa\nVomito, sangre y la policía\nSe divierte propinando otra paliza\nY no estoy muerto, sigo despierto\nBienvenido al infierno\n\n¡Delito es saber y opinar!\n¡De este estado criminal!\n\nVarios golpes ponen en shock mi corazón\nLa saliva sabe a sangre y se mezcla con sudor\nEl mañana no está claro, Morfeo lo advirtió\n¡En mis sueños no hay futuro!\n\nEsta patria de unos cuantos\nConquistada de un ladrón\nDonde el pobre es condenado\nAl hambre y la explotación\nEl que opina se castiga\nY se encarcela por bocón\n¡En mis sueños no hay futuro!\n\nVarios golpes ponen en shock mi corazón\nLa saliva sabe a sangre y se mezcla con sudor\nEl mañana no está claro, Morfeo lo advirtió\n¡En mis sueños no hay futuro!\nMi presente es un fracaso',
       time: "2:29",
       track: "9",
       composer: "Juan Camilo Restrepo",
@@ -116,7 +116,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Epidemia",
       lyrics:
-        "Completamente reprimidos\nUn nuevo ciclo\nNadie podrá escapar\n\nNos pisotean con sus normas\nTodas me estorban\nSu abuso ahora es legal\n\n¡Este país me ahoga!\nSus gobernantes unas ratas peligrosas\nPaís de mierda ilegalmente mantenido\n¡Su gobierno está repleto de bandidos!\n\nAhora encarcelan ciudadanos\nY maquillan resultados\nPara ocultar su mediocridad\n\n... carentes de cerebro\nQue defiendes a estos cerdos\nQue te utilizan para matar para robar\n\n¡Este país me ahoga!\nSus gobernantes unas ratas peligrosas\nPaís de mierda ilegalmente mantenido\n¡Su gobierno está repleto de bandidos!\n\nCompletamente reprimidos\nUn nuevo ciclo\nNadie podrá escapar\n\nNos pisotean con sus normas\nTodas me estorban\nSu abuso ahora es legal\n\n¡Este país me ahoga!\nSus gobernantes unas ratas peligrosas\nPaís de mierda ilegalmente mantenido\n¡Su gobierno está repleto de bandidos!\n\n¡Este país me ahoga!\nSus gobernantes unas ratas peligrosas\nPaís de mierda ilegalmente mantenido\n¡Su gobierno está repleto de bandidos!\n(¡Su gobierno está repleto de bandidos!)\n¡Su gobierno está repleto de bandidos!\n(¡Su gobierno está repleto de bandidos!)\n¡Su gobierno está repleto de bandidos!\n(¡Su gobierno está repleto de bandidos!)\n¡Su gobierno está repleto de bandidos!\n\n¡Su gobierno está repleto de bandidos!",
+        "Completamente reprimidos\nUn nuevo ciclo\nNadie podrá escapar\n\nNos pisotean con sus normas\nTodas me estorban\nSu abuso ahora es legal\n\n¡Este país me ahoga!\nSus gobernantes unas ratas peligrosas\nPaís de mierda ilegalmente mantenido\n¡Su gobierno está repleto de bandidos!\n\nAhora encarcelan ciudadanos\nY maquillan resultados\nPara ocultar su mediocridad\n\nEsbirro carente de cerebro\nQue defiendes a estos cerdos\nQue te utilizan para matar para robar\n\n¡Este país me ahoga!\nSus gobernantes unas ratas peligrosas\nPaís de mierda ilegalmente mantenido\n¡Su gobierno está repleto de bandidos!\n\nCompletamente reprimidos\nUn nuevo ciclo\nNadie podrá escapar\n\nNos pisotean con sus normas\nTodas me estorban\nSu abuso ahora es legal\n\n¡Este país me ahoga!\nSus gobernantes unas ratas peligrosas\n\nPaís de mierda ilegalmente mantenido\n¡Su gobierno está repleto de bandidos!",
       time: "2:12",
       track: "10",
       composer: "Juan Camilo Restrepo",
@@ -127,7 +127,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "El Canto De Mi Barra",
       lyrics:
-        "Santa María cantad!\n\nA mí no me dan premios por salir en la tele\n\nNi me mandan ropa de su color\nNo me pagan cientos cuando ganan concursos\n¡Ni me patrocinan con botellas de ron!\n\nNo me dan medallas por gritar con el alma\nCuando vas ganando buena notación\nNo se me declaran 12 chicas por juego\nNi me paran bolas las del Pop Punk\n\nComo no gano nada solo hago el ridículo\nPor corear los triunfos de tu sudor\n\nAsí que yo prefiero así\nAsí que yo prefiero así\nAsí que yo prefiero así\nAsí que yo prefiero así\n\nNo se me da nada que gane poco o pierda\nY si uno se muere uno a su salud\nSi siento alegría le hago a la guitarra\nSi me siento solo le pego al tambor\n\nCuando me da frío me amarro la chaqueta\nY si calienta me juago el sudor\nSi quieres te lo digo de otra forma cariño\n¡Tú no me motivas!\n¡La revolución!",
+        "Santa María cantad!\n\nA mí no me dan premios por salir en la tele\n\nNi me mandan ropa de su color\nNo me pagan cientos cuando ganan concursos\n¡Ni me patrocinan con botellas de ron!\n\nNo me dan medallas por gritar con el alma\nCuando vas ganando buena notación\nNo se me declaran 12 chicas por juego\nNi me paran bolas las del Pom Pom\n\nComo no gano nada solo hago el ridículo\nPor corear los triunfos de tu sudor\n\nAsí que yo prefiero así\nAsí que yo prefiero así\nAsí que yo prefiero así\nAsí que yo prefiero así\n\nNo se me da nada que gane poco o pierda\nY si uno se muere uno a su salud\nSi siento alegría le halo a la guitarra\nSi me siento solo le pego al tambor\n\nCuando me da frío me amarro la chaqueta\nY si calienta me juago el sudor\nSi quieres te lo digo de otra forma cariño\n¡Tú no me motivas!\n¡La revolución!",
       time: "1:08",
       track: "11",
       composer: "Jaime López",
@@ -138,7 +138,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Jugo De Tiburón Muerto",
       lyrics:
-        "Despertando en el vacío Oh! Oh!\nLa sociedad me da lo mismo\nYa cansado que no puedes caminar\ncon tanta mierda y tanto caos en la ciudad\n\nPolicías que torturan\nme hacen la vida aún más dura\nSon esbirros sin masa cerebral\nGente sin nombre y con licencia para matar\n\n¿Cómo no querer vivir\nEn este lindo país?\nDonde no puedes pensar, ni hablar\nSolo elegir el cambio de tu canal\n\nGente perdiendo la cordura\ncon las historias de los curas\nque te sanan, que puedes caminar\ndepende el diezmo que a la iglesia tu le das\n\nSi tu piensas pertenecer\nSal rebaño independiente\nLos condenaron los duros de matar\nLos que no cambian su manera de pensar\n\n¿Cómo no querer vivir\nEn este lindo país?\nDonde no puedes pensar, ni hablar\nSolo elegir el cambio de tu canal\n\n(Solo)\n\n¿Cómo no querer vivir\nEn este lindo país?\nDonde no puedes pensar, ni hablar\nSolo elegir el cambio de tu canal",
+        "Despertando en el vacío Oh! Oh!\nLa sociedad me da lo mismo\nYa cansado que no puedes caminar\nCon tanta mierda y tanto caos en la ciudad\n\nPolicías que torturan\nme hacen la vida aún más dura\nSon esbirros sin masa cerebral\nGente sin nombre y con licencia para matar\n\n¿Cómo no querer vivir\nEn este lindo país?\nDonde no puedes pensar, ni hablar\nSolo elegir el cambio de tu canal\n\nGente perdiendo la cordura\nCon las historias de los curas\nque te sanan, que puedes caminar\ndepende el diezmo que a la iglesia tu le das\n\nSi tu piensas pertenecer\nSal rebaño independiente\nLos condenaron los duros de matar\nLos que no cambian su manera de pensar\n\n¿Cómo no querer vivir\nEn este lindo país?\nDonde no puedes pensar, ni hablar\nSolo elegir el cambio de tu canal\n\n¿Cómo no querer vivir\nEn este lindo país?\nDonde no puedes pensar, ni hablar\nSolo elegir el cambio de tu canal",
       time: "2:38",
       track: "12",
       composer: "Juan Camilo Restrepo",
@@ -149,7 +149,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Alergia, Picazón Y Sarna",
       lyrics:
-        "Lo que quieras decir lo puedes pensar\npero nunca pregonar\nQue ahí están el alcalde, las fuerzas especiales\nTu madre y el cura, te van a condenar\n\nDesde chico nunca me pude aguantar\na 4 vientos lo que pienso tengo que gritar\nNo me aguanto un bicho y me tengo que rascar\nAunque brote sangre hay que rascar\nAunque brote sangre hay que rascar\n\nAquí te han recibido, y te dan un pan\nmigajas que has comido\nque no puedes negar, no puedes ser vulgar\nsarcástico o brutal\nTú escucha ¿Qué pensarán?\n\nPero acerca el rostro, te lo voy a bofetear\nDespierta hermano ¿no te pica la verdad?\nLevanta la cerviz rasca fuerte en  su lugar\nAunque brote sangre hay que rascar\nAunque brote sangre hay que rascar\n\n(Solo)\n\nHablar más de la cuenta,\npuede resultar que tu carrera se trunque\nque ahí están el esmad, las convivir\nteleAntioquia , televida, infinito\nY el dios de musinet\n\nEsquiroles, fachos  y farándulas\ncocacolos, emos y moda coco chanel\nalgo me camina y no me puedo aguantar\naunque brote sangre hay que rascar",
+        "Lo que quieras decir lo puedes pensar\npero nunca pregonar\nQue ahí están el alcalde, las fuerzas especiales\nTu madre y el cura, te van a condenar\n\nDesde chico nunca me pude aguantar\na cuatro vientos lo que pienso tengo que gritar\nNo me aguanto un bicho y me tengo que rascar\nAunque brote sangre hay que rascar\nAunque brote sangre hay que rascar\n\nAquí te han recibido, y te dan un pan\nmigajas que has comido\nque no puedes negar, no puedes ser vulgar\nsarcástico o brutal\nTú escucha ¿Qué pensarán?\n\nPero acerca el rostro, te lo voy a bofetear\nDespierta hermano ¿no te pica la verdad?\nLevanta la cerviz rasca fuerte en  su lugar\nAunque brote sangre hay que rascar\nAunque brote sangre hay que rascar\n\nHablar más de la cuenta,\npuede resultar que tu carrera se trunque\nQue ahí están el esmad, las convivir\nteleantioquia, televida, infinito\nY el dios de musinet\n\nEsquiroles, fachos  y farándulas\nCocacolos, emos y moda coco chanel\nAlgo me camina y no me puedo aguantar\nAunque brote sangre hay que rascar",
       time: "2:46",
       track: "13",
       composer: "Jaime López",
@@ -160,7 +160,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Ciudad Borgia",
       lyrics:
-        "Shatawai, Shatawai\nGudanda y gulugú\nLlorará, sufrirá\nCuando yo me vaya de gulagú\n\nvisto de negro en mi habitación\nvisto de negro en las calles\nvisto de negro es un buen color\n\nVisto de negro porque habito en la ciudad sin corazón\nen la ciudad del dolor\nun poco de sangre no me hará cambiar\nun poco de veneno no está mal\npodrías encerrarme\naislarme en soledad\ny ni aún así me cambiarás\n\nMe criticas por mis sentidos\nMe criticas por mi vestir\nMe criticas por mi sonido\n\nMe criticas porque habito en la ciudad sin corazón\nen la ciudad del dolor\nun poco de sangre no me hará cambiar\nun poco de veneno no está mal\npodrías encerrarme\naislarme en soledad\ny ni aún así me cambiarás\n\nTe molesta que te lo diga\nTe molesta que sea verdad\nAl momento no estoy en venta\n\nNo estoy en venta ni al mejor postor\nni aunque comparta su razón\nun poco de sangre no me hará cambiar\nun poco de veneno no está mal\npodrías encerrarme\naislarme en soledad\ny ni aún así me cambiarás\n\nEn la ciudad del dolor\nun poco de sangre no me hará cambiar\nun poco de veneno no está mal\npodrías encerrarme\naislarme en soledad\ny ni aún así me cambiarás",
+        "Shatawai, Shatawai\nGudanda y gulugú\nLlorará, sufrirá\nCuando yo me vaya de gulagú\n\nvisto de negro en mi habitación\nVisto de negro en las calles\nVisto de negro es un buen color\n\nVisto de negro porque habito en la ciudad sin corazón\nEn la ciudad del dolor\nUn poco de sangre no me hará cambiar\nIn poco de veneno no está mal\nPodrías encerrarme\nAislarme en soledad\nY ni aún así me cambiarás\n\nMe criticas por mis sentidos\nMe criticas por mi vestir\nMe criticas por mi sonido\n\nMe criticas porque habito en la ciudad sin corazón\nEn la ciudad del dolor\nUn poco de sangre no me hará cambiar\nUn poco de veneno no está mal\nPodrías encerrarme\nAislarme en soledad\nY ni aún así me cambiarás\n\nTe molesta que te lo diga\nTe molesta que sea verdad\nAl momento no estoy en venta\n\nNo estoy en venta ni al mejor postor\nNi aunque comparta su razón\nUn poco de sangre no me hará cambiar\nUn poco de veneno no está mal\nPodrías encerrarme\nAislarme en soledad\nY ni aún así me cambiarás\n\nEn la ciudad del dolor\nUn poco de sangre no me hará cambiar\nUn poco de veneno no está mal\nPodrías encerrarme\nAislarme en soledad\nY ni aún así me cambiarás",
       time: "2:35",
       track: "14",
       composer: "Jaime López",
@@ -171,7 +171,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Eros y Tanatos",
       lyrics:
-        "Cada vez que sientes miedo e inseguridad\ncuando no puedes decir la palabra cabal\ncuando empiezas a dudar de tu solidez\ny bajo tus pies sientes reblandecer\n\nCada vez que abres la boca mientes\naunque jures por tu dios mientes\ntu osadía y altivez miente\ntodo lo que grita en ti... miente\n\nMientes cuando evitas las miradas cruzar\ncuando callas lo que piensas por urbanidad\ncuando pregunta tras pregunta buscas indagar\nque hubo en la noche y en el amanecer\n\nSi te quieres escapar mientes\nsi buscas la elección mientes\ntus creencias y tu fe mienten\ny hasta tu ropa tan cool\nmiente, miente.",
+        "Cada vez que sientes miedo e inseguridad\ncuando no puedes decir la palabra cabal\nCuando empiezas a dudar de tu solidez\nY bajo tus pies sientes reblandecer\n\nCada vez que abres la boca mientes\nAunque jures por tu dios mientes\nTu osadía y altivez miente\nTodo lo que grita en ti... Miente\n\nMientes cuando evitas las miradas cruzar\nCuando callas lo que piensas por urbanidad\nCuando pregunta tras pregunta buscas indagar\nQue hubo en la noche y en el amanecer\n\nSi te quieres escapar mientes\nSi buscas la elección mientes\nTus creencias y tu fe mienten\nY hasta tu ropa tan cool\nmiente, miente.",
       time: "1:35",
       track: "15",
       composer: "Jaime López",
@@ -182,7 +182,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Ragnaröck",
       lyrics:
-        "El cielo se esta partiendo\nbajan ángeles de fuego\nla profecía de un infierno helado\nla soledad de Niflheim\n\nArródillate, flágelate, que llegó el final\n\nDesde el camino tembloroso\nsuena la trompeta Gjallarhorn\nllueve sangre es la señal\nel lobo Fenrir se ha soltado\nJörmundgander quiere devorar\n\nDesde el Bifröst llegan los gigantes\nacabando con la civilización\nmirada de fuego, arrasan destruyen\ngritos y llantos no existe el perdón\n\ndesde el inferno de las brumas hell\nordena la partida de la nao Naglfar\ny Tokk repite ni vivo ni muerto\nme ha servido el hijo del hombre\nguarde el inferno lo que tiene",
+        "El cielo se esta partiendo\nBajan ángeles de fuego\nLa profecía de un infierno helado\nLa soledad de Niflheim\n\nArródillate, flágelate, que llegó el final\n\nDesde el camino tembloroso\nSuena la trompeta Gjallarhorn\nLlueve sangre es la señal\nEl lobo Fenrir se ha soltado\nJörmundgander quiere devorar\n\nDesde el Bifröst llegan los gigantes\nAcabando con la civilización\nMirada de fuego, arrasan destruyen\nGritos y llantos no existe el perdón\n\nDesde el inferno de las brumas hell\nOrdena la partida de la nao Naglfar\nY Tokk repite ni vivo ni muerto\nMe ha servido el hijo del hombre\nGuarde el inferno lo que tiene",
       time: "2:13",
       track: "16",
       composer: "Jaime López",
@@ -193,7 +193,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Mis Dolores",
       lyrics:
-        "Tengo diabetes, hipertensión\ndolor en las piernas\ncasi me revienta el corazón\n\nTengo camisas\ndos o tres blue jeans\ny unas botas rotas, raspadas de patear traseros\n\nTengo adhesivos dél Mago de Öz\nbotones de Dimmu Borgir y sopa de coliflor\n\nTengo el cuerpo lleno de granos de pus\ny me han salido huesos que no están en el menú\n\ny tú me dices que vas a cambiar el mundo\nmientras buscas mercadeo para tu logo y ropajes\ncuéntame otro cuento chino sobre paz y escaparates\nque los muertos en la calle ya no se justifican",
+        "Tengo diabetes, hipertensión\nDolor en las piernas\nCasi me revienta el corazón\n\nTengo camisas\nDos o tres blue jeans\nY unas botas rotas, raspadas de patear traseros\n\nTengo adhesivos dél Mago de Öz\nBotones de Dimmu Borgir y sopa de coliflor\n\nTengo el cuerpo lleno de granos de pus\nY me han salido huesos que no están en el menú\n\nY tú me dices que vas a cambiar el mundo\nMientras buscas mercadeo para tu logo y ropajes\nCuéntame otro cuento chino sobre paz y escaparates\nQue los muertos en la calle ya no se justifican",
       time: "1:35",
       track: "17",
       composer: "Jaime López",
@@ -204,7 +204,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Sick TV",
       lyrics:
-        "Manipulación, la tele te enseña cómo has de pensar\ndesinformación y no cambies de canal\nentretenerte es rutina\n\nAsí te absorben el cerebro de por vida\nsi es que no tienes una vida\ntelenovelas se presentan todo el día\n\nMuerte y corrupción\nla tele se enciende y asunto olvidado\nDefiende algún color y vuélvete esclavo del tv sport\nLos comerciales contaminan\nque mal te informan las noticias\nel mundo entero se paralizó\nse lesionó otro jugador\n\nLa felicidad desde algún canal\ndonde manipulan la penosa realidad\nLa necesidad desde un comercial\npasa tu vida hipnotizado\nvive tu autismo en un canal\n\nSentado en un sillón\nte sientes más tranquilo teniendo el control\nlisto está el popcorn, paga una serie por HBO.",
+        "Manipulación, la tele te enseña cómo has de pensar\nDesinformación y no cambies de canal\nEntretenerte es rutina\n\nAsí te absorben el cerebro de por vida\nSi es que no tienes una vida\nTelenovelas se presentan todo el día\n\nMuerte y corrupción\nLa tele se enciende y asunto olvidado\nDefiende algún color y vuélvete esclavo del tv sport\nLos comerciales contaminan\nQue mal te informan las noticias\nEl mundo entero se paralizó\nSe lesionó otro jugador\n\nLa felicidad desde algún canal\nDonde manipulan la penosa realidad\nLa necesidad desde un comercial\nPasa tu vida hipnotizado\nVive tu autismo en un canal\n\nSentado en un sillón\nTe sientes más tranquilo teniendo el control\nListo está el popcorn, paga una serie por HBO.",
       time: "3:18",
       track: "18",
       composer: "Jaime López",
@@ -215,7 +215,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Sonsonete",
       lyrics:
-        "Siempre he sido tratado yo\ncomo la escoria de este país\nsatánico, rústico, desagradable\ningrato y vil\n\nSi me visto como me gusta\nSi odio el control\nSi me aburren los que gobiernan\nMe vuelvo un estorbo\n\nhey hey me quedo aquí\nhey hey te odio a ti\nhey hey odio el poder\nyompo yompo yo\n\nCuando digo no estoy de acuerdo\ncuando doy mi opinión\nllega el que manda, el que gobierna\ny me dice que hacer\n\nPor eso digo no estoy de acuerdo\nallá con tu control\nno me adhiero no me arrepiento\nme declaro en desacato",
+        "Siempre he sido tratado yo\nComo la escoria de este país\nSatánico, rústico, desagradable\nIngrato y vil\n\nSi me visto como me gusta\nSi odio el control\nSi me aburren los que gobiernan\nMe vuelvo un estorbo\n\nHey hey me quedo aquí\nHey hey te odio a ti\nHey hey odio el poder\nYompo Yompo Yo\n\nCuando digo no estoy de acuerdo\nCuando doy mi opinión\nLlega el que manda, el que gobierna\nY me dice que hacer\n\nPor eso digo no estoy de acuerdo\nAllá con tu control\nNo me adhiero no me arrepiento\nMe declaro en desacato",
       time: "1:56",
       track: "19",
       composer: "Jaime López",
@@ -226,7 +226,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "La Patria Boba",
       lyrics:
-        "Los que elegís y ahora gobiernan tu país\nse han dedicado a someterlo a la desgracia\nPaís de caos dirigido a convenir\nentes corruptos predicando tanta farsa\n\nDueños de nada, que se reparten la tajada\nla misma historia, que bonito cuento de hadas\nmuchos hipócritas y ladrones dirigiendo este país\nColombia inútil incapaz de resistir\n\nUn patriotismo que no sirve de nada\nmaldita bandera reutilizada\nLa patria boba inclinada a la derecha\nsucia y desecha, corrupta y ciega\n\nColombo-amnésico enceguecido con los mismos\nacostumbrado a un país podrido\nnación privada, donde se niega el porvenir\nColombia inútil triste infeliz",
+        "Los que elegís y ahora gobiernan tu país\nSe han dedicado a someterlo a la desgracia\nPaís de caos dirigido a convenir\nEntes corruptos predicando tanta farsa\n\nDueños de nada, que se reparten la tajada\nLa misma historia, que bonito cuento de hadas\nMuchos hipócritas y ladrones dirigiendo este país\nColombia inútil incapaz de resistir\n\nUn patriotismo que no sirve de nada\nMaldita bandera reutilizada\nLa patria boba inclinada a la derecha\nSucia y desecha, corrupta y ciega\n\nColombo-amnésico enceguecido con los mismos\nAcostumbrado a un país podrido\nNación privada, donde se niega el porvenir\nColombia inútil triste infeliz",
       time: "2:39",
       track: "20",
       composer: "Juan Camilo Restrepo",
@@ -237,7 +237,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Artista reglado",
       lyrics:
-        "Mato perros para probar mi valentía\ncomo buitres para probar mi razón\npateo pobres y a los aso a la parrilla\nv asusto niños por encargo del pastor\n\nno me persigno. pero rezo a voz en cuello\nmurmuro mucho pero siempre en baja voz\nvendo amuletos en forma de crucecitas\ny cuelo jugos con mi ropa interior\n\nadivina quién, qué fácil que está\n\npara mi el publico no importa\npero me esfuerzo para llamar su atención\nme disfrazo con taches y puntillas\nme paro el pelo con jabon de olor\n\ntomo alcohol mezclado con frutiño\ntequila smith si quiere algún nombre mejor\ny bajo nuestra coraza protectora\nlate un hincha de puro corazón\n\nsi no adivina no se asuste ni se espante\nque aquí pintamos a una fauna musical\nfuerzas oscuras, fachos gachos, mamarrachos\ny proponiéndonos hasta el grupo de esmad",
+        "Mato perros para probar mi valentía\nComo buitres para probar mi razón\nPateo pobres y a los aso a la parrilla\nY asusto niños por encargo del pastor\n\nNo me persigno. pero rezo a voz en cuello\nMurmuro mucho pero siempre en baja voz\nvendo amuletos en forma de crucecitas\nY cuelo jugos con mi ropa interior\n\nAdivina quién, qué fácil que está\n\nPara mi el publico no importa\nPero me esfuerzo para llamar su atención\nMe disfrazo con taches y puntillas\nMe paro el pelo con jabon de olor\n\nTomo alcohol mezclado con frutiño\nTequila smith si quiere algún nombre mejor\nY bajo nuestra coraza protectora\nLate un hincha de puro corazón\n\nSi no adivina no se asuste ni se espante\nQue aquí pintamos a una fauna musical\nFuerzas oscuras, fachos gachos, mamarrachos\nY proponiéndonos hasta el grupo de esmad",
       time: "1:58",
       track: "21",
       composer: "Jaime López",
@@ -248,7 +248,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Cualquier Parecido Con La Realidad",
       song: "Las Venas Abiertas De América Latina",
       lyrics:
-        "Aveces pienso que la vida es bella\ncuando no pienso en suicidarme\nque hay igualdad de oportunidades\nQue la ley en su majestuosa igualdad\nprohíbe tanto al rico como al pobre\nDormir bajo los puentes, mendigar en las calles\nprotestar contra esta justicia y robar el pan\n\nNada más sutil\nNada más discreto\nNada más ordenado que un cementerio\n\nPeregrinos del mayflower, pioneros de verdad\nEl desarrollo desarrolla la desigualdad\n\nTierra arrasada, país en orden\ntrabajadores con hambre, mansos y baratos\n\nLas corporaciones, nos venden su pericia\nen el arte de devorar al prójimo\n\nSomos los habitantes, al sur del río bravo\nDel sur del río bravo, está la Patagonia\n\nPodeis estar tranquilos\nde que la justicia, seguirá siendo injusta\nY el hambre hambrienta\n\n¡Nada más sutil!\n¡Nada más discreto!\n¡Nada mas ordenado que un cementerio!\n\n¡Nada más sutil!\n¡Nada más discreto!\n¡Nada mas ordenado que un cementerio!\n\n¡Nada más sutil!\n¡Nada más discreto!\n¡Nada mas ordenado que un cementerio!\n\n¡Nada más sutil!\n¡Nada más discreto!\n¡Nada mas ordenado que un cementerio!\n\n¡Nada más sutil!\n¡Nada más discreto!\n\n¡Nada mas ordenado que un cementerio!",
+        "Aveces pienso que la vida es bella\nCuando no pienso en suicidarme\nQue hay igualdad de oportunidades\nQue la ley en su majestuosa igualdad\nProhíbe tanto al rico como al pobre\nDormir bajo los puentes, mendigar en las calles\nProtestar contra esta justicia y robar el pan\n\nNada más sutil\nNada más discreto\nNada más ordenado que un cementerio\n\nPeregrinos del mayflower, pioneros de verdad\nEl desarrollo desarrolla la desigualdad\n\nTierra arrasada, país en orden\nTrabajadores con hambre, mansos y baratos\n\nLas corporaciones, nos venden su pericia\nEn el arte de devorar al prójimo\n\nSomos los habitantes, al sur del río bravo\nDel sur del río bravo, está la Patagonia\n\nPodeis estar tranquilos\nde que la justicia, seguirá siendo injusta\nY el hambre hambrienta\n\n¡Nada más sutil!\n¡Nada más discreto!\n¡Nada mas ordenado que un cementerio!\n\n¡Nada más sutil!\n¡Nada más discreto!\n¡Nada mas ordenado que un cementerio!\n\n¡Nada más sutil!\n¡Nada más discreto!\n¡Nada mas ordenado que un ",
       time: "3:51",
       track: "22",
       composer: "Jaime López",
@@ -259,7 +259,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Demo Kratos",
       song: "Ecce Vermis",
       lyrics:
-        "Voy a empezar el día bien \nLailailaralaila\nMe haré una lavado cerebral \nLailailaralaila \nVivo en un grato falansterio \nLailailaralaila \nLa tierra de la oportunidad \nLailailaralaila \n\nSobra comida y sobra tierra \nLalalaralalala \nY los niños que están creciendo \nLalalaralalala \nLo hacen en óptimas condiciones \nLalalaralalala \nDe bienestar de seguridad\nLalalaralalala \n\nEn cuestiones de religión \nLalalaralalala \nTengo a dios mi salvador \nLalalaralalala \nQue me promete un paraíso\nLalalaralalala  \nSi me someto a su aberración \nLalalaralalala  \n\n\nLos políticos son propios \nLalalaralalala\nPiensan sólo en tu bienestar\nLalalaralalala\n La libertad está a la puerta \nLalalaralalala\nBuscarla ya no es una lucha\nLalalaralalala\n\nVoy a empezar\nBien \nEl día bien bien me haré un lavado cerebral \nBien\nEl maquillaje no está mal\nBien\nSi te quieres ocultar bien",
+        "Voy a empezar el día bien \nLailailaralaila\nMe haré una lavado cerebral \nLailailaralaila \nVivo en un grato falansterio \nLailailaralaila \nLa tierra de la oportunidad \nLailailaralaila \n\nSobra comida y sobra tierra \nLalalaralalala \nY los niños que están creciendo \nLalalaralalala \nLo hacen en óptimas condiciones \nLalalaralalala \nDe bienestar de seguridad\nLalalaralalala \n\nEn cuestiones de religión \nLalalaralalala \nTengo a dios mi salvador \nLalalaralalala \nQue me promete un paraíso\nLalalaralalala  \nSi me someto a su aberración \nLalalaralalala  \n\n\nLos políticos son propios \nLalalaralalala\nPiensan sólo en tu bienestar\nLalalaralalala\nLa libertad está a la puerta \nLalalaralalala\nBuscarla ya no es una lucha\nLalalaralalala\n\nVoy a empezar\nBien \nMe haré un lavado cerebral \nBien\nEl maquillaje no está mal\nBien\nSi te quieres ocultar bien",
       time: "2:00",
       track: "1",
       composer: "Jaime López",
@@ -270,7 +270,7 @@ export const dataLyricsProps: LyricsProps = {
       album: "Demo Kratos",
       song: "Intro Punkies",
       lyrics:
-        "Si te señalan por borracho\nSi trabajo ya no encuentro\nSi lo tuyo es protestar y pensar\nY disfrutas la revolución social\n\nHoy no vino Hermes a anunciar\nCon Punkies y Cerebro en su lugar\n\nSi te señalan por borracho\nSi trabajo ya no encuentro\nSi lo tuyo es protestar y pensar\n(Y disfrutas la revolución social)\n\nHoy no vino Hermes a anunciar\nCon Punkies y Cerebro en tu lugar\nCon Punkies y Cerebro\nCon Punkies y Cerebro\nCon Punkies y Cerebro en tu lugar",
+        "Si te señalan por borracho\nSi trabajo ya no encuentro\nSi lo tuyo es protestar y pensar\nY disfrutas la revolución social\n\nHoy no vino Hermes a anunciar\nCon Punkies y Cerebro en su lugar\n\nSi te señalan por borracho\nSi trabajo ya no encuentro\nSi lo tuyo es protestar y pensar\nY disfrutas la revolución social\n\nHoy no vino Hermes a anunciar\nCon Punkies y Cerebro en tu lugar\nCon Punkies y Cerebro\nCon Punkies y Cerebro\nCon Punkies y Cerebro en tu lugar",
       time: "1:13",
       track: "2",
       composer: "Juan Camilo Restrepo",
@@ -283,17 +283,6 @@ export const dataLyricsProps: LyricsProps = {
       lyrics: "Canzonneta Andante",
       time: "2:35",
       track: "3",
-      composer: "Jaime López",
-      comparedAlbum: "demo kratos",
-    },
-    {
-      band: "punkies",
-      album: "Demo Kratos",
-      song: "Punkofobia",
-      lyrics:
-        "Sentado en el mismo parque la policía nacional\nTercera vez que nos miran nos vuelven a requisar\nSe paran de ahí borrachos que aquí no pueden beber\nTres golpes y a la patrulla por irrespeto a la autoridad\n\nPuede llorar puede llorar mi agente puede llorar\nDespués de estar detenidos la patrulla se completó\nCon el marica que había al lado el jibarito y el profesor\n\nNo pueden estar aquí\nEso quien lo dice (yo)\nPues desde cuando en los parques se reservan el derecho de\nAdmisión\n\nPuede llorar puede llorar mi agente puede llorar\n\nEl sábado en la mañana que nos soltaron a celebrar\nY en la noche en el mismo parque con el mismo agente fuimos a dar\nPues ya se les advirtió tres segundos y se van de aquí\nDespierten pues a su amigo que aquí en la acera no pueden dormir\nPuede llorar puede llorar mi agente puede llorar",
-      time: "2:09",
-      track: "4",
       composer: "Jaime López",
       comparedAlbum: "demo kratos",
     },
@@ -738,13 +727,56 @@ export const dataLyricsProps: LyricsProps = {
     },
     {
       band: "punkies",
-      album: "Punkies a la Escuela",
-      song: "",
+      album: "Demo punkies",
+      song: "Ecce Vermis",
+      lyrics:
+        "Voy a empezar el día bien \nLailailaralaila\nMe haré una lavado cerebral \nLailailaralaila \nVivo en un grato falansterio \nLailailaralaila \nLa tierra de la oportunidad \nLailailaralaila \n\nSobra comida y sobra tierra \nLalalaralalala \nY los niños que están creciendo \nLalalaralalala \nLo hacen en óptimas condiciones \nLalalaralalala \nDe bienestar de seguridad\nLalalaralalala \n\nEn cuestiones de religión \nLalalaralalala \nTengo a dios mi salvador \nLalalaralalala \nQue me promete un paraíso\nLalalaralalala  \nSi me someto a su aberración \nLalalaralalala  \n\n\nLos políticos son propios \nLalalaralalala\nPiensan sólo en tu bienestar\nLalalaralalala\n La libertad está a la puerta \nLalalaralalala\nBuscarla ya no es una lucha\nLalalaralalala\n\nVoy a empezar\nBien \nEl día bien bien me haré un lavado cerebral \nBien\nEl maquillaje no está mal\nBien\nSi te quieres ocultar bien",
+      time: "2:00",
+      track: "1",
+      composer: "Jaime López",
+      comparedAlbum: "demo punkies",
+    },
+    {
+      band: "punkies",
+      album: "Demo punkies",
+      song: "Renacuajo Explotador",
+      lyrics:
+        "Rin rin renacuajo salió esta mañana\nMuy tieso y muy majo a visitar un ratón\n\nLe dijo buen amigo hagamos las paces\nMontemos un concierto y saquémonos buen tajadón\n\nNo me crea tan rafael\nNo me crea tan rafael\n\nAl pueblo pan y circo, les montamos buenas luces\nContratamos tres payasos y un mimo con altavoz\nQue digan tres bobadas que no inciten la revolución\nQue no sepan de anarquismo, ni de sexo, ni drogas, ni rock\n\nNo me crea tan Rafael\nNo me crea tan Rafael\n\nHacemos convocatoria que parezca muy legal\nTres fotos, una pista, las reglas serán colador\nQue diga festival o encuentro musical\nEl dinero recogido con cultura se resarcirá\n\nNo me crea tan Rafael\nNo me crea tan Rafael\n\nCon el pueblo no se meta, con el pueblo no se meta\nCon el pueblo no se meta mi querido emperador",
+      time: "1:30",
+      track: "2",
+      composer: "Jaime López",
+      comparedAlbum: "demo punkies",
+    },
+    {
+      band: "punkies",
+      album: "Demo punkies",
+      song: "Un Puesto Justo",
+      lyrics:
+        "Estás detenido, no sabes que hacer\nNadie dio un motivo, nadie respondió\nLevante las manos, esposas para joder\nAguante el aliento, la bolsa y la pared\n\nEntraste al sistema, nadie te salvara\nNi alfil ni abogados, dinero ¿puede ser?\n\nNo hay motivo así es la ley\nSi protestas ésta es ley\nCuando has ingresado en la prisión\nVerde es tu verdugo, negra promoción\n\nBotas, rebotas y explotas, a impotencia huele aquí\nBolillos en boca, esposas otra vez\nEn las paredes oraciones puedes ver\n\nAlgún cretino que te quiso joder\nOtro cuadro anuncia, lo que ya es para llorar\nDerechos humanos, una realidad.",
+      time: "1:30",
+      track: "2",
+      composer: "Juan Camilo Restrepo",
+      comparedAlbum: "demo punkies",
+    },
+    {
+      band: "punkies",
+      album: "Demo punkies",
+      song: "renacuajo semilla",
       lyrics: "",
       time: "1:30",
-      track: "20",
-      composer: "Jaime López",
-      comparedAlbum: "punkies a la escuela",
+      track: "3",
+      composer: "Juan Camilo Restrepo",
+      comparedAlbum: "demo punkies",
+    },
+    {
+      band: "punkies",
+      album: "Demo punkies",
+      song: "Sospecha Original",
+      lyrics: "",
+      time: "1:30",
+      track: "4",
+      composer: "Juan Camilo Restrepo",
+      comparedAlbum: "demo punkies",
     },
   ],
 };

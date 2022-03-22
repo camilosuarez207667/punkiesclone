@@ -65,25 +65,6 @@ export default function Index({
   const router = useRouter();
   const articleid: any = router.query.letras;
 
-  // const [nudeUrl] = useState(articleid.replace(/-/g, " "));
-  // const [open, setOpen] = useState(false);
-
-  // const albumArray = letras.filter((e: any) => e.comparedAlbum == nudeUrl);
-
-  // const caratulaArray = discos.filter(
-  //   (e: { comparedAlbum: string }) => e.comparedAlbum == nudeUrl
-  // );
-
-  // const firstSong = albumArray.filter((e: any) => e.track == 1);
-  // const song = firstSong[0].song;
-  // const [songTitle, setSongTitle] = useState(song);
-
-  // const songInfo = albumArray
-  //   .map((e: any) => e)
-  //   .filter((e: any) => e.song == songTitle);
-
-  // const songs = albumArray.map((e: { song: any }) => e.song);
-
   const [nudeUrl] = useState(articleid.replace(/-/g, " "));
   const [open, setOpen] = useState(false);
   const caratulaArray = discos.filter(
@@ -94,8 +75,6 @@ export default function Index({
     (e) => e.comparedAlbum == nudeUrl
   );
 
-  console.log({ albumArray });
-
   const firstSongForDropdown = albumArray.filter((e: any) => e.track == "1");
   const song = firstSongForDropdown[0].song;
 
@@ -104,8 +83,6 @@ export default function Index({
   const songInfo = albumArray
     .map((e: any) => e)
     .filter((e: any) => e.song == songTitle);
-
-  console.log({ songInfo });
 
   const songs = albumArray.map((e: { song: any }) => e.song);
 
